@@ -1,0 +1,2944 @@
+2015-08-07 10:07:04 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Request.php:1219
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Request.php(1201): yii\web\Request->loadCookies()
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Request.php(1287): yii\web\Request->getCookies()
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Request.php(1266): yii\web\Request->loadCsrfToken()
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\helpers\BaseHtml.php(286): yii\web\Request->getCsrfToken()
+#4 D:\OpenServer\domains\baron-nt.dev\views\layouts\main.php(20): yii\helpers\BaseHtml::csrfMetaTags()
+#5 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\View.php(325): require('D:\\OpenServer\\d...')
+#6 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\OpenServer\\d...', Array)
+#7 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('D:\\OpenServer\\d...', Array, Object(app\controllers\SiteController))
+#8 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<div class="sit...')
+#9 D:\OpenServer\domains\baron-nt.dev\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#14 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#15 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2015-08-07 10:07:04 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '54540'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438927624.591
+    'REQUEST_TIME' => 1438927624
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 10:07:04 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#6 {main}
+2015-08-07 10:07:04 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '54540'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438927624.591
+    'REQUEST_TIME' => 1438927624
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 10:29:42 [127.0.0.1][100][lks6fn3kr7veh3esggnr8atnk5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "contact/".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('contact/', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 10:29:41 [127.0.0.1][100][lks6fn3kr7veh3esggnr8atnk5][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'lks6fn3kr7veh3esggnr8atnk5'
+    '_identity' => '444c97660fa899566e706a8d44231b5f5f3272cb1c46d2b41e96517647c83de0a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'yuyesiq'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=lks6fn3kr7veh3esggnr8atnk5; _identity=444c97660fa899566e706a8d44231b5f5f3272cb1c46d2b41e96517647c83de0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '54826'
+    'REDIRECT_URL' => '/contact/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/contact/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438928981.909
+    'REQUEST_TIME' => 1438928981
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:29:32 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: D:\OpenServer\domains\baron-nt.dev\modules\admin\views\layouts\dark.php' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('D:\\OpenServer\\d...', Array, Object(app\modules\admin\controllers\DefaultController))
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<div class="adm...')
+#2 D:\OpenServer\domains\baron-nt.dev\modules\admin\controllers\DefaultController.php(12): yii\base\Controller->render('index')
+#3 [internal function]: app\modules\admin\controllers\DefaultController->actionIndex()
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin', Array)
+#8 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-08-07 12:29:32 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56894'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936172.73
+    'REQUEST_TIME' => 1438936172
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:29:33 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#6 {main}
+2015-08-07 12:29:32 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56894'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936172.73
+    'REQUEST_TIME' => 1438936172
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:30:18 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: D:\OpenServer\domains\baron-nt.dev\modules\admin\views\layouts\dark.php' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('D:\\OpenServer\\d...', Array, Object(app\modules\admin\controllers\DefaultController))
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<div class="adm...')
+#2 D:\OpenServer\domains\baron-nt.dev\modules\admin\controllers\DefaultController.php(12): yii\base\Controller->render('index')
+#3 [internal function]: app\modules\admin\controllers\DefaultController->actionIndex()
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin', Array)
+#8 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-08-07 12:30:18 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56908'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936218.25
+    'REQUEST_TIME' => 1438936218
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:30:18 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#6 {main}
+2015-08-07 12:30:18 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56908'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936218.25
+    'REQUEST_TIME' => 1438936218
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:30:19 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: D:\OpenServer\domains\baron-nt.dev\modules\admin\views\layouts\dark.php' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('D:\\OpenServer\\d...', Array, Object(app\modules\admin\controllers\DefaultController))
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<div class="adm...')
+#2 D:\OpenServer\domains\baron-nt.dev\modules\admin\controllers\DefaultController.php(12): yii\base\Controller->render('index')
+#3 [internal function]: app\modules\admin\controllers\DefaultController->actionIndex()
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin', Array)
+#8 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-08-07 12:30:19 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56910'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936219.517
+    'REQUEST_TIME' => 1438936219
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:30:19 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#6 {main}
+2015-08-07 12:30:19 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56910'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936219.517
+    'REQUEST_TIME' => 1438936219
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:34:20 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:34:19 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56962'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936459.96
+    'REQUEST_TIME' => 1438936459
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:34:55 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:34:55 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '56986'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936495.758
+    'REQUEST_TIME' => 1438936495
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:35:35 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:35:35 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57007'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936535.471
+    'REQUEST_TIME' => 1438936535
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:29 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:29 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57018'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936589.712
+    'REQUEST_TIME' => 1438936589
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:33 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:33 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57023'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936593.855
+    'REQUEST_TIME' => 1438936593
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:34 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:34 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57022'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936594.411
+    'REQUEST_TIME' => 1438936594
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:43 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:43 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57023'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936603.462
+    'REQUEST_TIME' => 1438936603
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:44 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:44 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57022'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936604.684
+    'REQUEST_TIME' => 1438936604
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:36:50 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:36:50 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57020'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936610.278
+    'REQUEST_TIME' => 1438936610
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:37:49 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:37:49 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57076'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936669.619
+    'REQUEST_TIME' => 1438936669
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:38:02 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:38:02 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57093'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936682.674
+    'REQUEST_TIME' => 1438936682
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:39:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:39:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/debug/default/view?panel=log&tag=55c46e6aab68d'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57109'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936745.128
+    'REQUEST_TIME' => 1438936745
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:39:08 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:39:08 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57112'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936748.325
+    'REQUEST_TIME' => 1438936748
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:39:59 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:39:59 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57160'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936799.775
+    'REQUEST_TIME' => 1438936799
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:40:19 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/views/default/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/views/def...', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:40:19 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57165'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936819.326
+    'REQUEST_TIME' => 1438936819
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 12:40:23 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/views/default/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/views/def...', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 12:40:23 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57165'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438936823.508
+    'REQUEST_TIME' => 1438936823
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:06:35 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:06:35 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57225'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938395.827
+    'REQUEST_TIME' => 1438938395
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:12:19 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:12:19 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57383'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938739.092
+    'REQUEST_TIME' => 1438938739
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:12:29 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:12:29 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57383'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938749.278
+    'REQUEST_TIME' => 1438938749
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:12:32 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:12:32 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57383'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938752.465
+    'REQUEST_TIME' => 1438938752
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:12:50 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:12:50 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57424'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938770.423
+    'REQUEST_TIME' => 1438938770
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:22 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:22 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57436'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938802.33
+    'REQUEST_TIME' => 1438938802
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:39 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:39 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57448'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938819.731
+    'REQUEST_TIME' => 1438938819
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:43 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:43 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57448'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938823.024
+    'REQUEST_TIME' => 1438938823
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:46 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:46 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57448'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938826.024
+    'REQUEST_TIME' => 1438938826
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:48 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:48 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57450'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938828.445
+    'REQUEST_TIME' => 1438938828
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:13:51 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:13:51 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57456'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938831.075
+    'REQUEST_TIME' => 1438938831
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:15:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:15:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57502'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938905.88
+    'REQUEST_TIME' => 1438938905
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:15:37 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:15:36 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57524'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438938936.966
+    'REQUEST_TIME' => 1438938936
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:19:24 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:19:23 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57595'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939163.937
+    'REQUEST_TIME' => 1438939163
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:19:30 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:19:30 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57595'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939170.316
+    'REQUEST_TIME' => 1438939170
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:20:49 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:20:49 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57646'
+    'REDIRECT_URL' => '/admin/default/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/default/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939249.507
+    'REQUEST_TIME' => 1438939249
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:21:08 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/default/login' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/default/l...', Array)
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:21:08 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57660'
+    'REDIRECT_URL' => '/admin/default/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/default/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939268.751
+    'REQUEST_TIME' => 1438939268
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:23:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:23:05 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57691'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939385.218
+    'REQUEST_TIME' => 1438939385
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:23:46 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:23:46 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin/default/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57714'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939426.003
+    'REQUEST_TIME' => 1438939426
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 13:23:57 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/login".' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/login', Array)
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-08-07 13:23:57 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin/default/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '57733'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438939437.225
+    'REQUEST_TIME' => 1438939437
+    'argv' => []
+    'argc' => 0
+]
+2015-08-07 14:02:04 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 1 for yii\base\Model::load(), called in D:\OpenServer\domains\baron-nt.dev\modules\admin\controllers\DefaultController.php on line 24 and defined' in D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Model.php:795
+Stack trace:
+#0 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): app\modules\admin\controllers\DefaultController->actionLogin()
+#1 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#2 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#4 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 D:\OpenServer\domains\baron-nt.dev\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 D:\OpenServer\domains\baron-nt.dev\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2015-08-07 14:02:04 [127.0.0.1][-][hoke2ogkbigitkj4nfpp02j1p3][info][application] $_COOKIE = [
+    '_csrf' => 'fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN\";}'
+    'PHPSESSID' => 'hoke2ogkbigitkj4nfpp02j1p3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nuviwit'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'baron-nt.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://baron-nt.dev/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=fdc00ff35e00ead57f4e2e6159fa0bb7f754ed7e8b2c335a048991cad9d12937a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WmBkDz29SXUHxaSm-Plm9vWgY1MPzKVN%22%3B%7D; PHPSESSID=hoke2ogkbigitkj4nfpp02j1p3'
+    'PATH' => 'D:\\OpenServer\\modules\\php\\PHP-5.5\\ext;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear;D:\\OpenServer\\modules\\php\\PHP-5.5\\pear\\bin;D:\\OpenServer\\modules\\imagemagick;D:\\OpenServer\\modules\\php\\PHP-5.5;D:\\OpenServer\\modules\\database\\MySQL-5.5\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4\\bin;D:\\OpenServer\\modules\\http\\Apache-2.4;D:\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32)'
+    'SERVER_NAME' => 'baron-nt.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/domains/baron-nt.dev/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/baron-nt.dev/web/index.php'
+    'REMOTE_PORT' => '58198'
+    'REDIRECT_URL' => '/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1438941724.086
+    'REQUEST_TIME' => 1438941724
+    'argv' => []
+    'argc' => 0
+]
