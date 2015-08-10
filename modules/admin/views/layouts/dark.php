@@ -4,10 +4,18 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\widgets\Pjax;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\bootstrap\ButtonDropdown;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\modules\admin\models\BAdmins;
+use app\modules\admin\models\BSettings;
+
+$BAdmins = BAdmins::findOne(Yii::$app->user->id);
+$BSettings = BSettings::find()->where(['site' => 1])->one();
+$this->title = 'Авторизация - '.$BSettings->title;
 
 AppAsset::register($this);
 ?>
@@ -23,42 +31,50 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Барон',
+        'brandLabel' => $BSettings->title,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'yellow-nav navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Главная', 'url' => ['/site/index']],
-            ['label' => 'О компании', 'url' => ['/site/about']],
-            ['label' => 'Контакты', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ?
-                ['label' => 'Войти', 'url' => ['/admin/login']] :
-                [
-                    'label' => 'Выйти (' . Yii::$app->user->id . ')',
-                    'url' => ['/admin/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ],
-        ],
-    ]);
+	if(!Yii::$app->user->isGuest){
+		echo ButtonDropdown::widget([
+			'label' => $BAdmins->name,
+			'options' => [
+				'class' => 'btn-link',
+				'style' => 'margin: 8px'
+			],
+			'dropdown' => [
+				'items' => [
+					['label' => 'Изменить данные', 'url' => '/admin/userchange'],
+				],
+			],
+		]);
+		echo Nav::widget([
+			'options' => ['class' => 'navbar-nav navbar-right'],
+			'items' => [
+				[
+					'label' => 'Выйти',
+					'url' => ['/admin/logout'],
+					'linkOptions' => ['data-method' => 'post']
+				],
+			],
+		]);
+	}
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+		<?php Pjax::begin(); ?>
         <?= $content ?>
+		<?php Pjax::end(); ?>
     </div>
 </div>
-
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>

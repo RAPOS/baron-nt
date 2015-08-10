@@ -17,7 +17,8 @@ $config = [
         'user' => [
             'identityClass' => 'app\modules\admin\models\BAdmins',
             'enableAutoLogin' => true,
-			'loginUrl' => ['admin/login'],
+			'loginUrl' => ['/admin/login'],
+			'returnUrl' => ['/admin'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -56,7 +57,7 @@ $config = [
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
                 '<module:\w+>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
-                '<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>', */
+                <module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',*/
 			],
 		],
     ],

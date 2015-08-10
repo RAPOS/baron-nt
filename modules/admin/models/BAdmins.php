@@ -42,8 +42,8 @@ class BAdmins extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'password' => 'Password',
+            'name' => 'Логин',
+            'password' => 'Пароль',
         ];
     }
 	
