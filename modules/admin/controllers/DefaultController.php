@@ -57,6 +57,10 @@ class DefaultController extends Controller
     }
 	
 	public function actionUserchange(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
 		$BAdmins = BAdmins::findOne(Yii::$app->user->id);
 		return $this->render('userchange', ['model' => $BAdmins]);
 	}

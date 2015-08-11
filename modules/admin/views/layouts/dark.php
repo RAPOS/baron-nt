@@ -31,13 +31,14 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<?php Pjax::begin(); ?>
 <div class="wrap">
     <?php
     NavBar::begin([
         'brandLabel' => $BSettings->title,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'yellow-nav navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
 	if(!Yii::$app->user->isGuest){
@@ -70,11 +71,12 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-		<?php Pjax::begin(); ?>
+		
         <?= $content ?>
-		<?php Pjax::end(); ?>
+		
     </div>
 </div>
+<?php Pjax::end(); ?>
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
