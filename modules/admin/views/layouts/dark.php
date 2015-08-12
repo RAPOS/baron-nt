@@ -31,11 +31,10 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php Pjax::begin(); ?>
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => $BSettings->title,
+        'brandLabel' => 'Панель управления',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -68,15 +67,37 @@ AppAsset::register($this);
     NavBar::end();
     ?>
     <div class="container">
+		<?php Pjax::begin(); ?>
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-		
-        <?= $content ?>
-		
+		<aside>
+			<menu>
+			<?echo Nav::widget([
+				'options' => ['class' => 'navbar-left'],
+				'items' => [
+					[
+						'label' => 'Приветствие',
+						'url' => ['/admin/bhello'],
+					],
+					[
+						'label' => 'Настройки сайта',
+						'url' => ['/admin/settings'],
+					],
+					[
+						'label' => 'Изменить пароль',
+						'url' => ['/admin/userchange'],
+					],
+				],
+			]);?>
+			</menu>
+		</aside>
+		<section>
+			<?= $content ?>
+		</section>
+		<?php Pjax::end(); ?>
     </div>
 </div>
-<?php Pjax::end(); ?>
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>

@@ -5,6 +5,7 @@ namespace app\modules\admin\controllers;
 use yii;
 use yii\web\Controller;
 use app\modules\admin\models\BAdmins;
+use app\modules\admin\models\BHello;
 use app\modules\admin\models\BSettings;
 
 class DefaultController extends Controller
@@ -63,5 +64,35 @@ class DefaultController extends Controller
 		
 		$BAdmins = BAdmins::findOne(Yii::$app->user->id);
 		return $this->render('userchange', ['model' => $BAdmins]);
+	}
+	
+	public function actionBhello(){
+		$model = new BHello;
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				// form inputs are valid, do something here
+				return;
+			}
+		}
+
+		return $this->render('bhello', [
+			'model' => $model,
+		]);
+	}
+	
+	public function actionSettings(){
+		$model = new BSettings;
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				// form inputs are valid, do something here
+				return;
+			}
+		}
+
+		return $this->render('settings', [
+			'model' => $model,
+		]);
 	}
 }

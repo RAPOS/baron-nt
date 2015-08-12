@@ -28,7 +28,7 @@ class BSettings extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'title', 'keywords', 'description'], 'required'],
+            [['title', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
             [['title'], 'string', 'max' => 64],
             [['keywords', 'description'], 'string', 'max' => 256],
@@ -43,9 +43,9 @@ class BSettings extends \yii\db\ActiveRecord
     {
         return [
             'site' => 'Site',
-            'title' => 'Title',
-            'keywords' => 'Keywords',
-            'description' => 'Description',
+            'title' => 'Заголовок',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Описание',
         ];
     }
 }
