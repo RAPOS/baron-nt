@@ -62,17 +62,38 @@ class DefaultController extends Controller
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-		$BAdmins = BAdmins::findOne(Yii::$app->user->id);
-		return $this->render('userchange', ['model' => $BAdmins]);
+		$model = BAdmins::findOne(Yii::$app->user->id);
+		if(!$model){
+			$model = new BAdmins;
+		}
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				$model->site = 1;
+				$model->password = md5(md5($model->password));
+				$model->save();
+				
+				return $this->render('userchange', ['model' => $model, 'success' => true]);
+			}
+		}
+
+		return $this->render('userchange', ['model' => $model]);
 	}
 	
 	public function actionBhello(){
-		$model = new BHello;
-
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
+		$model = BHello::find()->where(['site' => 1])->one();
+		if(!$model){
+			$model = new BHello;
+		}
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
-				// form inputs are valid, do something here
-				return;
+				$model->site = 1;
+				$model->save();
+				
+				return $this->render('bhello', ['model' => $model, 'success' => true]);
 			}
 		}
 
@@ -82,12 +103,19 @@ class DefaultController extends Controller
 	}
 	
 	public function actionSettings(){
-		$model = new BSettings;
-
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
+		$model = BSettings::find()->where(['site' => 1])->one();;
+		if(!$model){
+			$model = new BAdmins;
+		}
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
-				// form inputs are valid, do something here
-				return;
+				$model->site = 1;
+				
+				return $this->render('settings', ['model' => $model, 'success' => true]);
 			}
 		}
 

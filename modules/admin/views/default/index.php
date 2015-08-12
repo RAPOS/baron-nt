@@ -5,6 +5,4 @@ use yii\bootstrap\NavBar;
 
 <div class="admin-default-index">
 
-	
-	
 </div>

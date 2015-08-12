@@ -67,12 +67,8 @@ AppAsset::register($this);
     NavBar::end();
     ?>
     <div class="container">
-		<?php Pjax::begin(); ?>
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-		<aside>
-			<menu>
+		<?if(!Yii::$app->user->isGuest){?>
+		<aside class="admin_panel">
 			<?echo Nav::widget([
 				'options' => ['class' => 'navbar-left'],
 				'items' => [
@@ -90,12 +86,15 @@ AppAsset::register($this);
 					],
 				],
 			]);?>
-			</menu>
 		</aside>
-		<section>
+		<?}?>
+		<section class="admin_content">
+			<?= Breadcrumbs::widget([
+				'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+				'homeLink'=>['label' => 'Панель управления', 'url' => '/admin'],
+			]) ?>
 			<?= $content ?>
 		</section>
-		<?php Pjax::end(); ?>
     </div>
 </div>
 <footer class="footer">
