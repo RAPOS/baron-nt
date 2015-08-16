@@ -7,6 +7,7 @@ use yii\web\Controller;
 use app\modules\admin\models\BAdmins;
 use app\modules\admin\models\BHello;
 use app\modules\admin\models\BSettings;
+use app\modules\admin\models\BTypesOfMassage;
 
 class DefaultController extends Controller
 {
@@ -57,28 +58,6 @@ class DefaultController extends Controller
 		return $this->goHome();
     }
 	
-	public function actionUserchange(){
-		if(Yii::$app->user->isGuest){
-			$this->redirect(Yii::$app->user->loginUrl);
-		}
-		
-		$model = BAdmins::findOne(Yii::$app->user->id);
-		if(!$model){
-			$model = new BAdmins;
-		}
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->password = md5(md5($model->password));
-				$model->save();
-				
-				return $this->render('userchange', ['model' => $model, 'success' => true]);
-			}
-		}
-
-		return $this->render('userchange', ['model' => $model]);
-	}
-	
 	public function actionBhello(){
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
@@ -101,6 +80,10 @@ class DefaultController extends Controller
 			'model' => $model,
 		]);
 	}
+
+	public function actionMassage(){
+		$this->redirect('/admin/massage/');
+	}
 	
 	public function actionSettings(){
 		if(Yii::$app->user->isGuest){
@@ -122,5 +105,27 @@ class DefaultController extends Controller
 		return $this->render('settings', [
 			'model' => $model,
 		]);
+	}
+	
+	public function actionUserchange(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
+		$model = BAdmins::findOne(Yii::$app->user->id);
+		if(!$model){
+			$model = new BAdmins;
+		}
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				$model->site = 1;
+				$model->password = md5(md5($model->password));
+				$model->save();
+				
+				return $this->render('userchange', ['model' => $model, 'success' => true]);
+			}
+		}
+
+		return $this->render('userchange', ['model' => $model]);
 	}
 }

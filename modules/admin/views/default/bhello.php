@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = 'Приветствие';
 			]
 		]);?>
         <div class="form-group">
-            <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 			<?= Html::a('Отменить', ['/admin'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>

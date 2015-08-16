@@ -23,8 +23,8 @@ $this->params['breadcrumbs'][] = 'Изменить пароль';
         <?= $form->field($model, 'password')->passwordInput(['value' => ''])->label('Введите новый пароль:')?>
     
         <div class="form-group">
-            <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
-           <?= Html::a('Отменить', ['/admin'], ['class'=>'btn btn-primary']) ?>
+			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+			<?= Html::a('Отменить', ['/admin'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 
