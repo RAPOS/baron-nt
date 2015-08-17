@@ -9,7 +9,31 @@ use dosamigos\tinymce\TinyMce;
 
 <div class="btypes-of-massage-form">
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+	<div class="clearfix">
+		<div style="float: left;">
+			<?= $form->field($model, 'name')->textInput([
+				'style' => 'width: 500px;',
+				'maxlength' => true
+			]) ?>
+		</div>
+		<div style="float: left;margin-left: 50px;">
+			<?= $form->field($model, 'duration')->dropDownList (
+				[
+					'' => '',
+					'60' => '60',
+					'60' => '60',
+					'50' => '50',
+					'40' => '40',
+					'30' => '30',
+					'20' => '20',
+					'10' => '10',
+				],
+				[
+					'style' => 'width: 70px;',
+				]
+			)?>
+		</div>
+	</div>
 	<?= $form->field($model, 'description')->widget(TinyMce::className(), [
 		'options' => ['rows' => 6],
 		'language' => 'ru',
@@ -21,8 +45,7 @@ use dosamigos\tinymce\TinyMce;
 			],
 			'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 		]
-	]);?>	
-    <?= $form->field($model, 'duration')->textInput() ?>
+	]);?>
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>

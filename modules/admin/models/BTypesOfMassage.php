@@ -29,7 +29,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description', 'duration', 'keywords'], 'required'],
+            [['name', 'description', 'keywords'], 'required'],
             [['description'], 'string'],
             [['duration'], 'integer'],
             [['name'], 'string', 'max' => 64],
