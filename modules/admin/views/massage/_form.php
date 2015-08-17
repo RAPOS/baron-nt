@@ -29,7 +29,7 @@ use dosamigos\tinymce\TinyMce;
 					'10' => '10',
 				],
 				[
-					'style' => 'width: 70px;',
+					'style' => 'width: 100px;',
 				]
 			)?>
 		</div>
