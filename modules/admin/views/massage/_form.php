@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
+use kartik\widgets\FileInput;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BTypesOfMassage */
 /* @var $form yii\widgets\ActiveForm */
@@ -34,6 +35,7 @@ use dosamigos\tinymce\TinyMce;
 			)?>
 		</div>
 	</div>
+    <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
 	<?= $form->field($model, 'description')->widget(TinyMce::className(), [
 		'options' => ['rows' => 6],
 		'language' => 'ru',
@@ -46,7 +48,22 @@ use dosamigos\tinymce\TinyMce;
 			'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 		]
 	]);?>
-    <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
+	<?=FileInput::widget([
+		'name' => 'image[]',
+		'language' => 'ru',
+		'options' => [
+			'multiple' => true,
+			'accept' => 'image/*',
+		],
+		'pluginOptions' => [
+			'previewFileType' => 'image',
+			'uploadUrl' => ['/admin/upload'],
+			'browseClass' => 'btn btn-success',
+			'uploadClass' => 'btn btn-info',
+			'removeClass' => 'btn btn-danger',
+			'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
+		]
+	]);?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>
 		<?= Html::a('Отменить', ['/admin/massage/'], ['class'=>'btn btn-primary']) ?>

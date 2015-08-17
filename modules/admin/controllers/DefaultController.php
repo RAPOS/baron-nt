@@ -128,4 +128,8 @@ class DefaultController extends Controller
 
 		return $this->render('userchange', ['model' => $model]);
 	}
+	
+	public function actionUpload(){
+		print_r($_FILES);die();
+	}
 }
