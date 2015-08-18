@@ -81,7 +81,6 @@ class DefaultController extends Controller
 
 	public function actionLogin()
 	{
-
 		$model = new BAdmins;
 		if(Yii::$app->request->post()){
 			$model->attributes = Yii::$app->request->post('BAdmins');
