@@ -4,9 +4,9 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\BMainpage;
-use app\models\BVacancy;
-use app\models\BRules;
+use app\modules\admin\models\BMainpage;
+use app\modules\admin\models\BVacancy;
+use app\modules\admin\models\BRules;
 use app\modules\admin\models\BAdmins;
 use app\modules\admin\models\BSettings;
 use app\modules\admin\models\BTypesOfMassage;
@@ -24,16 +24,14 @@ class DefaultController extends Controller
         return $this->render('index');
     }
 
-    public function actionRules()
-    {
-						
+    public function actionRules() {
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
-		
 		$model = BRules::find()->where(['site' => 1])->one();
 		
 		if(!$model){
+		print_r($_POST);
 			$model = new BRules;
 		}
 		

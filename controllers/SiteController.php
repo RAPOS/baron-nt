@@ -6,11 +6,9 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\BMainpage;
-use app\models\BRules;
-use app\models\BVacancy;
+use app\modules\admin\models\BMainpage;
+use app\modules\admin\models\BRules;
+use app\modules\admin\models\BVacancy;
 
 class SiteController extends Controller
 {
@@ -88,38 +86,15 @@ class SiteController extends Controller
     public function actionVacancy()
     {
 		$model = BVacancy::find()->where(['site' => 1])->one();
-		
-		$title = $model->title;
-			
-		$text  = $model->text;
-	
-        return $this->render('vacancy', ['title' => $title, 'text' => $text]);
+
+        return $this->render('vacancy', ['model' => $model]);
     }	
 
     public function actionRules()
     {
 		$model = BRules::find()->where(['site' => 1])->one();
-		
-		$title = $model->title;
-			
-		$text  = $model->text;
 	
-        return $this->render('rules', ['title' => $title, 'text' => $text]);
-    }
-	
-    public function actionLogin()
-    {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        return $this->render('rules', ['model' => $model]);
     }
 
     public function actionLogout()
