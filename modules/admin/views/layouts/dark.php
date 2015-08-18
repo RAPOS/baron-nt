@@ -74,7 +74,7 @@ AppAsset::register($this);
 				'items' => [
 					[
 						'label' => 'Приветствие',
-						'url' => ['/admin/bhello'],
+						'url' => ['/admin/bmainpage'],
 					],
 					[
 						'label' => 'Виды массажа',

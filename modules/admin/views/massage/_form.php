@@ -64,6 +64,7 @@ use kartik\widgets\FileInput;
 			'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
 		]
 	]);?>
+	<br>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>
 		<?= Html::a('Отменить', ['/admin/massage/'], ['class'=>'btn btn-primary']) ?>

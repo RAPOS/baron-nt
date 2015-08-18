@@ -5,7 +5,7 @@ namespace app\modules\admin\controllers;
 use yii;
 use yii\web\Controller;
 use app\modules\admin\models\BAdmins;
-use app\modules\admin\models\BHello;
+use app\modules\admin\models\BMainpage;
 use app\modules\admin\models\BSettings;
 use app\modules\admin\models\BTypesOfMassage;
 
@@ -58,25 +58,25 @@ class DefaultController extends Controller
 		return $this->goHome();
     }
 	
-	public function actionBhello(){
+	public function actionBmainpage(){
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-		$model = BHello::find()->where(['site' => 1])->one();
+		$model = BMainpage::find()->where(['site' => 1])->one();
 		if(!$model){
-			$model = new BHello;
+			$model = new BMainpage;
 		}
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
 				$model->site = 1;
 				$model->save();
 				
-				return $this->render('bhello', ['model' => $model, 'success' => true]);
+				return $this->render('bmainpage', ['model' => $model, 'success' => true]);
 			}
 		}
 
-		return $this->render('bhello', [
+		return $this->render('bmainpage', [
 			'model' => $model,
 		]);
 	}
