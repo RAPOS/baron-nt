@@ -86,15 +86,23 @@ class SiteController extends Controller
     public function actionVacancy()
     {
 		$model = BVacancy::find()->where(['site' => 1])->one();
+		
+		$title = $model->title;
+		
+		$text = $model->text;
 
-        return $this->render('vacancy', ['model' => $model]);
+        return $this->render('vacancy', ['title' => $title, 'text' => $text]);
     }	
 
     public function actionRules()
     {
 		$model = BRules::find()->where(['site' => 1])->one();
 	
-        return $this->render('rules', ['model' => $model]);
+		$title = $model->title;
+		
+		$text = $model->text;
+		
+	    return $this->render('rules', ['title' => $title, 'text' => $text]);
     }
 
     public function actionLogout()
