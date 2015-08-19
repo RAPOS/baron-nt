@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = 'Правила';
     <?php $form = ActiveForm::begin(); ?>
         <?= $form->field($model, 'title') ?>
 		<?= $form->field($model, 'text')->widget(TinyMce::className(), [
-			'options' => ['rows' => 20],
+			'options' => ['rows' => 6],
 			'language' => 'ru',
 			'clientOptions' => [
 				'plugins' => [
