@@ -299,7 +299,7 @@ aside{
 	float:right;
 }
 /***tegs**/
-#w0.navbar-inverse {display:none !important;}
+/* #w0.navbar-inverse {display:none !important;} */
 /***main_our_masters***/
 #main_our_masters .master_link img{
 	width:330px;
