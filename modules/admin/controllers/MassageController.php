@@ -77,8 +77,6 @@ class MassageController extends Controller
         $model = new BTypesOfMassage();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-				$model->translate = str2url($_POST['BTypesOfMassage[name]']);
-				$model->save();
             return $this->redirect(['view', 'id' => $model->id_massage]);
         } else {
             return $this->render('create', [
