@@ -90,7 +90,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 			// удаляем начальные и конечные '-'
 			$str = trim($str, "-");
 			
-			$this->translate = $this->str2url($str);
+			$this->translate = $str;
 			return true;
 		} else {
 			return false;
