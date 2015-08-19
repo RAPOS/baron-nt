@@ -82,7 +82,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 				'Э' => 'E',   'Ю' => 'Yu',  'Я' => 'Ya',
 			);
 			// переводим в транслит
-			$str =  strtr($this->name, $converter);
+			$str = strtr($this->name, $converter);
 			// в нижний регистр
 			$str = strtolower($str);
 			// заменям все ненужное нам на "-"
