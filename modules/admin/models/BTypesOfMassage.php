@@ -56,14 +56,14 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 	public function beforeSave($insert)
 	{
 		if (parent::beforeSave($insert)) {
-			$this->translate = BTypesOfMassage::str2url($this->name);
+			$this->translate = $this->str2url($this->name);
 			return true;
 		} else {
 			return false;
 		}
 	}
 	
-	public function rus2translit($string) {
+	function rus2translit($string) {
 		$converter = array(
 			'а' => 'a',   'б' => 'b',   'в' => 'v',
 			'г' => 'g',   'д' => 'd',   'е' => 'e',
@@ -92,9 +92,9 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 		return strtr($string, $converter);
 	}
 	
-	public function str2url($str) {
+	function str2url($str) {
 		// переводим в транслит
-		$str = BTypesOfMassage::rus2translit($str);
+		$str = $this->rus2translit($str);
 		// в нижний регистр
 		$str = strtolower($str);
 		// заменям все ненужное нам на "-"
