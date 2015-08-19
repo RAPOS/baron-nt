@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id_massage
  * @property string $name
+ * @property string $translate
  * @property string $description
  * @property integer $duration
  * @property string $keywords
@@ -29,10 +30,10 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description', 'keywords'], 'required'],
+            [['name', 'description', 'duration', 'keywords'], 'required'],
             [['description'], 'string'],
             [['duration'], 'integer'],
-            [['name'], 'string', 'max' => 64],
+            [['name', 'translate'], 'string', 'max' => 64],
             [['keywords'], 'string', 'max' => 256]
         ];
     }
@@ -44,10 +45,11 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
     {
         return [
             'id_massage' => 'Id Massage',
-            'name' => 'Название',
-            'description' => 'Описание',
-            'duration' => 'Длительность',
-            'keywords' => 'Ключевые слова',
+            'name' => 'Name',
+            'translate' => 'Translate',
+            'description' => 'Description',
+            'duration' => 'Duration',
+            'keywords' => 'Keywords',
         ];
     }
 }
