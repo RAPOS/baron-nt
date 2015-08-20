@@ -96,3 +96,4 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 			return false;
 		}
 	}
+}
