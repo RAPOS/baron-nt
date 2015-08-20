@@ -31,7 +31,6 @@ class BImages extends \yii\db\ActiveRecord
         return [
             [['name', 'extension'], 'required'],
             [['name'], 'string', 'max' => 32],
-            [['page'], 'string', 'max' => 10],
             [['path'], 'string', 'max' => 256],
             [['extension'], 'string', 'max' => 5]
         ];
@@ -45,7 +44,6 @@ class BImages extends \yii\db\ActiveRecord
         return [
             'id_img' => 'Id Img',
             'name' => 'Name',
-            'page' => 'Page',
             'path' => 'Path',
             'extension' => 'Extension',
         ];
