@@ -1,36 +1,31 @@
 <?php
-
-	$this->title = 'Мужской спа-салон «Барон»';
-
+	use yii\widgets\LinkPager;
+	use app\modules\admin\models\BImages;
+	$this->title = 'Мужской спа-салон «Барон»';	
 ?>
 	<div id="content" class="clearfix">
 		<div id="programs_page">
 			<h1>Программы</h1>
-			<div id="programs_image">					
-				<a href="/oneprogram.php">
-					<img src="/images/program-6.png" alt="">
-					<p>Классика</p>						
-				</a>					
-				<a href="/oneprogram.php">
-					<img src="/images/program-4.png" alt="">	
-					<p>Фантазия</p>							
-				</a>					
-				<a href="/oneprogram.php">
-					<img src="/images/program-2.png" alt="">	
-					<p>Багира</p>						
-				</a>					
-				<a href="/oneprogram.php">
-					<img src="/images/program-1.png" alt="">	
-					<p>Амур</p>							
-				</a>					
-				<a href="/oneprogram.php">
-					<img src="/images/program-5.png" alt="">	
-					<p>Пенный микс</p>						
-				</a>					
-				<a href="/oneprogram.php">
-					<img src="/images/program-3.png" alt="">	
-					<p>Барон</p>						
-				</a>
+			<div id="programs_image">		
+				<?foreach($model as $programs){
+					$model_images = json_decode($programs->images);
+					$BImages = BImages::findOne($model_images[0]);
+					if(file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+						$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+						$image->resize(280, 200);
+						$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
+						?>			
+						<a href="/oneprogram.php">
+							<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+							<p><?=$programs->name?></p>						
+						</a>
+				<?	}
+				}
+				
+				echo LinkPager::widget([
+					'pagination' => $page,
+				]);
+			?>			
 			</div>	
 			<h2>Описание</h2>
 			<div id="programs_text">

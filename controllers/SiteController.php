@@ -6,9 +6,12 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use yii\data\Pagination;
+use yii\widgets\LinkPager;
 use app\modules\admin\models\BMainpage;
 use app\modules\admin\models\BRules;
 use app\modules\admin\models\BVacancy;
+use app\modules\admin\models\BTypesOfMassage;
 
 class SiteController extends Controller
 {
@@ -73,9 +76,30 @@ class SiteController extends Controller
         return $this->render('interior');
     }
 	
-    public function actionPrograms()
+    public function actionPrograms_detail()
     {
-        return $this->render('programs');
+        return $this->render('programs_detail');
+    }
+		
+    public function actionPrograms($getName = null)
+    {
+		if(!$getName){
+			$query = BTypesOfMassage::find();
+
+			$countQuery = clone $query;
+			$pages = new Pagination(['totalCount' => $countQuery->count()]);
+			$models = $query->offset($pages->offset)
+				->limit($pages->limit)
+				->all();
+
+			return $this->render('programs', [
+				 'model' => $models,
+				 'page' => $pages,
+			]);
+		} else {
+			return $this->render('programs_details');
+		}
+		
     }	
 
     public function actionMasters()
