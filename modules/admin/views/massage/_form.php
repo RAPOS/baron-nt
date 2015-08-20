@@ -63,9 +63,18 @@ use kartik\widgets\FileInput;
 			'removeClass' => 'btn btn-danger',
 			'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
 			'maxFileCount' => 3,
+			'onclick' => 'onclick="delete_preview($(this))"',
 		],
 		'pluginEvents' => [
-			'fileuploaded' => 'function(data){
+			'filecleared' => 'function(event){
+				$(".file-input input[name=\'id_img[]\']").each(function(){
+					$(this).remove();
+				});
+				console.log("ok");
+			}',
+			'fileuploaded' => 'function(event, data, previewId, index) {
+				var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
+				$(".file-input").append(\'<input hidden type="text" name="id_img[]" data-name="\'+files[0]["name"]+\'" value="\'+response["id_img"]+\'"/>\');
 				console.log(data);
 			}',
 		]
@@ -76,5 +85,4 @@ use kartik\widgets\FileInput;
 		<?= Html::a('Отменить', ['/admin/massage/'], ['class'=>'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
-
 </div>

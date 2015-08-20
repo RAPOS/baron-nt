@@ -185,7 +185,6 @@ class DefaultController extends Controller
 	}
 	
 	public function actionUpload(){
-		//print_r($_SERVER);die();
 		if($_FILES){
 			for($i=0;$i<count($_FILES);$i++){
 				if(!in_array(exif_imagetype($_FILES['image']['tmp_name'][$i]), array(IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG))){
@@ -207,9 +206,12 @@ class DefaultController extends Controller
 					if(move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'].'/files/uploads/'.$name.'.'.$path_info['extension'])){
 						$image = Yii::$app->image->load(Yii::getAlias('@webroot/files/uploads/'.$name.'.'.$path_info['extension']));
 						$image->resize(800, NULL, \yii\image\drivers\Image::AUTO);
+						$mark = Yii::$app->image->load(Yii::getAlias('@webroot/images/label.png'));
+						$image->watermark($mark, TRUE, TRUE);
 						$image->save(Yii::getAlias('@webroot/'.$BImages->path));
+						
 						unlink($_SERVER['DOCUMENT_ROOT'].'/files/uploads/'.$name.'.'.$path_info['extension']);
-						print 1;
+						print json_encode(array('id_img' => $BImages->id_img));
 					}
 				}
 			}

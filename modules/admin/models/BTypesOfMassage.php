@@ -13,6 +13,7 @@ use Yii;
  * @property string $description
  * @property integer $duration
  * @property string $keywords
+ * @property string $images
  */
 class BTypesOfMassage extends \yii\db\ActiveRecord
 {
@@ -31,7 +32,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'description', 'duration', 'keywords'], 'required'],
-            [['description'], 'string'],
+            [['description', 'images'], 'string'],
             [['duration'], 'integer'],
             [['name', 'translate'], 'string', 'max' => 64],
             [['keywords'], 'string', 'max' => 256]
@@ -50,6 +51,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
             'description' => 'Description',
             'duration' => 'Duration',
             'keywords' => 'Keywords',
+            'images' => 'Images',
         ];
     }
 	

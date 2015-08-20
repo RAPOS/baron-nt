@@ -288,7 +288,7 @@
             '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
             '    <div class="clearfix"></div>\n' +
             '</div>',
-        tActionDelete = '<button type="button" class="kv-file-remove {removeClass}" ' +
+        tActionDelete = '<button type="button" onclick="delete_preview($(this))" class="kv-file-remove {removeClass}" ' +
             'title="{removeTitle}"{dataUrl}{dataKey}>{removeIcon}</button>\n',
         tActionUpload = '<button type="button" class="kv-file-upload {uploadClass}" title="{uploadTitle}">' +
             '   {uploadIcon}\n</button>\n',

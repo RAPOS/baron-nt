@@ -77,6 +77,8 @@ class MassageController extends Controller
         $model = new BTypesOfMassage();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			$model->images = json_encode($_POST[id_img]);
+			$model->save();
             return $this->redirect(['view', 'id' => $model->id_massage]);
         } else {
             return $this->render('create', [
@@ -100,6 +102,8 @@ class MassageController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			$model->images = json_encode($_POST[id_img]);
+			$model->save();
             return $this->redirect(['view', 'id' => $model->id_massage]);
         } else {
             return $this->render('update', [

@@ -5,7 +5,6 @@ $(document).ready(function(){
 		$('#menu a[href='+location.pathname+']').addClass('active');
 	*/}
 
-	
 	$(".zoomimage").fancybox();
 	
 	$(".slideimage").owlCarousel({
@@ -86,4 +85,13 @@ function image_next(thisis){
 	thisis.parents('.master_images').find('.main_image a').attr('href', next_link);
 	thisis.parents('.master_images').find('.main_image img').attr('src', next_link);
 	thisis.parents('.master_images').find('.preview_image').append('<img onclick="change_image($(this));" src="'+active_link+'">');	
+}
+
+function delete_preview(thisis){
+	name = thisis.parents('.file-actions').siblings('.file-caption-name').text();
+	if($('.file-input input[data-name="'+name+'"]').length){
+		for(i=0;i<$('.file-input input[data-name="'+name+'"]').length;i++){
+			$('.file-input input[data-name="'+name+'"]').eq(i).remove();
+		}
+	}
 }
