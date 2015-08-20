@@ -55,10 +55,11 @@ $config = [
                     'controller' => ['api' => 'api']
                 ],
 				''=>'site/index',
+				'admin' => 'admin/default/index',
 				'admin/<action:\w+>' => 'admin/default/<action>',
 				'admin/massage/<action:\w+>' => 'admin/massage/<action>',
-				'<action:\w+>'=>'site/<action>',
 				'<action:\w+>/<name:\w+>'=>'site/<action>',
+				'<action:\w+>'=>'site/<action>',
 			],
 		],
     ],
