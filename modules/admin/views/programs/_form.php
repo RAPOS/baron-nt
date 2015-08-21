@@ -85,7 +85,7 @@ if(!$array_image && !$array_image_cfg){
 			'maxFileCount' => 3,
 			'initialPreview' => $array_image,
 			'initialPreviewConfig' => $array_image_cfg,
-			//'initialPreviewShowDelete' => true,
+			'overwriteInitial' => false,
 		],
 		'pluginEvents' => [
 			'filecleared' => 'function(event){

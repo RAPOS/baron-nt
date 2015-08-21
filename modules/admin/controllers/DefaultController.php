@@ -195,7 +195,7 @@ class DefaultController extends Controller
 					return false;
 				}
 				$path_info = pathinfo($_FILES['image']['name'][$i]);
-				$name = md5($path_info['filename']);
+				$name = md5($path_info['filename'].md5(rand(1,1000000)));
 				$dir = 'files/images';
 				
 				$BImages = new BImages;
