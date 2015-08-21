@@ -101,13 +101,17 @@ class ProgramsController extends Controller
 		}
 		
         $model = $this->findModel($id);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			if(isset($_POST[id_img])){
+			if($_POST[id_img]){
 				$array_id_img = json_decode($model->images);
-				$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
-				$model->images = json_encode(array_unique($new_pre_images));
-				$model->save();
+				if(is_array($array_id_img)){
+					$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
+					$model->images = json_encode(array_unique($new_pre_images));
+					$model->save();
+				} else {
+					$model->images = json_encode($_POST[id_img]);
+					$model->save();
+				}
 			}
             return $this->redirect(['view', 'id' => $model->id_massage]);
         } else {
