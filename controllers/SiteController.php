@@ -88,12 +88,12 @@ class SiteController extends Controller
 
 			$countQuery = clone $query;
 			$pages = new Pagination(['totalCount' => $countQuery->count()]);
-			$models = $query->offset($pages->offset)
+			$model = $query->offset($pages->offset)
 				->limit($pages->limit)
 				->all();
 
 			return $this->render('programs', [
-				 'model' => $models,
+				 'model' => $model,
 				 'page' => $pages,
 			]);
 		} else {
