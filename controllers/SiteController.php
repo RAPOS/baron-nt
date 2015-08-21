@@ -81,8 +81,9 @@ class SiteController extends Controller
         return $this->render('programs_detail');
     }
 		
-    public function actionPrograms($getName = null)
+    public function actionPrograms()
     {
+		$getName = $_GET['name'];
 		if(!$getName){
 			$query = BTypesOfMassage::find();
 
@@ -97,7 +98,7 @@ class SiteController extends Controller
 				 'page' => $pages,
 			]);
 		} else {
-			return $this->render('programs_details');
+			return $this->render('programs_detail');
 		}
 		
     }	
