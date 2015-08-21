@@ -45,13 +45,13 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_massage' => 'Id Massage',
-            'name' => 'Name',
-            'translate' => 'Translate',
-            'description' => 'Description',
-            'duration' => 'Duration',
-            'keywords' => 'Keywords',
-            'images' => 'Images',
+            'id_massage' => 'ID',
+            'name' => 'Название',
+            'translate' => 'Транслит',
+            'description' => 'Описание',
+            'duration' => 'Продолжительность',
+            'keywords' => 'Ключевые слова',
+            'images' => 'Изображения',
         ];
     }
 	
