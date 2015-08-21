@@ -15,7 +15,7 @@ $this->title = 'Мужской спа-салон «Барон»';
 					$image->resize(280, 200);
 					$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
 					?>			
-					<a href="/oneprogram.php">
+					<a href="/programs/<?=$programs->translate?>">
 						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
 						<p><?=$programs->name?></p>						
 					</a>
