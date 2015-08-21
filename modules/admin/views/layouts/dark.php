@@ -77,8 +77,8 @@ AppAsset::register($this);
 						'url' => ['/admin/mainpage'],
 					],
 					[
-						'label' => 'Виды массажа',
-						'url' => ['/admin/massage/'],
+						'label' => 'Программы',
+						'url' => ['/admin/programs'],
 					],
 					[
 						'label' => 'Правила',

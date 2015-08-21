@@ -140,6 +140,10 @@ class DefaultController extends Controller
 		$this->redirect('/admin/massage/');
 	}
 	
+	public function actionPrograms(){
+		$this->redirect('/admin/programs/');
+	}
+	
 	public function actionSettings(){
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
