@@ -58,6 +58,22 @@ $(document).ready(function(){
 		}, 600);
 		$('.some_reviews').fadeIn('slow');
 	}, 7000);	
+	
+	$('#sortable').sortable({
+		distance: 5,
+		cursor: 'move',
+		stop: function (event, ui){
+			$('#sortable td:nth-child(1)').each(function(i, val){
+				$(this).text(i+1);
+			});
+			s = $('#sortable').sortable('toArray', {attribute: 'data-key'});
+			$.post('/admin/programs/sort', {'id_massage[]':s});
+		},
+		out: function (event, ui){
+			$( ".selector" ).sortable( "disable" );
+		}
+	});
+    $('#sortable').disableSelection();
 });
 
 function change_image(thisis){	

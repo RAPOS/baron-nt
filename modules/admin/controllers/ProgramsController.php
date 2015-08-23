@@ -41,6 +41,9 @@ class ProgramsController extends Controller
 		
         $dataProvider = new ActiveDataProvider([
             'query' => BTypesOfMassage::find(),
+			'sort' => [
+				'defaultOrder' => ['sort' => SORT_ASC],
+			],
         ]);
 
         return $this->render('index', [
@@ -180,6 +183,22 @@ class ProgramsController extends Controller
 			}
 		} else {
 			return 'Не пришли данные для удаления';
+		}
+	}
+	
+	public function actionSort(){
+		if(!$_POST){
+			return $this->redirect('/admin/programs');
+		}
+		
+		if($_POST['id_massage']){
+			foreach($_POST['id_massage'] as $key => $id_massage){
+				$ids[] ="(".$id_massage.",".($key+1).")";
+				$model = $this->findModel($id_massage);
+				$model->sort = $key+1;
+				$model->save();
+			}
+			print json_encode(array('msg' => 'ОК'));
 		}
 	}
 }

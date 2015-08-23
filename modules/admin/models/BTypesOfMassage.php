@@ -33,7 +33,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
         return [
             [['name', 'description', 'duration', 'keywords'], 'required'],
             [['description', 'images'], 'string'],
-            [['duration'], 'integer'],
+            [['duration', 'sort'], 'integer'],
             [['name', 'translate'], 'string', 'max' => 64],
             [['keywords'], 'string', 'max' => 256]
         ];
@@ -52,6 +52,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
             'duration' => 'Продолжительность',
             'keywords' => 'Ключевые слова',
             'images' => 'Изображения',
+            'sort' => 'Сотировка',
         ];
     }
 	
@@ -93,6 +94,11 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 			$str = trim($str, "-");
 			
 			$this->translate = $str;
+			
+			if($this->isNewRecord){
+				$sort_count = self::find()->count();
+				$this->sort = $sort_count + 1;
+			}
 			return true;
 		} else {
 			return false;

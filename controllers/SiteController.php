@@ -91,6 +91,7 @@ class SiteController extends Controller
 			$pages = new Pagination(['totalCount' => $countQuery->count()]);
 			$model = $query->offset($pages->offset)
 				->limit($pages->limit)
+				->orderBy('sort ASC')
 				->all();
 
 			return $this->render('programs', [

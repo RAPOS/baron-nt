@@ -50,6 +50,7 @@ class GridView extends BaseListView
     const FILTER_POS_FOOTER = 'footer';
     const FILTER_POS_BODY = 'body';
 
+	public $tBodyAttr;
     /**
      * @var string the default data column class if the class name is not explicitly specified when configuring a data column.
      * Defaults to 'yii\grid\DataColumn'.
@@ -483,9 +484,9 @@ class GridView extends BaseListView
         if (empty($rows)) {
             $colspan = count($this->columns);
 
-            return "<tbody>\n<tr><td colspan=\"$colspan\">" . $this->renderEmpty() . "</td></tr>\n</tbody>";
+            return "<tbody ".$this->tBodyAttr.">\n<tr><td colspan=\"$colspan\">" . $this->renderEmpty() . "</td></tr>\n</tbody>";
         } else {
-            return "<tbody>\n" . implode("\n", $rows) . "\n</tbody>";
+            return "<tbody ".$this->tBodyAttr.">\n" . implode("\n", $rows) . "\n</tbody>";
         }
     }
 

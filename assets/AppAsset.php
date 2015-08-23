@@ -23,6 +23,7 @@ class AppAsset extends AssetBundle
     public $js = [
 		'js/index.js',
 		'js/owl.carousel.js',
+		'js/jquery-ui.js',
 		'js/jquery.fancybox.js'
     ];
     public $depends = [

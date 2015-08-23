@@ -13,17 +13,13 @@ $this->params['breadcrumbs'][] = 'Программы';
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+		'tBodyAttr' => 'id="sortable"',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id_massage',
             'name',
             'translate',
-            //'description:ntext',
             'duration',
-            // 'keywords',
-            // 'images:ntext',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
