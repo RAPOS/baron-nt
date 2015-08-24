@@ -16,6 +16,11 @@
 					$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
 					?>			
 					<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+				<?} else {?>
+					<a href="/programs/<?=$programs->translate?>">
+						<img src="/images/default_massage.png" width="280" height="200" alt="">
+						<p><?=$programs->name?></p>						
+					</a>
 				<?}?>
 
 		<div class="info">			
