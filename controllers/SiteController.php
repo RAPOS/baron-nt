@@ -104,7 +104,9 @@ class SiteController extends Controller
 		} else {
 						
 			$model = BTypesOfMassage::find()->where(['translate' => $getName])->one();
-
+			if(!$model){
+				return $this->render('error', ['name' => 'Not Found (#404)', 'message' => 'Страница не найдена']);
+			}
 			return $this->render('programs_detail', ['model' => $model]);
 		}	
 	}
