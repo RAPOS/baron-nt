@@ -100,11 +100,14 @@ class SiteController extends Controller
 				 'model' => $model,
 				 'page' => $pages,
 			]);
+			
 		} else {
-			return $this->render('programs_detail');
-		}
-		
-    }	
+						
+			$model = BTypesOfMassage::find()->where(['translate' => $getName])->one();
+
+			return $this->render('programs_detail', ['model' => $model]);
+		}	
+	}
 
     public function actionMasters()
     {
