@@ -89,9 +89,9 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
 			// в нижний регистр
 			$str = strtolower($str);
 			// заменям все ненужное нам на "-"
-			$str = preg_replace('~[^-a-z0-9_]+~u', '-', $str);
+			$str = preg_replace('~[^-a-z0-9_]+~u', '_', $str);
 			// удаляем начальные и конечные '-'
-			$str = trim($str, "-");
+			$str = trim($str, "_");
 			
 			$this->translate = $str;
 			
