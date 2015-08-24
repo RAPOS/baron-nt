@@ -62,6 +62,9 @@ $config = [
 				'<action:\w+>/<name:\w+>'=>'site/<action>',
 			],
 		],
+		'general' => [
+			'class' => 'app\extensions\general',
+		],
     ],
 	'modules'=> [
 		'admin' => [
