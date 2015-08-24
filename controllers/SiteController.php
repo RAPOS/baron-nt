@@ -81,7 +81,7 @@ class SiteController extends Controller
         return $this->render('programs_detail');
     }
 		
-    public function actionPrograms()
+    public function actionPrograms($page = 0)
     {
 		$getName = $_GET['name'];
 		if(!$getName){
@@ -89,6 +89,8 @@ class SiteController extends Controller
 
 			$countQuery = clone $query;
 			$pages = new Pagination(['totalCount' => $countQuery->count()]);
+			$pages->defaultPageSize = 9;
+			$pages->page = $page - 1;
 			$model = $query->offset($pages->offset)
 				->limit($pages->limit)
 				->orderBy('sort ASC')

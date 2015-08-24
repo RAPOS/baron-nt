@@ -19,7 +19,12 @@ $this->title = 'Мужской спа-салон «Барон»';
 						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
 						<p><?=$programs->name?></p>						
 					</a>
-			<?	}
+			<?	} else {?>
+					<a href="/programs/<?=$programs->translate?>">
+						<img src="/images/default_massage.png" width="280" height="200" alt="">
+						<p><?=$programs->name?></p>						
+					</a>
+				<?}
 			}
 			
 			echo LinkPager::widget([
