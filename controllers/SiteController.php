@@ -88,7 +88,7 @@ class SiteController extends Controller
 			$query = BTypesOfMassage::find();
 
 			$countQuery = clone $query;
-			$pages = new Pagination(['totalCount' => $countQuery->count()]);
+			$pages = new Pagination(['totalCount' => $countQuery->count(), 'PAGESIZE' => 6]);
 			$pages->defaultPageSize = 9;
 			$pages->page = $page - 1;
 			$model = $query->offset($pages->offset)

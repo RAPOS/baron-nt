@@ -1350,6 +1350,35 @@ a.desc:after {
 .admin_panel, .admin_content {float: left;}
 .admin_panel a {display: block;border: 1px solid #000;padding: 10px;width: 220px;}
 /* .admin_panel a:last-child {border-bottom: 1px solid #000;} */
+.paginate .pagination{
+	margin-left:15px;
+}
+.paginate .pagination li a {
+	background: rgba(191,164,90, 0.7);
+	color:white;
+	margin-left:5px !important;
+	margin-right:5px !important;
+}
+
+.paginate .prev.disabled span{
+	background: rgba(220,203,154, 0.7);	
+	color:white;
+	border:1px solid white !important;
+	font-weight:bold;
+    margin-right: 5px;	
+}
+.paginate .next.disabled span{
+	background: rgba(220,203,154, 0.7);	
+	color:white;
+	border:1px solid white !important;
+	font-weight:bold;	
+	margin-left: 5px;
+}
+.paginate .pagination li.active  a {
+	border:1px solid white !important;
+	font-weight:bold;
+	background: rgba(220,203,154, 0.7);	
+}
 
 @media (max-width: 1000px) {
 	.review_background:after {

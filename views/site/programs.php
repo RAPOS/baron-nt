@@ -25,12 +25,12 @@ $this->title = 'Мужской спа-салон «Барон»';
 						<p><?=$programs->name?></p>						
 					</a>
 				<?}
-			}
-			
-			echo LinkPager::widget([
-				'pagination' => $page,
-			]);
-		?>			
+			}?>
+			<div class="paginate clearfix">
+				<?echo LinkPager::widget([
+					'pagination' => $page,
+				]);?>
+			</div>		
 		</div>	
 		<h2>Описание</h2>
 		<div id="programs_text">
