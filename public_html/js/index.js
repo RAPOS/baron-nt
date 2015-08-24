@@ -61,6 +61,7 @@ $(document).ready(function(){
 	
 	$('#sortable').sortable({
 		distance: 5,
+		axis: 'y',
 		cursor: 'move',
 		stop: function (event, ui){
 			$('#sortable td:nth-child(1)').each(function(i, val){

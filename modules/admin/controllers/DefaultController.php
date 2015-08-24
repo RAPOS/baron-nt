@@ -207,6 +207,9 @@ class DefaultController extends Controller
 					
 					$path = $dir.'/'.$BImages->id_img;
 					mkdir($_SERVER['DOCUMENT_ROOT'].'/'.$path, 0777, true);
+					if(!file_exists($_SERVER['DOCUMENT_ROOT'].'/files/uploads/')){
+						mkdir($_SERVER['DOCUMENT_ROOT'].'/files/uploads/');
+					}
 					if(move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'].'/files/uploads/'.$name.'.'.$path_info['extension'])){
 						$image = Yii::$app->image->load(Yii::getAlias('@webroot/files/uploads/'.$name.'.'.$path_info['extension']));
 						$image->resize(800, NULL, \yii\image\drivers\Image::AUTO);
