@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\BImages;
+use app\modules\admin\models\BMainpageMassage;
 use app\modules\admin\models\BTypesOfMassage;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -158,6 +159,10 @@ class ProgramsController extends Controller
     }
 	
 	public function actionDeleteimages(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
 		if($_POST){
 			$new_array_images = array();
 			for($i=0;$i<count($_POST['id_images']);$i++){
@@ -187,6 +192,10 @@ class ProgramsController extends Controller
 	}
 	
 	public function actionSort(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
 		if(!$_POST){
 			return $this->redirect('/admin/programs');
 		}
@@ -200,5 +209,30 @@ class ProgramsController extends Controller
 			}
 			print json_encode(array('msg' => 'ОК'));
 		}
+	}
+	
+	public function actionDescription(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+
+		$model = BMainpageMassage::find()->where(['site' => 1])->one();
+		
+		if(!$model){
+			$model = new BMainpageMassage;
+		}
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				$model->site = 1;
+				$model->save();
+				
+				return $this->render('vacancy', ['model' => $model, 'success' => true]);
+			}
+		}
+
+		return $this->render('description', [
+			'model' => $model,
+		]);
 	}
 }

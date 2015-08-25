@@ -54,7 +54,6 @@ class DefaultController extends Controller
 	
     public function actionVacancy()
     {
-				
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
 		}

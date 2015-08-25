@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\BImages;
+use app\modules\admin\models\BMainpageMasters;
 use app\modules\admin\models\BMasters;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -200,5 +201,30 @@ class MastersController extends Controller
 			}
 			print json_encode(array('msg' => 'ОК'));
 		}
+	}
+	
+	public function actionDescription(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+
+		$model = BMainpageMasters::find()->where(['site' => 1])->one();
+		
+		if(!$model){
+			$model = new BMainpageMasters;
+		}
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				$model->site = 1;
+				$model->save();
+				
+				return $this->render('vacancy', ['model' => $model, 'success' => true]);
+			}
+		}
+
+		return $this->render('description', [
+			'model' => $model,
+		]);
 	}
 }
