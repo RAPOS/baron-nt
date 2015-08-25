@@ -101,7 +101,6 @@ class MastersController extends Controller
 		}
 		
         $model = $this->findModel($id);
-		
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			if($_POST[id_img]){
 				$array_id_img = json_decode($model->images);
