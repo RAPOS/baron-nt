@@ -18,7 +18,7 @@ if(!$model->isNewRecord){
 			'caption' => $BImages->name,
 			'url' => '/admin/programs/deleteimages',
 			'key' =>  $BImages->id_img,
-			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_massage' => $model->id_massage, 'id_images' => $array_id_images],
+			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_master' => $model->id_master, 'id_images' => $array_id_images],
 		];
 	}
 }

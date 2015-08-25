@@ -10,7 +10,7 @@ use Yii;
 use yii\base\Component;
 
 class general extends Component {
-	public function getPrint_r($obj) {
+	public function Print_r($obj) {
 		print '<pre>';
 		print_r($obj);
 		print '</pre>';
