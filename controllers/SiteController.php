@@ -13,6 +13,8 @@ use app\modules\admin\models\BRules;
 use app\modules\admin\models\BVacancy;
 use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BTypesOfMassage;
+use app\modules\admin\models\BMainpageMassage;
+use app\modules\admin\models\BMainpageMasters;
 use app\modules\admin\models\BMasters;
 use app\modules\admin\models\BFeedback;
 
@@ -113,9 +115,12 @@ class SiteController extends Controller
 				->orderBy('sort ASC')
 				->all();
 
+			$BMainpageMassage = BMainpageMassage::find()->where(['site' => 1])->one();
+			
 			return $this->render('programs', [
 				 'model' => $model,
 				 'page' => $pages,
+				 'description' => $BMainpageMassage->text,
 			]);
 			
 		} else {				
@@ -144,9 +149,12 @@ class SiteController extends Controller
 				->orderBy('sort ASC')
 				->all();
 
+			$BMainpageMasters = BMainpageMasters::find()->where(['site' => 1])->one();
+			
 			return $this->render('masters', [
-				 'model' => $model,
-				 'page' => $pages,
+				'model' => $model,
+				'page' => $pages,
+				'description' = $BMainpageMasters->text,
 			]);
 			
 		} else {				
