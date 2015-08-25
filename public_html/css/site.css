@@ -631,6 +631,7 @@ aside{
 }
 #feedback form {
 	margin-top:20px;
+	width: 270px;
 }
 #feedback input[name=name] {
 	width:250px;
@@ -649,18 +650,22 @@ aside{
 	margin-top:20px;
 	color:#a9a9bb;
 }
-#feedback input[type=button] {
+#feedback .help-block {
+	display:none;
+}
+#feedback .btn {
     width: 200px;
-    margin: 0 auto;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 21px;
-    margin-top: 20px;
 	background:#bfa45a;
-	color:White;
+	color:white;
 	border:none;
 	cursor:pointer;
+}
+#feedback .form-group:last-child {
+	text-align:center;
 }
 #feedback select {
 	width:250px;
@@ -671,10 +676,21 @@ aside{
 	margin-top:20px;
 	color:#a9a9bb;
 }
+#feedback label {
+	display:none;
+}
+#feedback #bfeedback-verifycode-image {
+	border-radius:4px;
+}
+#feedback #bfeedback-verifycode {
+    margin-left: 60px;
+    width: 135px;
+    height: 50px;
+}
 #feedback textarea {
 	color:#a9a9bb;
 	resize:none;
-	width:250px;
+	width:270px;
 	height:140px;
 	padding-left:10px;
 	padding-top:5px;
@@ -1378,7 +1394,7 @@ a.desc:after {
 .paginate .pagination li.active  a {
 	border:1px solid white !important;
 	font-weight:bold;
-	background: rgba(220,203,154, 0.7);	
+	background: rgba(173, 144, 64, 0.7);	
 }
 
 @media (max-width: 1000px) {

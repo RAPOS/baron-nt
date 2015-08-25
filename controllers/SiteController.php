@@ -14,6 +14,7 @@ use app\modules\admin\models\BVacancy;
 use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BTypesOfMassage;
 use app\modules\admin\models\BMasters;
+use app\modules\admin\models\BFeedback;
 
 class SiteController extends Controller
 {
@@ -76,14 +77,17 @@ class SiteController extends Controller
 		$title = $model->title;
 		
 		$text = $model->text;
-
+		
+		$feedback = new BFeedback;
+		
         return $this->render('contacts', [
             'model' => $model,
 			'title' => $title, 
 			'text' => $text,
+			'feedback' => $feedback,
         ]);
     }	
-
+	
     public function actionInterior()
     {
         return $this->render('interior');
@@ -185,18 +189,4 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    public function actionContact()
-    {
-        $model = new ContactForm();
-		
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-            return $this->refresh();
-        }
-    }
-
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
 }
