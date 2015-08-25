@@ -5,7 +5,7 @@ use kartik\widgets\FileInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BTypesOfMassage */
+/* @var $model app\modules\admin\models\BMasters */
 /* @var $form yii\widgets\ActiveForm */
 $array_image = array();
 $array_image_cfg = array();
@@ -28,33 +28,46 @@ if(!$array_image && !$array_image_cfg){
 }
 ?>
 
-<div class="btypes-of-massage-form">
+<div class="bmasters-form">
     <?php $form = ActiveForm::begin(); ?>
 	<div class="clearfix">
 		<div style="float: left;">
 			<?= $form->field($model, 'name')->textInput(
 				[
 					'maxlength' => true,
-					'style' => 'width: 500px;',
+					'style' => 'width: 250px;',
 				]
 			) ?>
 		</div>
-		<div style="float: left;margin-left: 50px;">
-			<?= $form->field($model, 'duration')->dropDownList (
-				[
-					'' => '',
-					'60' => '60',
-					'60' => '60',
-					'50' => '50',
-					'40' => '40',
-					'30' => '30',
-					'20' => '20',
-					'10' => '10',
-				],
-				[
-					'style' => 'width: 100px;',
-				]
-			)?>
+		<div style="float: left;margin-left: 150px;">
+			<?= $form->field($model, 'new')->checkbox() ?>
+			<?= $form->field($model, 'tour')->checkbox() ?>
+		</div>
+	</div>
+	<div class="clearfix">
+		<div style="float: left;">
+			<?= $form->field($model, 'age')->textInput([
+				'style' => 'width: 50px;',
+				'maxlength' => 2,
+			]) ?>
+		</div>
+		<div style="float: left;margin-left: 150px;">
+			<?= $form->field($model, 'growth')->textInput([
+				'style' => 'width: 50px;',
+				'maxlength' => 3,
+			]) ?>
+		</div>
+		<div style="float: left;margin-left: 150px;">
+			<?= $form->field($model, 'weight')->textInput([
+				'style' => 'width: 50px;',
+				'maxlength' => 3,
+			]) ?>
+		</div>
+		<div style="float: left;margin-left: 150px;">
+			<?= $form->field($model, 'breast')->textInput([
+				'style' => 'width: 50px;',
+				'maxlength' => 2,
+			]) ?>
 		</div>
 	</div>
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
@@ -84,7 +97,7 @@ if(!$array_image && !$array_image_cfg){
 			'uploadClass' => 'btn btn-info',
 			'removeClass' => 'btn btn-danger',
 			'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
-			'maxFileCount' => 1,
+			'maxFileCount' => 3,
 			'initialPreview' => $array_image,
 			'initialPreviewConfig' => $array_image_cfg,
 			'overwriteInitial' => false,
@@ -107,8 +120,8 @@ if(!$array_image && !$array_image_cfg){
 	]);?>
 	<br>
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>
-		<?= Html::a('Отменить', ['/admin/programs'], ['class'=>'btn btn-primary']) ?>
+        <?=Html::submitButton($model->isNewRecord ?  'Сохранить' : 'Обновить', ['class' => 'btn btn-success'])?>
+		<?= Html::a('Отменить', ['/admin/masters'], ['class'=>'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

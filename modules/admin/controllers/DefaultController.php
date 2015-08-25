@@ -135,13 +135,13 @@ class DefaultController extends Controller
 			'model' => $model,
 		]);
 	}
-
-	public function actionMassage(){
-		$this->redirect('/admin/massage/');
-	}
 	
 	public function actionPrograms(){
 		$this->redirect('/admin/programs/');
+	}
+
+	public function actionMasters(){
+		$this->redirect('/admin/masters/');
 	}
 	
 	public function actionSettings(){

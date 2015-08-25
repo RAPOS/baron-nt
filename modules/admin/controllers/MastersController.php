@@ -3,17 +3,16 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\modules\admin\models\BImages;
-use app\modules\admin\models\BTypesOfMassage;
+use app\modules\admin\models\BMasters;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProgramsController implements the CRUD actions for BTypesOfMassage model.
+ * MastersController implements the CRUD actions for BMasters model.
  */
-class ProgramsController extends Controller
+class MastersController extends Controller
 {
 	public $layout = 'dark';
 	
@@ -30,7 +29,7 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Lists all BTypesOfMassage models.
+     * Lists all BMasters models.
      * @return mixed
      */
     public function actionIndex()
@@ -40,7 +39,7 @@ class ProgramsController extends Controller
 		}
 		
         $dataProvider = new ActiveDataProvider([
-            'query' => BTypesOfMassage::find(),
+            'query' => BMasters::find(),
 			'sort' => [
 				'defaultOrder' => ['sort' => SORT_ASC],
 			],
@@ -52,7 +51,7 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Displays a single BTypesOfMassage model.
+     * Displays a single BMasters model.
      * @param integer $id
      * @return mixed
      */
@@ -68,7 +67,7 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Creates a new BTypesOfMassage model.
+     * Creates a new BMasters model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
@@ -78,12 +77,10 @@ class ProgramsController extends Controller
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-        $model = new BTypesOfMassage();
+        $model = new BMasters();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			$model->images = json_encode($_POST[id_img]);
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->id_massage]);
+            return $this->redirect(['view', 'id' => $model->id_master]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -92,7 +89,7 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Updates an existing BTypesOfMassage model.
+     * Updates an existing BMasters model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -116,7 +113,7 @@ class ProgramsController extends Controller
 					$model->save();
 				}
 			}
-            return $this->redirect(['view', 'id' => $model->id_massage]);
+            return $this->redirect(['view', 'id' => $model->id_master]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -125,7 +122,7 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Deletes an existing BTypesOfMassage model.
+     * Deletes an existing BMasters model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -142,15 +139,15 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Finds the BTypesOfMassage model based on its primary key value.
+     * Finds the BMasters model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return BTypesOfMassage the loaded model
+     * @return BMasters the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = BTypesOfMassage::findOne($id)) !== null) {
+        if (($model = BMasters::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
@@ -165,7 +162,7 @@ class ProgramsController extends Controller
 					$new_array_images[] = $_POST['id_images'][$i];
 				}
 			}
-			$model = $this->findModel($_POST['id_massage']);
+			$model = $this->findModel($_POST['id_master']);
 			$model->images = json_encode($new_array_images);
 			if($model->save()){
 				$BImages = BImages::findOne($_POST['delete_id_img']);
@@ -188,13 +185,13 @@ class ProgramsController extends Controller
 	
 	public function actionSort(){
 		if(!$_POST){
-			return $this->redirect('/admin/programs');
+			return $this->redirect('/admin/masters');
 		}
 		
-		if($_POST['id_massage']){
-			foreach($_POST['id_massage'] as $key => $id_massage){
-				$ids[] ="(".$id_massage.",".($key+1).")";
-				$model = $this->findModel($id_massage);
+		if($_POST['id_master']){
+			foreach($_POST['id_master'] as $key => $id_master){
+				$ids[] ="(".$id_master.",".($key+1).")";
+				$model = $this->findModel($id_master);
 				$model->sort = $key+1;
 				$model->save();
 			}

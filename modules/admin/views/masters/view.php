@@ -4,15 +4,15 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BTypesOfMassage */
+/* @var $model app\modules\admin\models\BMasters */
 
-$this->params['breadcrumbs'][] = ['label' => 'Программы', 'url' => ['/admin/programs']];
+$this->params['breadcrumbs'][] = ['label' => 'Мастера', 'url' => ['/admin/masters']];
 $this->params['breadcrumbs'][] = $model->name;
 ?>
-<div class="btypes-of-massage-view" style="width: 700px;">
+<div class="bmasters-view" style="width: 700px;">
     <p>
-        <?= Html::a('Редактировать', ['update', 'id' => $model->id_massage], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить', ['delete', 'id' => $model->id_massage], [
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id_master], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id_master], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Вы уверены, что хотите удлаить?',
@@ -23,13 +23,19 @@ $this->params['breadcrumbs'][] = $model->name;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id_massage',
+            'id_master',
             'name',
             'translate',
             'description:ntext',
-            'duration',
             'keywords',
             'images:ntext',
+            'sort',
+            'age',
+            'growth',
+            'weight',
+            'breast',
+            'new',
+            'tour',
         ],
     ]) ?>
 </div>

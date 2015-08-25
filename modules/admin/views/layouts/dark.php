@@ -81,6 +81,10 @@ AppAsset::register($this);
 						'url' => ['/admin/programs'],
 					],
 					[
+						'label' => 'Мастера',
+						'url' => ['/admin/masters'],
+					],
+					[
 						'label' => 'Правила',
 						'url' => ['/admin/rules'],
 					],
