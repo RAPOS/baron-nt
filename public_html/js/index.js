@@ -1,9 +1,13 @@
 $(document).ready(function(){
 	if(location.pathname == '/'){
 		$('#menu a:eq(0)').addClass('active');		
-	}else{/*
-		$('#menu a[href='+location.pathname+']').addClass('active');
-	*/}
+	}else{
+		$('#menu a').each(function(){
+			if ($(this).attr('href') == location.pathname) {
+				$(this).addClass('active')
+			}
+		});
+	}
 
 	$(".zoomimage").fancybox();
 	
