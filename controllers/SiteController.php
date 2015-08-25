@@ -71,7 +71,6 @@ class SiteController extends Controller
 
     public function actionContacts()
     {
-
 		$model = BContacts::find()->where(['site' => 1])->one();
 	
 		$title = $model->title;
@@ -80,12 +79,31 @@ class SiteController extends Controller
 		
 		$feedback = new BFeedback;
 		
-        return $this->render('contacts', [
-            'model' => $model,
-			'title' => $title, 
-			'text' => $text,
-			'feedback' => $feedback,
-        ]);
+		if($_POST['BFeedback[name]']){
+			if ($feedback->load(Yii::$app->request->post())) {
+				if ($feedback->validate()) {
+					$feedback->date = date();
+					$feedback->save();
+					
+					return $this->render('contacts', [
+						'model' => $model,
+						'title' => $title, 
+						'text' => $text,
+						'feedback' => $feedback,
+						'success' => true,
+					]);	
+				}
+			}		
+		}else{
+			return $this->render('contacts', [
+				'model' => $model,
+				'title' => $title, 
+				'text' => $text,
+				'feedback' => $feedback,
+			]);			
+		}
+
+		
     }	
 	
     public function actionInterior()
