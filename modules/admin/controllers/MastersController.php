@@ -3,6 +3,7 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
+use app\modules\admin\models\BImages;
 use app\modules\admin\models\BMasters;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -80,6 +81,8 @@ class MastersController extends Controller
         $model = new BMasters();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			$model->images = json_encode($_POST[id_img]);
+			$model->save();
             return $this->redirect(['view', 'id' => $model->id_master]);
         } else {
             return $this->render('create', [
