@@ -4,7 +4,8 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->params['breadcrumbs'][] = 'Программы';
+$this->title = 'Программы';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="btypes-of-massage-index" style="width: 700px;">
     <p>

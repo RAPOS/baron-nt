@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BAdmins */
 /* @var $form ActiveForm */
+$this->title = 'Вход в панель управления';
 ?>
 <div class="login">
     <?php $form = ActiveForm::begin(); ?>

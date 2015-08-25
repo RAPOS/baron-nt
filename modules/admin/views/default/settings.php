@@ -5,7 +5,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BSettings */
 /* @var $form ActiveForm */
-$this->params['breadcrumbs'][] = 'Настройки сайта';
+$this->title = 'Настройки сайта';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="settings" style="width: 700px;">
 	<?if($success){

@@ -1,6 +1,5 @@
 <?
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+$this->title = 'Панель управления';
 ?>
 
 <div class="admin-default-index">

@@ -4,8 +4,8 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->params['breadcrumbs'][] = 'Мастера';
+$this->title = 'Мастера';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bmasters-index" style="width: 700px;">
     <p>

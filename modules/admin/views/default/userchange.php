@@ -6,7 +6,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BAdmins */
 /* @var $form ActiveForm */
-$this->params['breadcrumbs'][] = 'Изменить пароль';
+$this->title = 'Изменить данные входа';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="userchange" style="width: 700px;">
 	<?if($success){

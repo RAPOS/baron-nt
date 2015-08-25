@@ -6,7 +6,8 @@ use dosamigos\tinymce\TinyMce;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BHello */
 /* @var $form ActiveForm */
-$this->params['breadcrumbs'][] = 'Правила';
+$this->title = 'Правила';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bhello" style="width: 700px;">
 	<?if($success){

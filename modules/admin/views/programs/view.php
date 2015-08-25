@@ -5,9 +5,9 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BTypesOfMassage */
-
+$this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Программы', 'url' => ['/admin/programs']];
-$this->params['breadcrumbs'][] = $model->name;
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="btypes-of-massage-view" style="width: 700px;">
     <p>

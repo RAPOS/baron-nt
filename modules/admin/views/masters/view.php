@@ -5,9 +5,9 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BMasters */
-
+$this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Мастера', 'url' => ['/admin/masters']];
-$this->params['breadcrumbs'][] = $model->name;
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bmasters-view" style="width: 700px;">
     <p>
