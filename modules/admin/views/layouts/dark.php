@@ -77,6 +77,10 @@ AppAsset::register($this);
 						'url' => ['/admin/mainpage'],
 					],
 					[
+						'label' => 'Мастера',
+						'url' => ['/admin/masters'],
+					],
+					[
 						'label' => 'Программы',
 						'url' => ['/admin/programs'],
 					],
@@ -91,6 +95,10 @@ AppAsset::register($this);
 					[
 						'label' => 'Вакансии',
 						'url' => ['/admin/vacancy'],
+					],
+					[
+						'label' => 'Контакты',
+						'url' => ['/admin/contacts'],
 					],
 					[
 						'label' => 'Настройки сайта',

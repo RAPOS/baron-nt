@@ -297,6 +297,7 @@ aside #main_sertificates a img{
 }
 aside{
 	float:right;
+	margin-right:20px;
 }
 /***tegs**/
 /* #w0.navbar-inverse {display:none !important;} */
@@ -607,7 +608,7 @@ aside{
 }
 #main_page {
 	float:left;
-	margin-left:30px;
+	margin-left:45px;
 }
 /***main_page***/
 
@@ -618,7 +619,7 @@ aside{
 
 /***feedback***/
 #feedback {
-	padding-right:55px;
+	padding-right:65px;
 }
 #feedback h2{
     font-family: MonAmourTwo;
@@ -652,8 +653,8 @@ aside{
     width: 200px;
     margin: 0 auto;
     padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 21px;
     margin-top: 20px;
 	background:#bfa45a;

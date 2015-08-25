@@ -11,6 +11,7 @@ use yii\widgets\LinkPager;
 use app\modules\admin\models\BMainpage;
 use app\modules\admin\models\BRules;
 use app\modules\admin\models\BVacancy;
+use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BTypesOfMassage;
 
 class SiteController extends Controller
@@ -68,7 +69,18 @@ class SiteController extends Controller
 
     public function actionContacts()
     {
-        return $this->render('contacts');
+
+		$model = BContacts::find()->where(['site' => 1])->one();
+	
+		$title = $model->title;
+		
+		$text = $model->text;
+
+        return $this->render('contacts', [
+            'model' => $model,
+			'title' => $title, 
+			'text' => $text,
+        ]);
     }	
 
     public function actionInterior()
@@ -148,14 +160,11 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
+		
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
-
             return $this->refresh();
         }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
     }
 
     public function actionAbout()

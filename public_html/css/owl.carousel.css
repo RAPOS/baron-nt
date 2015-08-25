@@ -79,7 +79,7 @@
 	height: 51px; 
 	position: absolute;
 	top: 215px;
-	left: 5px;
+	left: 25px;
 	cursor:pointer;
 	z-index:999;
 }
@@ -97,7 +97,7 @@
 	position: absolute;
 	width: 37px;
 	top: 215px;
-	left: 565px;
+	left: 585px;
 	cursor:pointer;
 	z-index:999;
 }
