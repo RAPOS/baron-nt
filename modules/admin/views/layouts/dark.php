@@ -14,8 +14,6 @@ use app\modules\admin\models\BAdmins;
 use app\modules\admin\models\BSettings;
 
 $BAdmins = BAdmins::findOne(Yii::$app->user->id);
-$BSettings = BSettings::find()->where(['site' => 1])->one();
-$this->title = 'Авторизация - '.$BSettings->title;
 
 AppAsset::register($this);
 ?>
@@ -101,7 +99,7 @@ AppAsset::register($this);
 						'url' => ['/admin/settings'],
 					],
 					[
-						'label' => 'Изменить пароль',
+						'label' => 'Изменить данные входа',
 						'url' => ['/admin/userchange'],
 					],
 				],
