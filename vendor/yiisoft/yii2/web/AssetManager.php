@@ -208,7 +208,9 @@ class AssetManager extends Component
         parent::init();
         $this->basePath = Yii::getAlias($this->basePath);
         if (!is_dir($this->basePath)) {
-            throw new InvalidConfigException("The directory does not exist: {$this->basePath}");
+			if(!mkdir($this->basePath, 0777, true)){
+				throw new InvalidConfigException("The directory does not exist: {$this->basePath}");
+			}
         } elseif (!is_writable($this->basePath)) {
             throw new InvalidConfigException("The directory is not writable by the Web process: {$this->basePath}");
         } else {
