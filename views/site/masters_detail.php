@@ -1,19 +1,32 @@
+<?
+	use app\modules\admin\models\BImages;
+?>
 <div id="content" class="clearfix">
 
 	<div id="onemaster_page" class="clearfix">
 
-		<h1>Василиса</h1>
+		<h1><?=$model->name?></h1>
 
 		<div class="master_images">
 
 			<div class="main_image">					
 
 				<a class="zoomimage" rel="master" href="/images/master.png">
-
-					<img src="/images/master.png" alt="">
+				<?$model_images = json_decode($model->images);
+					$BImages = BImages::findOne($model_images[0]);
+					if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+						$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+						$image->resize(280, 200);
+						$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
+						?>			
+						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+					<?} else {?>
+						<a href="/programs/<?=$masters->translate?>">
+							<img src="/images/default_master.png" width="280" height="200" alt="">					
+						</a>
+					<?}?>
 
 				</a>						
-
 				<div class="image-prev" onclick="image_prev($(this));"></div>
 
 				<div class="image-next" onclick="image_next($(this));"></div>
@@ -34,17 +47,17 @@
 
 		<div class="info">			
 
-			<p>Возраст: <span>24</span> </p>
+			<p>Р’РѕР·СЂР°СЃС‚: <span><?=$model->age?></span> </p>
 
-			<p>Грудь: <span>2</span></p>
+			<p>Р“СЂСѓРґСЊ: <span><?=$model->breast?></span></p>
 
-			<p>Рост: <span>165</span></p>	
+			<p>Р РѕСЃС‚: <span><?=$model->growth?></span></p>	
 
-			<p>Вес: <span>50</span></p>	
+			<p>Р’РµСЃ: <span><?=$model->weight?></span></p>	
 
-			<p>Описание:</p>	
+			<p>РћРїРёСЃР°РЅРёРµ:</p>	
 
-			<p><span>«Забыть о суете земной и вознестись на вершину блаженства возможно лишь тому, чей взор услаждают красавицы, слух ласкает музыка, а тело предстает как самая великая драгоценность». СПА салон Барон-это оазис удовольствия и покоя в мире полном суеты. Это окно в мир чувственности и блаженственности, удовольствия и безконечного наслаждения. Многим спа-салон представляется как храм блаженства: белоснежные полотенца, ароматические масла и чуткие руки мастера спа-массажа. Вы ощущаете, как нежные пальцы ласкают каждую Вашу клеточку, наполняя ее негой… СПА салон Барон ждет вас воплотить свои фантазии в реальность! Вы готовы пройти в мир блаженства? Соглашайтесь! Проведете свое время без забот и серых будней.</span></p>	
+			<p><span><?=$model->description?></span></p>	
 
 			<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
 
@@ -52,23 +65,23 @@
 
 		</div>
 
-		<div class="prev-link"><span><</span>Предыдущий мастер</div>
+		<div class="prev-link"><span><</span>РџСЂРµРґС‹РґСѓС‰РёР№ РјР°СЃС‚РµСЂ</div>
 
-		<div class="next-link">Следующий мастер<span>></span></div>
+		<div class="next-link">РЎР»РµРґСѓСЋС‰РёР№ РјР°СЃС‚РµСЂ<span>></span></div>
 
 	</div>
 
-	<h2 class="reviews_title">Отзывы</h2>
+	<h2 class="reviews_title">РћС‚Р·С‹РІС‹</h2>
 
 	<div id="reviews">
 
-		<p class="reviews_name">Андрей</p>
+		<p class="reviews_name">РђРЅРґСЂРµР№</p>
 
 		<div class="review_background">
 
-			<p class="review_text">Отличный салон!</p>
+			<p class="review_text">РћС‚Р»РёС‡РЅС‹Р№ СЃР°Р»РѕРЅ!</p>
 
-			<a>Читать далее</a>
+			<a>Р§РёС‚Р°С‚СЊ РґР°Р»РµРµ</a>
 
 		</div>
 

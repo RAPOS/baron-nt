@@ -13,6 +13,7 @@ use app\modules\admin\models\BRules;
 use app\modules\admin\models\BVacancy;
 use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BTypesOfMassage;
+use app\modules\admin\models\BMasters;
 
 class SiteController extends Controller
 {
@@ -113,19 +114,46 @@ class SiteController extends Controller
 				 'page' => $pages,
 			]);
 			
-		} else {
-						
+		} else {				
 			$model = BTypesOfMassage::find()->where(['translate' => $getName])->one();
+			
 			if(!$model){
 				return $this->render('error', ['name' => 'Not Found (#404)', 'message' => 'Страница не найдена']);
 			}
+			
 			return $this->render('programs_detail', ['model' => $model]);
 		}	
 	}
 
-    public function actionMasters()
+    public function actionMasters($page = 0)
     {
-        return $this->render('masters');
+		$getName = $_GET['name'];
+		if(!$getName){
+			$query = BMasters::find();
+
+			$countQuery = clone $query;
+			$pages = new Pagination(['totalCount' => $countQuery->count(), 'PAGESIZE' => 6]);
+			$pages->defaultPageSize = 9;
+			$pages->page = $page - 1;
+			$model = $query->offset($pages->offset)
+				->limit($pages->limit)
+				->orderBy('sort ASC')
+				->all();
+
+			return $this->render('masters', [
+				 'model' => $model,
+				 'page' => $pages,
+			]);
+			
+		} else {				
+			$model = BMasters::find()->where(['translate' => $getName])->one();
+			
+			if(!$model){
+				return $this->render('error', ['name' => 'Not Found (#404)', 'message' => 'Страница не найдена']);
+			}
+			
+			return $this->render('masters_detail', ['model' => $model]);
+		}	
     }	
 	
     public function actionVacancy()
