@@ -37,7 +37,7 @@ class BMasters extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'translate', 'description', 'keywords', 'sort', 'age', 'growth', 'weight', 'breast'], 'required'],
+            [['name', 'description', 'keywords', 'age', 'growth', 'weight', 'breast'], 'required'],
             [['description', 'images'], 'string'],
             [['sort', 'age', 'growth', 'weight', 'breast', 'new', 'tour'], 'integer'],
             [['name', 'translate'], 'string', 'max' => 64],
@@ -51,19 +51,35 @@ class BMasters extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_master' => 'Id Master',
-            'name' => 'Name',
-            'translate' => 'Translate',
-            'description' => 'Description',
-            'keywords' => 'Keywords',
-            'images' => 'Images',
-            'sort' => 'Sort',
-            'age' => 'Age',
-            'growth' => 'Growth',
-            'weight' => 'Weight',
-            'breast' => 'Breast',
-            'new' => 'New',
-            'tour' => 'Tour',
+            'id_master' => 'ID',
+            'name' => 'Название',
+            'translate' => 'Транслит',
+            'description' => 'Описание',
+            'keywords' => 'Ключевые слова',
+            'images' => 'Изображения',
+            'sort' => 'Сотировка',
+            'age' => 'Возраст',
+            'growth' => 'Рост',
+            'weight' => 'Вес',
+            'breast' => 'Бюст',
+            'new' => 'Новенькая',
+            'tour' => 'На гастролях',
         ];
     }
+	
+	/**/
+	public function beforeSave($insert)
+	{
+		if (parent::beforeSave($insert)) {
+			$this->translate = Yii::$app->general->translate($this->name);
+			
+			if($this->isNewRecord){
+				$sort_count = self::find()->count();
+				$this->sort = $sort_count + 1;
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
