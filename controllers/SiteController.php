@@ -154,7 +154,7 @@ class SiteController extends Controller
 			return $this->render('masters', [
 				'model' => $model,
 				'page' => $pages,
-				'description' = $BMainpageMasters->text,
+				'description' => $BMainpageMasters->text,
 			]);
 			
 		} else {				
