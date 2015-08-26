@@ -101,14 +101,10 @@ if(!$array_image && !$array_image_cfg){
 			'initialPreview' => $array_image,
 			'initialPreviewConfig' => $array_image_cfg,
 			'overwriteInitial' => false,
+			'showRemove' => false,
 		],
 		'pluginEvents' => [
-			'filecleared' => 'function(event){
-				$(".file-input input[name=\'id_img[]\']").each(function(){
-					$(this).remove();
-				});
-			}',
-			'fileuploaded' => 'function(event, data, previewId, index) {
+			'fileuploaded' => 'function(event, data, previewId, index){
 				var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
 				$(".file-input").append(\'<input hidden type="text" name="id_img[]" value="\'+response["id_img"]+\'"/>\');
 				$(".file-input input[name=\"id_img[]\"]").each(function(i, value){
