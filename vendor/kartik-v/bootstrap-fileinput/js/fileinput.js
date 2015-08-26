@@ -2105,7 +2105,7 @@
                 .repl('{preview}', preview)
                 .repl('{caption}', caption)
                 .repl('{upload}', self.renderUpload())
-                .repl('{remove}', self.renderRemove())
+                //.repl('{remove}', self.renderRemove())
                 .repl('{cancel}', self.renderCancel())
                 .repl('{browse}', self.renderBrowse());
         },

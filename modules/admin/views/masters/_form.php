@@ -92,6 +92,9 @@ if(!$array_image && !$array_image_cfg){
 		],
 		'pluginOptions' => [
 			'previewFileType' => 'image',
+			'previewSettings' => [
+				'image' => ['width' => 'auto', 'height' => '220px'],
+			],
 			'uploadUrl' => ['/admin/upload'],
 			'browseClass' => 'btn btn-success',
 			'uploadClass' => 'btn btn-info',
@@ -110,7 +113,14 @@ if(!$array_image && !$array_image_cfg){
 				$(".file-input input[name=\"id_img[]\"]").each(function(i, value){
 					$(this).attr("data-name", files[i]["name"]);
 				});
-				console.log(data);
+				if($(".file-input .file-preview-frame").length == 3){
+					$(".file-input .input-group").hide();
+				}
+			}',
+			'filesuccessremove' => 'function(event, id){
+				if($(".file-input .file-preview-frame").length == 3){
+					$(".file-input .input-group").show();
+				}
 			}',
 		]
 	]);?>
