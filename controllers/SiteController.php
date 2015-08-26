@@ -90,10 +90,6 @@ class SiteController extends Controller
 		$text = $model->text;
 		
 		$feedback = new BFeedback;
-		$feedback->load(Yii::$app->request->post());
-			$feedback->date = time();
-			$feedback->save();
-		Yii::$app->general->print_r($feedback->getErrors());die();
 		if ($feedback->load(Yii::$app->request->post()) && $feedback->save()){
 			$feedback->date = time();
 			$feedback->save();
