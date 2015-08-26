@@ -13,6 +13,7 @@ use app\modules\admin\models\BSettings;
 use app\modules\admin\models\BTypesOfMassage;
 use app\modules\admin\models\BVacancy;
 use app\modules\admin\models\BContacts;
+use app\modules\admin\models\BSertificates;
 
 class DefaultController extends Controller
 {
@@ -79,6 +80,32 @@ class DefaultController extends Controller
 		]);
     }
 
+    public function actionSertificate()
+    {
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+
+		$model = BSertificates::find()->where(['site' => 1])->one();
+		
+		if(!$model){
+			$model = new BSertificates;
+		}
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				$model->site = 1;
+				$model->save();
+				
+				return $this->render('sertificate', ['model' => $model, 'success' => true]);
+			}
+		}
+
+		return $this->render('sertificate', [
+			'model' => $model,
+		]);
+    }	
+	
 	public function actionContacts(){
 		
 		if(Yii::$app->user->isGuest){

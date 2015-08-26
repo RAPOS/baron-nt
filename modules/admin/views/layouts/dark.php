@@ -95,6 +95,10 @@ AppAsset::register($this);
 						'url' => ['/admin/vacancy'],
 					],
 					[
+						'label' => 'Подарочный сертификат',
+						'url' => ['/admin/sertificate'],
+					],					
+					[
 						'label' => 'Контакты',
 						'url' => ['/admin/contacts'],
 					],
