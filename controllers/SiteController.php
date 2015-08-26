@@ -73,31 +73,26 @@ class SiteController extends Controller
 
     public function actionContacts()
     {
-	
 		$model = BContacts::find()->where(['site' => 1])->one();
-	
 		$title = $model->title;
-		
 		$text = $model->text;
 		
 		$feedback = new BFeedback;
-		
-		if($_POST['BFeedback[name]']){
-			if ($feedback->load(Yii::$app->request->post())) {
-				if ($feedback->validate()) {
-					$feedback->date = date();	
-					$feedback->save();	
-				}
-			}
+		$feedback->load(Yii::$app->request->post());
+			$feedback->date = time();
+			$feedback->save();
+		Yii::$app->general->print_r($feedback->getErrors());die();
+		if ($feedback->load(Yii::$app->request->post()) && $feedback->save()){
+			$feedback->date = time();
+			$feedback->save();
 		}
 		
         return $this->render('contacts', [
-            'model' => $model,
 			'title' => $title, 
 			'text' => $text,
 			'feedback' => $feedback,
         ]);
-    }	
+    }
 	
     public function actionInterior()
     {
