@@ -12,6 +12,7 @@ use Yii;
  * @property string $translate
  * @property string $description
  * @property integer $duration
+ * @property integer $exclusive
  * @property string $keywords
  * @property string $images
  */
@@ -33,7 +34,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
         return [
             [['name', 'description', 'duration', 'keywords'], 'required'],
             [['description', 'images'], 'string'],
-            [['duration', 'sort'], 'integer'],
+            [['duration', 'sort', 'exclusive'], 'integer'],
             [['name', 'translate'], 'string', 'max' => 64],
             [['keywords'], 'string', 'max' => 256]
         ];
@@ -53,6 +54,7 @@ class BTypesOfMassage extends \yii\db\ActiveRecord
             'keywords' => 'Ключевые слова',
             'images' => 'Изображения',
             'sort' => 'Сотировка',
+            'exclusive' => 'Эксклюзивная',
         ];
     }
 	

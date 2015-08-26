@@ -35,11 +35,12 @@ if(!$array_image && !$array_image_cfg){
 			<?= $form->field($model, 'name')->textInput(
 				[
 					'maxlength' => true,
-					'style' => 'width: 500px;',
+					'style' => 'width: 400px;',
 				]
 			) ?>
 		</div>
-		<div style="float: left;margin-left: 50px;">
+
+		<div style="float: left; margin-left: 30px;">
 			<?= $form->field($model, 'duration')->dropDownList (
 				[
 					'' => '',
@@ -56,6 +57,9 @@ if(!$array_image && !$array_image_cfg){
 					'style' => 'width: 100px;',
 				]
 			)?>
+		</div>
+		<div style="float: left; margin-left: 15px; margin-top:20px;">
+			<?= $form->field($model, 'exclusive')->checkbox() ?>
 		</div>
 	</div>
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>

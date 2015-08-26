@@ -302,6 +302,13 @@ aside{
 /***tegs**/
 /* #w0.navbar-inverse {display:none !important;} */
 /***main_our_masters***/
+#main_our_masters .master_link {
+	position:relative;
+	display:none;
+}
+#main_our_masters .master_link.active {
+	display:block;
+}
 #main_our_masters .master_link img{
 	width:330px;
 	height:220px;
@@ -335,13 +342,12 @@ aside{
 #main_our_masters {
 	position:relative;
 	width:350px;
+	height:285px;
 }
 /***main_our_masters***/
-
 #main {
 	min-height: 100%;		
 }
-
 /***manu***/
 #menu a:hover {
 	color:white;

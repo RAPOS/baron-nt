@@ -32,21 +32,19 @@ $(document).ready(function(){
 		owl.next();
 	});
 	
-	setInterval(function() {
-		$('.master_link').fadeOut('slow');
-		img = $('.master_link img').attr('src');
-		setTimeout(function(){	
-			if(img == '/images/master-1.png'){
-				$('.master_link img').attr('src', '/images/master-2.png');
-				$('.master_link p').text('Виктория');
-			}else{
-				$('.master_link img').attr('src', '/images/master-1.png');
-				$('.master_link p').text('Василиса');
-			}			
-		}, 600);
-		$('.master_link').fadeIn('slow');
-	}, 5000);
+	i = 0;
 	
+	setInterval(function() {
+		count = $('.master_link').length;
+		$('.master_link').eq(i).fadeOut('slow');	
+		setTimeout(function(){	
+			i++;		
+			if(i == count){
+				i = 0;
+			}
+			$('.master_link').eq(i).fadeIn('slow');
+		}, 700);		
+	}, 6000);	
 
 	setInterval(function() {
 		$('.some_reviews').fadeOut('slow');

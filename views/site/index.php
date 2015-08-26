@@ -1,7 +1,7 @@
 <?php
 
 	/* @var $this yii\web\View */
-
+	use app\modules\admin\models\BImages;
 	$this->title = 'Мужской спа-салон «Барон»';
 
 ?>
@@ -31,21 +31,42 @@
 			<aside>
 				<div id="main_our_masters">
 					<p class="title">Наши мастера</p>
-					<a href="/masters.php" class="link">Все мастера</a>
-					<a href="/onemaster.php" class="master_link">
-						<img src="/images/master-1.png" alt="">
-						<p class="name">Василиса</p>
-					</a>
+					<a href="/masters" class="link">Все мастера</a>
+					<?for($i=0;$i<count($masters);$i++){
+						if($i==0){
+							$active = 'active';
+						}else{
+							$active = '';
+						}
+
+						$model_images = json_decode($masters[$i]->images);
+						$BImages = BImages::findOne($model_images[0]);
+						if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+							$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+							$image->resize(280, 200);
+							$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));?>
+							<a href="/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
+								<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+								<p class="name"><?=$masters[$i]->name?></p>
+							</a>
+						<?}else{?>
+								<a href="/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
+								<img src="/images/default_master.png" alt="">
+								<p class="name"><?=$masters[$i]->name?></p>
+							</a>					
+						<?}?>
+					<?}?>
+
 				</div>
 				<div id="main_actions">
 					<p class="title">Акции</p>
-					<a href="/actions.php" class="link all_list">Все акции</a>
+					<a href="/actions" class="link all_list">Все акции</a>
 					<p class="description">В дневное время скидка 20% на все программы, каждый день кроме выходных!</p>
-					<a href="/actions.php" class="link all_text">Подробнее</a>
+					<a href="/actions" class="link all_text">Подробнее</a>
 				</div>
 				<div id="main_responses">
 					<p class="title">Отзывы</p>
-					<a href="/reviews.php" class="link all_list">Все отзывы</a>
+					<a href="/reviews" class="link all_list">Все отзывы</a>
 					<div class="some_reviews">
 						<p class="reviews_name">Андрей</p>
 						<div class="review_background">
