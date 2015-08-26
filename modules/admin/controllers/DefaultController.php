@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Controller;
 use app\modules\admin\models\BAdmins;
 use app\modules\admin\models\BImages;
+use app\modules\admin\models\BInterior;
 use app\modules\admin\models\BMainpage;
 use app\modules\admin\models\BRules;
 use app\modules\admin\models\BSettings;
@@ -171,18 +172,52 @@ class DefaultController extends Controller
 		$this->redirect('/admin/masters/');
 	}
 	
+	public function actionInterior(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
+		$model = BInterior::find()->where(['site' => 1])->one();
+		if(!$model){
+			$model = new BInterior;
+		}
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			$model->site = 1;
+			if($_POST[id_img]){
+				$array_id_img = json_decode($model->images);
+				if(is_array($array_id_img)){
+					$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
+					$model->images = json_encode(array_unique($new_pre_images));
+					$model->save();
+				} else {
+					$model->images = json_encode($_POST[id_img]);
+					$model->save();
+				}
+			}
+			$model->save();
+				
+			return $this->redirect('interior', ['model' => $model, 'success' => true]);
+		}
+
+		return $this->render('interior', [
+			'model' => $model,
+		]);
+	}
+
+	
 	public function actionSettings(){
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-		$model = BSettings::find()->where(['site' => 1])->one();;
+		$model = BSettings::find()->where(['site' => 1])->one();
 		if(!$model){
-			$model = new BAdmins;
+			$model = new BSettings;
 		}
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
 				$model->site = 1;
+				$model->save();
 				
 				return $this->render('settings', ['model' => $model, 'success' => true]);
 			}
@@ -204,7 +239,6 @@ class DefaultController extends Controller
 		}
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
-				$model->site = 1;
 				$model->password = md5(md5($model->password));
 				$model->save();
 				
@@ -249,6 +283,39 @@ class DefaultController extends Controller
 					}
 				}
 			}
+		}
+	}
+	
+	public function actionDeleteimages(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
+		if($_POST){
+			$new_array_images = array();
+			for($i=0;$i<count($_POST['id_images']);$i++){
+				if($_POST['delete_id_img'] != $_POST['id_images'][$i]){
+					$new_array_images[] = $_POST['id_images'][$i];
+				}
+			}
+			$model = BInterior::find()->where(['site' => 1])->one();
+			$model->images = json_encode($new_array_images);
+			if($model->save()){
+				$BImages = BImages::findOne($_POST['delete_id_img']);
+				if($BImages->delete()){
+					if(!unlink(Yii::getAlias('@webroot/'.$_POST['delete_path']))){
+						return 'Не удалось удалить изображение локально';
+					} else {
+						return true;
+					}
+				} else {
+					return 'Не удалось удалить изображение из базы';
+				}
+			} else {
+				return 'Не удалось перезаписать изображения';
+			}
+		} else {
+			return 'Не пришли данные для удаления';
 		}
 	}
 }

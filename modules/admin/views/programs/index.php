@@ -25,3 +25,4 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 </div>
+<script>page = {name: 'programs', files_count: 1};</script>

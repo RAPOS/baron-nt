@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'options' => [
 				'class' => 'alert-success'
 			],
-			'body' => '<b>Вакансии успешно изменены!</b>'
+			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>

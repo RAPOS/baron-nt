@@ -13,7 +13,7 @@ if(!$model->isNewRecord){
 	$array_id_images = json_decode($model->images);
 	for($i=0;$i<count($array_id_images);$i++){
 		$BImages = BImages::findOne($array_id_images[$i]);
-		$array_image[] = Html::img('/'.$BImages->path, ['class'=>'file-preview-image', 'alt'=>$BImages->name, 'title'=>$BImages->name, 'style'=>'width:auto;height:160px;']);
+		$array_image[] = Html::img('/'.$BImages->path, ['class'=>'file-preview-image', 'alt'=>$BImages->name, 'title'=>$BImages->name, 'style'=>'width:auto;height:210px;']);
 		$array_image_cfg[] = [
 			'caption' => $BImages->name,
 			'url' => '/admin/programs/deleteimages',
@@ -95,18 +95,24 @@ if(!$array_image && !$array_image_cfg){
 			'previewSettings' => [
 				'image' => ['width' => 'auto', 'height' => '220px'],
 			],
-			'uploadUrl' => ['/admin/upload'],
+			'maxFileCount' => 3,
+			'validateInitialCount' => true,
+			'overwriteInitial' => false,
+			'initialPreview' => $array_image,
+			'initialPreviewConfig' => $array_image_cfg,
+			'uploadUrl' => '/admin/upload',
 			'browseClass' => 'btn btn-success',
 			'uploadClass' => 'btn btn-info',
 			'removeClass' => 'btn btn-danger',
 			'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
-			'maxFileCount' => 3,
-			'initialPreview' => $array_image,
-			'initialPreviewConfig' => $array_image_cfg,
-			'overwriteInitial' => false,
 			'showRemove' => false,
 		],
 		'pluginEvents' => [
+		   'filepredelete' => 'function(event, key) {
+				if($(".file-input .file-preview-frame").length == 3){
+					$(".file-input .input-group").show();
+				}
+			}',
 			'fileuploaded' => 'function(event, data, previewId, index){
 				var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
 				$(".file-input").append(\'<input hidden type="text" name="id_img[]" value="\'+response["id_img"]+\'"/>\');
@@ -131,3 +137,4 @@ if(!$array_image && !$array_image_cfg){
     </div>
     <?php ActiveForm::end(); ?>
 </div>
+<script>page = {name: 'masters', files_count: 3};</script>

@@ -83,6 +83,10 @@ AppAsset::register($this);
 						'url' => ['/admin/programs'],
 					],
 					[
+						'label' => 'Интерьер',
+						'url' => ['/admin/interior'],
+					],
+					[
 						'label' => 'Правила',
 						'url' => ['/admin/rules'],
 					],

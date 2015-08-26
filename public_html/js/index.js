@@ -1,4 +1,9 @@
+var page; //Объект
 $(document).ready(function(){
+	window.onload = function(){
+		init_preview_file(page);
+	}
+	
 	if(location.pathname == '/'){
 		$('#menu a:eq(0)').addClass('active');		
 	}else{
@@ -70,7 +75,11 @@ $(document).ready(function(){
 				$(this).text(i+1);
 			});
 			s = $('#sortable').sortable('toArray', {attribute: 'data-key'});
-			$.post('/admin/programs/sort', {'id_massage[]':s});
+			if(page.name == 'masters'){
+				$.post('/admin/masters/sort', {'id_master[]':s});
+			} else if(page.name == 'programs'){
+				$.post('/admin/programs/sort', {'id_massage[]':s});
+			}
 		},
 		out: function (event, ui){
 			$( ".selector" ).sortable( "disable" );
@@ -112,5 +121,11 @@ function delete_preview(thisis){
 		for(i=0;i<$('.file-input input[data-name="'+name+'"]').length;i++){
 			$('.file-input input[data-name="'+name+'"]').eq(i).remove();
 		}
+	}
+}
+
+function init_preview_file(page){
+	if($(".file-input .file-preview-frame").length == page.files_count){
+		$(".file-input .input-group").hide();
 	}
 }

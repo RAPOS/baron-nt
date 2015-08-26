@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = 'Контакты';
 			'options' => [
 				'class' => 'alert-success'
 			],
-			'body' => '<b>Контакты успешно изменены!</b>'
+			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>
