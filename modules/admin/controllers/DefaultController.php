@@ -194,6 +194,10 @@ class DefaultController extends Controller
 		$this->redirect('/admin/masters/');
 	}
 	
+	public function actionFeedback(){
+		$this->redirect('/admin/feedback/');
+	}
+	
 	public function actionInterior(){
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
