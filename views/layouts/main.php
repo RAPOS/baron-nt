@@ -29,7 +29,7 @@ AppAsset::register($this);
 		<link href="/css/owl.theme.css" rel="stylesheet" type="text/css">
 		<link href="/css/component.css" rel="stylesheet" type="text/css">
 		
-		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=f44ArjT_bgjaocuFoKidIcDfxU1SqmBM&amp;width=550&amp;height=450&amp;id=map"></script>
+		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=f44ArjT_bgjaocuFoKidIcDfxU1SqmBM&amp;width=550&amp;height=495&amp;id=map"></script>
 		<?php $this->head() ?>
 	</head>
 	<body>

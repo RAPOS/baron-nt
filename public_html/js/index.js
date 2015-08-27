@@ -13,7 +13,11 @@ $(document).ready(function(){
 			}
 		});
 	}
-
+	
+	$('.add_reviews').click(function(){
+		
+	});
+	
 	$(".zoomimage").fancybox();
 	
 	$(".slideimage").owlCarousel({

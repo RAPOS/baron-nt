@@ -586,7 +586,7 @@ aside{
 }
 #reviews_page .add_reviews {
 	position: absolute;
-    right: 55px;
+    right: 60px;
     top: 20px;
     padding-left: 10px;
     padding-right: 10px;
@@ -753,7 +753,7 @@ aside{
 	padding-left:45px;
 }
 #contacts_page #map{
-	height:450px;
+	height:495px;
 	width:550px;
 	margin-bottom:30px;
 }
