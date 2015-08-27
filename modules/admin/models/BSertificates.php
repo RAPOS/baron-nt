@@ -28,7 +28,7 @@ class BSertificates extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'title', 'text', 'images'], 'required'],
+            [['site', 'title', 'text'], 'required'],
             [['site'], 'integer'],
             [['text', 'images'], 'string'],
             [['title'], 'string', 'max' => 64],

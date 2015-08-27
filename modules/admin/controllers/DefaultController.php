@@ -91,19 +91,27 @@ class DefaultController extends Controller
 		if(!$model){
 			$model = new BSertificates;
 		}
-
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
-				
-				return $this->render('sertificate', ['model' => $model, 'success' => true]);
+		
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			$model->site = 1;
+			if($_POST[id_img]){
+				$array_id_img = json_decode($model->images);
+				if(is_array($array_id_img)){
+					$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
+					$model->images = json_encode(array_unique($new_pre_images));
+					$model->save();
+				} else {
+					$model->images = json_encode($_POST[id_img]);
+					$model->save();
+				}
 			}
-		}
-
-		return $this->render('sertificate', [
-			'model' => $model,
-		]);
+			
+			$model->save();			
+			
+			return $this->render('sertificate', ['model' => $model, 'success' => true]);
+		}	
+		
+		return $this->render('sertificate', ['model' => $model]);
     }	
 	
 	public function actionContacts(){
