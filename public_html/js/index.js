@@ -1,4 +1,4 @@
-var page; //Объект
+var page = {name: '',files_count: ''}; //Объект
 $(document).ready(function(){
 	window.onload = function(){
 		init_preview_file(page);

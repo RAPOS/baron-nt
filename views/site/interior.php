@@ -1,32 +1,28 @@
 <?php
+use app\modules\admin\models\BImages;
 $this->title = 'Мужской спа-салон «Барон»';
 ?>
 <div id="content" class="clearfix">
 	<div id="interior_page">
-		<h1>Интерьер</h1>
+		<h1><?=$model->title?></h1>
 		<div id="interior_image">
-			<a class="zoomimage" rel="interior-group" href="/images/interior-1.png">
-				<img src="/images/interior-1.png" alt="">
-			</a>						
-			<a class="zoomimage" rel="interior-group" href="/images/interior-2.png">
-				<img src="/images/interior-2.png" alt="">
-			</a>						
-			<a class="zoomimage" rel="interior-group" href="/images/interior-3.png">
-				<img src="/images/interior-3.png" alt="">
-			</a>						
-			<a class="zoomimage" rel="interior-group" href="/images/interior-4.png">
-				<img src="/images/interior-4.png" alt="">
-			</a>						
-			<a class="zoomimage" rel="interior-group" href="/images/interior-5.png">
-				<img src="/images/interior-5.png" alt="">
-			</a>				
-			<a class="zoomimage" rel="interior-group" href="/images/interior-6.png">
-				<img src="/images/interior-6.png" alt="">
-			</a>	
+			<?$model_images = json_decode($model->images);
+			foreach($model_images as $interior){
+				$BImages = BImages::findOne($interior);
+				if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+					$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+					$image->resize(280, 200);
+					$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
+					?>			
+					<a class="zoomimage" rel="interior-group" href="<?=$BImages->path?>">
+						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+					</a>
+				<?}
+			}?>
 		</div>	
 		<h2>Описание</h2>
 		<div id="interior_text">
-			<p>«Забыть о суете земной и вознестись на вершину блаженства возможно лишь тому, чей взор услаждают красавицы, слух ласкает музыка, а тело предстает как самая великая драгоценность». СПА салон Барон-это оазис удовольствия и покоя в мире полном суеты. Это окно в мир чувственности и блаженственности, удовольствия и безконечного наслаждения. Многим спа-салон представляется как храм блаженства: белоснежные полотенца, ароматические масла и чуткие руки мастера спа-массажа. Вы ощущаете, как нежные пальцы ласкают каждую Вашу клеточку, наполняя ее негой… СПА салон Барон ждет вас воплотить свои фантазии в реальность! Вы готовы пройти в мир блаженства? Соглашайтесь! Проведете свое время без забот и серых будней.</p>
+			<p><?=$model->text?></p>
 		</div>
 		<h3>Отзывы</h3>
 		<div id="reviews">

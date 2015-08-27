@@ -11,6 +11,7 @@ use yii\widgets\LinkPager;
 use app\modules\admin\models\BMainpage;
 use app\modules\admin\models\BRules;
 use app\modules\admin\models\BVacancy;
+use app\modules\admin\models\BInterior;
 use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BTypesOfMassage;
 use app\modules\admin\models\BMainpageMassage;
@@ -104,7 +105,9 @@ class SiteController extends Controller
 	
     public function actionInterior()
     {
-        return $this->render('interior');
+		$model = BInterior::find()->where(['site' => 1])->one();
+
+        return $this->render('interior', ['model' => $model]);
     }
 	
     public function actionPrograms_detail()
