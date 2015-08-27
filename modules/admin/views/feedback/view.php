@@ -17,7 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'subject',
             'text:ntext',
             'date',
-            'verifyCode',
         ],
     ]) ?>
     <p>

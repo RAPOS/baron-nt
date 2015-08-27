@@ -170,13 +170,25 @@ class DefaultController extends Controller
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
-		
+
 		$model = BMainpage::find()->where(['site' => 1])->one();
 		if(!$model){
 			$model = new BMainpage;
 			$model->site = 1;
 		}
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			if($_POST[id_img]){
+				$array_id_img = json_decode($model->images);
+				if(is_array($array_id_img)){
+					$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
+					$model->images = json_encode(array_unique($new_pre_images));
+					$model->save();
+				} else {
+					$model->images = json_encode($_POST[id_img]);
+					$model->save();
+				}
+			}
+			$model->save();
 			
 			return $this->render('mainpage', ['model' => $model, 'success' => true]);
 		}
@@ -325,6 +337,8 @@ class DefaultController extends Controller
 				$model = BInterior::find()->where(['site' => 1])->one();
 			} else if($_POST['page'] == 'sertificate'){
 				$model = BSertificates::find()->where(['site' => 1])->one();
+			} else if($_POST['page'] == 'mainpage'){
+				$model = BMainpage::find()->where(['site' => 1])->one();
 			}
 			$model->images = json_encode($new_array_images);
 			if($model->save()){

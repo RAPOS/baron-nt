@@ -12,6 +12,7 @@ use Yii;
  * @property string $title_h2
  * @property string $text_1
  * @property string $text_2
+ * @property string $images
  */
 class BMainpage extends \yii\db\ActiveRecord
 {
@@ -31,7 +32,7 @@ class BMainpage extends \yii\db\ActiveRecord
         return [
             [['site', 'title_h1', 'title_h2', 'text_1', 'text_2'], 'required'],
             [['site'], 'integer'],
-            [['text_1', 'text_2'], 'string'],
+            [['text_1', 'text_2', 'images'], 'string'],
             [['title_h1', 'title_h2'], 'string', 'max' => 64],
             [['site'], 'unique']
         ];
@@ -44,10 +45,11 @@ class BMainpage extends \yii\db\ActiveRecord
     {
         return [
             'site' => 'Site',
-            'title_h1' => 'Title H1',
-            'title_h2' => 'Title H2',
-            'text_1' => 'Text 1',
-            'text_2' => 'Text 2',
+            'title_h1' => 'Заголовок верх',
+            'title_h2' => 'Заголовок низ',
+            'text_1' => 'Описнаие верх',
+            'text_2' => 'Описание низ',
+            'images' => 'Изображения',
         ];
     }
 }

@@ -71,7 +71,7 @@ class SiteController extends Controller
 		
 		$masters = BMasters::find()->all();
 	
-        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters]);
+        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'model' => $mainpage]);
     }
 
     public function actionActions()
