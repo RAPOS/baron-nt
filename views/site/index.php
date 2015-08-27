@@ -9,15 +9,20 @@
 				<h1><?=$title_h1?></h1>
 				<div class="owl-container">
 					<div class="owl-carousel owl-theme slideimage">
-						<div class="item">
-							<img src="/images/1.png" alt="">
-						</div>
-						<div class="item">
-							<img src="/images/5.png" alt="">
-						</div>
-						<div class="item">
-							<img src="/images/6.png" alt="">
-						</div>			 
+						<?
+						$model_images = json_decode($images);
+						for($i=0;$i<count($model_images);$i++){
+							$BImages = BImages::findOne($model_images[$i]);
+							if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+								$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+								$image->resize(280, 200);
+							$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
+							?>
+							<div class="item">
+								<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+							</div><?						
+							}
+						}?>											 
 					</div>
 					<div class="owl-prev"></div>
 					<div class="owl-next"></div>
@@ -75,16 +80,16 @@
 				</div>
 				<div id="main_sertificates">
 					<p class="title"><?=$sertificate->title?></p>
-						<?$model_images = json_decode($sertificate->images);
-						$BImages = BImages::findOne($model_images[0]);
-						if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
-							$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
-							$image->resize(280, 200);
-							$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));?>
-							<a class="zoomimage" href="<?=$BImages->path?>">
-								<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
-							</a>
-						<?}?>
+					<?$model_images = json_decode($sertificate->images);
+					$BImages = BImages::findOne($model_images[0]);
+					if($BImages->path && file_exists(Yii::getAlias('@webroot/'.$BImages->path))){
+						$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
+						$image->resize(280, 200);
+						$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));?>
+						<a class="zoomimage" href="<?=$BImages->path?>">
+							<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+						</a>
+					<?}?>
 				</div>
 			</aside>
 		</div>

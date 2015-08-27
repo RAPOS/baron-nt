@@ -70,11 +70,14 @@ class SiteController extends Controller
 		
 		$text_2 = $mainpage->text_2;
 		
+		$images = $mainpage->images;
+		
 		$masters = BMasters::find()->all();
 		
 		$sertificate = BSertificates::find()->where(['site' => 1])->one();
+		
 	
-        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate]);
+        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images]);
     }
 	
     public function actionActions()
