@@ -18,6 +18,7 @@ use app\modules\admin\models\BMainpageMassage;
 use app\modules\admin\models\BMainpageMasters;
 use app\modules\admin\models\BMasters;
 use app\modules\admin\models\BFeedback;
+use app\modules\admin\models\BReviews;
 use app\modules\admin\models\BSertificates;
 
 class SiteController extends Controller
@@ -75,7 +76,6 @@ class SiteController extends Controller
 		$masters = BMasters::find()->all();
 		
 		$sertificate = BSertificates::find()->where(['site' => 1])->one();
-		
 	
         return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images]);
     }
@@ -87,7 +87,9 @@ class SiteController extends Controller
 
     public function actionReviews()
     {
-        return $this->render('reviews');
+		$reviews = new BReviews;
+		
+        return $this->render('reviews',['reviews' => $reviews]);
     }
 	
     public function actionContacts()

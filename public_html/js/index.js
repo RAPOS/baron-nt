@@ -15,7 +15,7 @@ $(document).ready(function(){
 	}
 	
 	$('.add_reviews').click(function(){
-		
+		$('.reviews_form_block').fadeIn('slow');
 	});
 	
 	$(".zoomimage").fancybox();
