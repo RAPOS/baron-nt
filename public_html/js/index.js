@@ -1,4 +1,4 @@
-var page = {name: '',files_count: ''}; //Объект
+var page; //Объект
 $(document).ready(function(){
 	window.onload = function(){
 		init_preview_file(page);
@@ -125,7 +125,9 @@ function delete_preview(thisis){
 }
 
 function init_preview_file(page){
-	if($(".file-input .file-preview-frame").length == page.files_count){
-		$(".file-input .input-group").hide();
+	if(page){
+		if($(".file-input .file-preview-frame").length == page.files_count){
+			$(".file-input .input-group").hide();
+		}
 	}
 }

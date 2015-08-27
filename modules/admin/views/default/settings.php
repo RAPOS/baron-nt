@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	}?>
     <?php $form = ActiveForm::begin(); ?>
         <?= $form->field($model, 'title') ?>
+        <?= $form->field($model, 'email')->input('email')?>
         <?= $form->field($model, 'keywords')->textarea()?>
 		<?= $form->field($model, 'description')->textarea(['rows' => 6])?>
         <div class="form-group">

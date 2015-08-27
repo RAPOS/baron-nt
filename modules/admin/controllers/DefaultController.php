@@ -325,7 +325,11 @@ class DefaultController extends Controller
 					$new_array_images[] = $_POST['id_images'][$i];
 				}
 			}
-			$model = BInterior::find()->where(['site' => 1])->one();
+			if($_POST['page'] == 'interior'){
+				$model = BInterior::find()->where(['site' => 1])->one();
+			} else if($_POST['page'] == 'sertificate'){
+				$model = BSertificates::find()->where(['site' => 1])->one();
+			}
 			$model->images = json_encode($new_array_images);
 			if($model->save()){
 				$BImages = BImages::findOne($_POST['delete_id_img']);

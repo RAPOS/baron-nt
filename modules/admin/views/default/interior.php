@@ -21,7 +21,7 @@ if(!$model->isNewRecord){
 			'caption' => $BImages->name,
 			'url' => '/admin/deleteimages',
 			'key' =>  $BImages->id_img,
-			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_images' => $array_id_images],
+			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_images' => $array_id_images, 'page' => 'interior'],
 		];
 	}
 }
@@ -98,14 +98,6 @@ if(!$array_image && !$array_image_cfg){
 						$(".file-input .input-group").show();
 					}
 				}',
-/* 				'filebatchpreupload' => 'function(event, data){
-					if($(".file-input .file-preview-frame").length > 6){
-						return {
-							message: "Вы можете загрузить максимум 6 файлов, а вы выбрали "+data.files.length+"!", // upload error message
-							data:{} // any other data to send that can be referred in `filecustomerror`
-						};
-					}
-				}', */
 			]
 		]);?>
 		<br>

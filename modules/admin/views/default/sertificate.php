@@ -10,6 +10,25 @@ use kartik\widgets\FileInput;
 /* @var $form ActiveForm */
 $this->title = 'Сертификат';
 $this->params['breadcrumbs'][] = $this->title;
+$array_image = array();
+$array_image_cfg = array();
+if(!$model->isNewRecord){
+	$array_id_images = json_decode($model->images);
+	for($i=0;$i<count($array_id_images);$i++){
+		$BImages = BImages::findOne($array_id_images[$i]);
+		$array_image[] = Html::img('/'.$BImages->path, ['class'=>'file-preview-image', 'alt'=>$BImages->name, 'title'=>$BImages->name, 'style'=>'width:auto;height:210px;']);
+		$array_image_cfg[] = [
+			'caption' => $BImages->name,
+			'url' => '/admin/deleteimages',
+			'key' =>  $BImages->id_img,
+			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_images' => $array_id_images, 'page' => 'sertificate'],
+		];
+	}
+}
+if(!$array_image && !$array_image_cfg){
+	$array_image = array();
+	$array_image_cfg = array();
+}
 ?>
 <div class="bhello" style="width: 700px;">
 	<?if($success){
@@ -17,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'options' => [
 				'class' => 'alert-success'
 			],
-			'body' => '<b>Сертификат успешно изменен!</b>'
+			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>
@@ -44,19 +63,26 @@ $this->params['breadcrumbs'][] = $this->title;
 			'pluginOptions' => [
 				'previewFileType' => 'image',
 				'previewSettings' => [
-					'image' => ['width' => 'auto', 'height' => '220px'],
+					'image' => ['width' => 'auto', 'height' => '210px'],
 				],
-				'uploadUrl' => ['/admin/upload'],
+				'maxFileCount' => 1,
+				'validateInitialCount' => true,
+				'overwriteInitial' => false,
+				'initialPreview' => $array_image,
+				'initialPreviewConfig' => $array_image_cfg,
+				'uploadUrl' => '/admin/upload',
 				'browseClass' => 'btn btn-success',
 				'uploadClass' => 'btn btn-info',
 				'removeClass' => 'btn btn-danger',
 				'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> ',
-				'maxFileCount' => 1,
-				'initialPreview' => $array_image,
-				'initialPreviewConfig' => $array_image_cfg,
-				'overwriteInitial' => false,
+				'showRemove' => false,
 			],
 			'pluginEvents' => [
+			   'filepredelete' => 'function(event, key) {
+					if($(".file-input .file-preview-frame").length == 1){
+						$(".file-input .input-group").show();
+					}
+				}',
 				'fileuploaded' => 'function(event, data, previewId, index){
 					var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
 					$(".file-input").append(\'<input hidden type="text" name="id_img[]" value="\'+response["id_img"]+\'"/>\');
@@ -74,9 +100,11 @@ $this->params['breadcrumbs'][] = $this->title;
 				}',
 			]
 		]);?>
+		<br>
         <div class="form-group">
 			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 			<?= Html::a('Отменить', ['/admin'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 </div>
+<script>page = {name: 'sertificate', files_count: 1};</script>
