@@ -74,8 +74,9 @@
 	<h2 class="reviews_title">Отзывы</h2>
 
 	<div id="reviews">
-
-		<p class="reviews_name">Андрей</p>
+		<p class="add_reviews">Оставить отзыв</p>
+		
+		<!--<p class="reviews_name">Андрей</p>
 
 		<div class="review_background">
 
@@ -83,8 +84,8 @@
 
 			<a>Читать далее</a>
 
-		</div>
-
+		</div>-->
+		<p class="empty_reviews">Пока что не оставлено ни одного отзыва.</p>
 	</div>	
 
 </div>

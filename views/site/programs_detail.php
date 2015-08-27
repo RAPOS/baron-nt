@@ -46,7 +46,8 @@
 	<h2 class="reviews_title">Отзывы</h2>
 
 	<div id="reviews">
-
+		<p class="add_reviews">Оставить отзыв</p>
+		
 		<p class="reviews_name">Андрей</p>
 
 		<div class="review_background">

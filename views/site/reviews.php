@@ -1,6 +1,7 @@
 <div id="content" class="clearfix">
 	<div id="reviews_page">
 		<h1>Отзывы</h1>
+		<p class="add_reviews">Оставить отзыв</p>
 		<div id="reviews">
 			<div class="review_wrap">
 				<p class="reviews_name">Андрей</p>

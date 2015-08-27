@@ -26,6 +26,7 @@ $this->title = 'Мужской спа-салон «Барон»';
 		</div>
 		<h3>Отзывы</h3>
 		<div id="reviews">
+			<p class="add_reviews">Оставить отзыв</p>
 			<p class="reviews_name">Андрей</p>
 			<div class="review_background">
 				<p class="review_text">Отличный салон!</p>

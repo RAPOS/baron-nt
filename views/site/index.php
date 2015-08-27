@@ -48,12 +48,12 @@
 							$image = Yii::$app->image->load(Yii::getAlias('@webroot/'.$BImages->path));
 							$image->resize(280, 200);
 							$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));?>
-							<a href="/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
+							<a href="/masters/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
 								<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
 								<p class="name"><?=$masters[$i]->name?></p>
 							</a>
 						<?}else{?>
-								<a href="/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
+								<a href="/masters/<?=$masters[$i]->translate?>" class="master_link <?=$active?>">
 								<img src="/images/default_master.png" alt="">
 								<p class="name"><?=$masters[$i]->name?></p>
 							</a>					

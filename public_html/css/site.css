@@ -562,12 +562,42 @@ aside{
 /***copyright***/
 
 /***reviews***/
-#reviews_page .review_wrap{
+#reviews_page .review_wrap {
 	position:relative;
 }
 #reviews_page {
 	width:900px;
 	margin:0 auto;
+}
+#reviews .add_reviews {
+	position: absolute;
+    right: 40px;
+    top: -45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 21px;
+    background: rgba(191, 164, 90, 0.7);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#reviews_page .add_reviews {
+	position: absolute;
+    right: 55px;
+    top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 21px;
+    background: rgba(191, 164, 90, 0.7);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 #reviews_page h1 {
 	font-family: MonAmourTwo; 
@@ -665,9 +695,10 @@ aside{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 21px;
-	background:#bfa45a;
+    background: rgba(191, 164, 90, 0.7);
 	color:white;
 	border:none;
+	border-radius:4px;
 	cursor:pointer;
 }
 #feedback .form-group:last-child {
@@ -915,12 +946,19 @@ aside{
 	color:white;
 	position:absolute;	
 	bottom:0;
-	right:40px;	
+	right:50px;	
 	margin-bottom:30px;
 	cursor:pointer;
 }
 /***onemaster_page***/
-
+.empty_reviews {
+    text-align: center;
+    color: #c2c2c2;
+    font-size: 21px;
+    font-family: Trebuchet-MS;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 /***oneprogram_page***/
 #oneprogram_page  img {
 	width:280px;
@@ -972,7 +1010,7 @@ aside{
 	color:white;
 	position:absolute;
 	bottom:0;
-	left:40px;
+	left:15px;
 	margin-bottom:30px;	
 	cursor:pointer;
 }
@@ -981,14 +1019,14 @@ aside{
 	color:white;
 	position:absolute;	
 	bottom:0;
-	right:40px;	
+	right:50px;	
 	margin-bottom:30px;
 	cursor:pointer;
 }
 /***oneprogram_page***/
 
 .reviews_title {
-    padding-left: 15px;
+    padding-left: 35px;
 	font-family: MonAmourTwo;
     color: #bfa45a;
     font-size: 25px;
@@ -1135,7 +1173,7 @@ aside{
 #reviews  .review_background{
 	background: #bfa45a; 
 	position:relative;
-	width:888px;
+	width:880px;
 	height:100px; 
 	border-radius:15px; 
 	margin-top:20px;
@@ -1233,6 +1271,7 @@ aside{
 .link {
 	transition: color 0.3s;
 	color: #bfa45a; 
+	cursor:pointer;
 }
 .link:hover{
 	color:white;
