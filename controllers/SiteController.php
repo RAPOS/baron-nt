@@ -18,6 +18,7 @@ use app\modules\admin\models\BMainpageMassage;
 use app\modules\admin\models\BMainpageMasters;
 use app\modules\admin\models\BMasters;
 use app\modules\admin\models\BFeedback;
+use app\modules\admin\models\BSertificates;
 
 class SiteController extends Controller
 {
@@ -70,10 +71,12 @@ class SiteController extends Controller
 		$text_2 = $mainpage->text_2;
 		
 		$masters = BMasters::find()->all();
+		
+		$sertificate = BSertificates::find()->where(['site' => 1])->one();
 	
-        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'model' => $mainpage]);
+        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate]);
     }
-
+	
     public function actionActions()
     {
         return $this->render('actions');
