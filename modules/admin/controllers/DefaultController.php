@@ -37,15 +37,12 @@ class DefaultController extends Controller
 		if(!$model){
 		print_r($_POST);
 			$model = new BRules;
+			$model->site = 1;
 		}
 		
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-				return $this->render('rules', ['model' => $model, 'success' => true]);
-			}
+			return $this->render('rules', ['model' => $model, 'success' => true]);
 		}
 
 		return $this->render('rules', [
@@ -64,15 +61,12 @@ class DefaultController extends Controller
 		
 		if(!$model){
 			$model = new BVacancy;
+			$model->site = 1;
 		}
 
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
-				
-				return $this->render('vacancy', ['model' => $model, 'success' => true]);
-			}
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+			return $this->render('vacancy', ['model' => $model, 'success' => true]);
 		}
 
 		return $this->render('vacancy', [
@@ -90,10 +84,10 @@ class DefaultController extends Controller
 		
 		if(!$model){
 			$model = new BSertificates;
+			$model->site = 1;
 		}
 		
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			$model->site = 1;
 			if($_POST[id_img]){
 				$array_id_img = json_decode($model->images);
 				if(is_array($array_id_img)){
@@ -105,7 +99,6 @@ class DefaultController extends Controller
 					$model->save();
 				}
 			}
-			
 			$model->save();			
 			
 			return $this->render('sertificate', ['model' => $model, 'success' => true]);
@@ -124,15 +117,12 @@ class DefaultController extends Controller
 		
 		if(!$model){
 			$model = new BContacts;
+			$model->site = 1;
 		}
 
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
-				
-				return $this->render('contacts', ['model' => $model, 'success' => true]);
-			}
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+			return $this->render('contacts', ['model' => $model, 'success' => true]);
 		}
 
 		return $this->render('contacts', [
@@ -184,14 +174,11 @@ class DefaultController extends Controller
 		$model = BMainpage::find()->where(['site' => 1])->one();
 		if(!$model){
 			$model = new BMainpage;
+			$model->site = 1;
 		}
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
-				
-				return $this->render('mainpage', ['model' => $model, 'success' => true]);
-			}
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			
+			return $this->render('mainpage', ['model' => $model, 'success' => true]);
 		}
 
 		return $this->render('mainpage', [
@@ -215,9 +202,9 @@ class DefaultController extends Controller
 		$model = BInterior::find()->where(['site' => 1])->one();
 		if(!$model){
 			$model = new BInterior;
+			$model->site = 1;
 		}
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			$model->site = 1;
 			if($_POST[id_img]){
 				$array_id_img = json_decode($model->images);
 				if(is_array($array_id_img)){
@@ -248,14 +235,11 @@ class DefaultController extends Controller
 		$model = BSettings::find()->where(['site' => 1])->one();
 		if(!$model){
 			$model = new BSettings;
+			$model->site = 1;
 		}
-		if ($model->load(Yii::$app->request->post())) {
-			if ($model->validate()) {
-				$model->site = 1;
-				$model->save();
-				
-				return $this->render('settings', ['model' => $model, 'success' => true]);
-			}
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+			return $this->render('settings', ['model' => $model, 'success' => true]);
 		}
 
 		return $this->render('settings', [
