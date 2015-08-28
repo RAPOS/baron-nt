@@ -52,7 +52,7 @@ class BMasters extends \yii\db\ActiveRecord
     {
         return [
             'id_master' => 'ID',
-            'name' => 'Название',
+            'name' => 'Имя',
             'translate' => 'Транслит',
             'description' => 'Описание',
             'keywords' => 'Ключевые слова',

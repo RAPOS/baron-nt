@@ -4,38 +4,32 @@
 
 		<h1>Акции</h1>
 
-		<div id="actions_filter">
+		<?/*<div id="actions_filter">
 
 			<p class="active">Действует</p>
 
 			<p>Все</p>
 
-		</div>
+		</div>*/?>
 
 		<div class="actions_block">
+			<?for($i=0;$i<count($actions);$i++){?>
+				<div class="action">
 
-			<div class="action">
+					<div class="date"><?=Yii::$app->formatter->asDate($actions[$i]->date, 'd.MM.Y')?></div>
+					<?if($actions[$i]->status == 1){
+						$active = 'active';
+						$status = 'Действует';
+					}else{
+						$active = '';
+						$status = 'Не действует';
+					}?>
+					<div class="status <?=$active?>"><?=$status?></div>
 
-				<div class="date">25.07.2015</div>
+					<div class="description"><?=$actions[$i]->text?></div>
 
-				<div class="status active">Действует</div>
-
-				<div class="description">В честь открытия нашего салона скидка 20% на все программы в будние дни</div>
-
-			</div>
-
-			<div class="action">
-
-				<div class="date">25.07.2015</div>
-
-				<div class="status">Не действует</div>
-
-				<div class="description">В честь открытия нашего салона скидка 20% на все программы в будние дни</div>
-
-			</div>
-
-		</div>
-
+				</div>	
+			<?}?>
 	</div>
 
 </div>

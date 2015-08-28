@@ -28,10 +28,10 @@ class BActions extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['text', 'date', 'status'], 'required'],
+            [['text','status'], 'required'],
             [['status'], 'integer'],
             [['text'], 'string', 'max' => 255],
-            [['date'], 'string', 'max' => 64]
+            [['date'], 'safe'],
         ];
     }
 

@@ -59,7 +59,10 @@ class ActionsController extends Controller
 		
         $model = new BActions();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->date = time();
+			$model->save();
+			//print_r($model->getErrors());
             return $this->redirect(['/admin/actions']);
         } else {
             return $this->render('create', [

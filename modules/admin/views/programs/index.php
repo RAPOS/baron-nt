@@ -19,8 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
             'id_massage',
             'name',
-            'translate',
-            'duration',
+            'exclusive',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

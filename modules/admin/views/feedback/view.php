@@ -16,7 +16,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'subject',
             'text:ntext',
-            'date',
+			[
+				'attribute' => 'date',
+				'format' => ['date', 'php:d.m.Y']
+			],
         ],
     ]) ?>
     <p>

@@ -13,11 +13,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            [
+				'class' => 'yii\grid\SerialColumn'
+			],
             'id',
             'email:email',
             'name',
             'subject',
+			[
+				'attribute' => 'date',
+				'format' => ['date', 'php:d.m.Y']
+			],
             [
 				'class' => 'yii\grid\ActionColumn',
 				'buttons' => ['update' => function ($url, $model, $key) {return false;}]

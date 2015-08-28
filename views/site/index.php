@@ -64,8 +64,7 @@
 				<div id="main_actions">
 					<p class="title">Акции</p>
 					<a href="/actions" class="link all_list">Все акции</a>
-					<p class="description">В дневное время скидка 20% на все программы, каждый день кроме выходных!</p>
-					<a href="/actions" class="link all_text">Подробнее</a>
+					<p class="description"><?=strip_tags($actions->text)?></p>
 				</div>
 				<div id="main_responses">
 					<p class="title">Отзывы</p>

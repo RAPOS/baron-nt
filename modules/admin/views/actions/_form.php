@@ -9,23 +9,13 @@ use yii\widgets\ActiveForm;
 ?>
 <div class="bactions-form">
     <?php $form = ActiveForm::begin(); ?>
-	<div class="clearfix">
-		<div style="float: left;width: 189px;">
-			<?= $form->field($model, 'date')->widget(DatePicker::classname(), [
-				'options' => [
-					'placeholder' => 'Выберите дату ...',
-					'style' => 'width: 150px;',
-				],
-				'type' => DatePicker::TYPE_COMPONENT_APPEND,
-				'removeButton' => false,
-				'pluginOptions' => [
-					'autoclose'=>true
-				]
-			]);?>
-		</div>
-		<div style="float: left;">
-			<?= $form->field($model, 'status')->textInput() ?>
-		</div>
+	<div>
+		<?= $form->field($model, 'status')->dropDownList (
+			[
+				'1' => 'Действует',
+				'0' => 'Не действует',
+			]
+		)?>
 	</div>
 	<?= $form->field($model, 'text')->widget(TinyMce::className(), [
 		'options' => ['rows' => 6],
@@ -39,6 +29,7 @@ use yii\widgets\ActiveForm;
 			'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 		]
 	]);?>
+
 	<div class="form-group">
 		<?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>
 		<?= Html::a('Отменить', ['/admin/masters'], ['class'=>'btn btn-primary']) ?>
