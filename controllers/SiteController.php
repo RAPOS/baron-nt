@@ -55,7 +55,7 @@ class SiteController extends Controller
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                //'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
     }
@@ -93,8 +93,30 @@ class SiteController extends Controller
     public function actionReviews()
     {
 		$reviews = new BReviews;
+		if ($reviews->load(Yii::$app->request->post()) && $reviews->validate()){
+			$message = $reviews->text;
+			$message = str_replace(":)", "<img src='/base/img/smiles/ab.gif' alt=''/>", $message);
+			$message = str_replace("8-)", "<img src='/base/img/smiles/24.gif' alt=''/>", $message);
+			$message = str_replace(";)", "<img src='/base/img/smiles/105.gif' alt=''/>", $message);
+			$message = str_replace(":yahoo:", "<img src='/base/img/smiles/bp.gif' alt=''/>", $message);
+			$message = str_replace(":think:", "<img src='/base/img/smiles/73.gif' alt=''/>", $message);
+			$message = str_replace(":cool:", "<img src='/base/img/smiles/33.gif' alt=''/>", $message);
+			$message = str_replace(":yes:", "<img src='/base/img/smiles/109.gif' alt=''/>", $message);
+			$message = str_replace(":ok:", "<img src='/base/img/smiles/56.gif' alt=''/>", $message);
+			$message = str_replace(":dance:", "<img src='/base/img/smiles/21.gif' alt=''/>", $message);
+			$message = str_replace(":drug:", "<img src='/base/img/smiles/31.gif' alt=''/>", $message);
+			$message = str_replace(":read:", "<img src='/base/img/smiles/65.gif' alt=''/>", $message);
+			$message = str_replace(":aplo:", "<img src='/base/img/smiles/15.gif' alt=''/>", $message);
+			$reviews->text = $message;
+			$reviews->ip = $_SERVER['REMOTE_ADDR'];		
+			$reviews->date = time();
+			$reviews->save();
+		} else {
+			$errors = $model->errors;
+			//Yii::$app->general->print_r(Yii::$app->request->post($errors));die();
+		}
 		
-        return $this->render('reviews',['reviews' => $reviews]);
+        return $this->render('reviews', ['reviews' => $reviews]);
     }
 	
     public function actionContacts()

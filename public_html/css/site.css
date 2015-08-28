@@ -758,12 +758,12 @@ aside{
 	margin-bottom:30px;
 }
 .reviews_form_block {
-	display:none;
+	display: none;
     margin-left: -150px;
     padding: 20px 30px;
     position: fixed;
     width: 300px;
-    top: 40%;
+    top: 36%;
     left: 50%;
     background: #222;
     z-index: 1000;

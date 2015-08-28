@@ -60,6 +60,7 @@ $config = [
 				'admin/feedback' => 'admin/feedback/index',
 				'admin/masters' => 'admin/masters/index',
 				'admin/programs' => 'admin/programs/index',
+				'admin/reviews' => 'admin/reviews/index',
 				'admin/<action:\w+>' => 'admin/default/<action>',
 				'<action:\w+>'=>'site/<action>',
 				'<action:\w+>/<name:\w+>'=>'site/<action>',

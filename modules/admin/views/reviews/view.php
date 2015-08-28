@@ -2,24 +2,24 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BFeedback */
+/* @var $model app\modules\admin\models\BReviews */
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Обратная связь', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Отзывы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="bfeedback-view">
+<div class="breviews-view">
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
             'email:email',
             'name',
-            'subject',
             'text:ntext',
-			[
-				'attribute' => 'date',
-				'format' => ['date', 'php:d.m.Y']
-			],
+            'date',
+            'verifyCode',
+            'section',
+            'moderate',
+            'ip',
         ],
     ]) ?>
     <p>

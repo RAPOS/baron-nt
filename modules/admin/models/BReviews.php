@@ -36,7 +36,8 @@ class BReviews extends \yii\db\ActiveRecord
             [['email', 'name', 'text', 'verifyCode'], 'required'],
             [['text'], 'string'],
             [['moderate'], 'integer'],
-            [['email', 'name', 'date', 'verifyCode', 'section', 'ip'], 'string', 'max' => 64]
+            [['date'], 'safe'],
+            [['email', 'name', 'verifyCode', 'section', 'ip'], 'string', 'max' => 64]
         ];
     }
 
@@ -50,11 +51,11 @@ class BReviews extends \yii\db\ActiveRecord
             'email' => 'E-mail',
             'name' => 'Имя',
             'text' => 'Текст',
-            'date' => 'Date',
+            'date' => 'Дата',
             'verifyCode' => 'Код подтверждения',
-            'section' => 'Section',
-            'moderate' => 'Moderate',
-            'ip' => 'Ip',
+            'section' => 'Раздел сайта',
+            'moderate' => 'Публикаця',
+            'ip' => 'IP',
         ];
     }
 }

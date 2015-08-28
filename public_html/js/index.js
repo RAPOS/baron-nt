@@ -135,3 +135,9 @@ function init_preview_file(page){
 		}
 	}
 }
+
+function setSmile(smile) {
+	obj = document.getElementById('breviews-text');
+	obj.value += smile;
+	obj.focus();
+}

@@ -101,7 +101,11 @@ AppAsset::register($this);
 					[
 						'label' => 'Подарочный сертификат',
 						'url' => ['/admin/sertificate'],
-					],					
+					],
+					[
+						'label' => 'Отзывы',
+						'url' => ['/admin/reviews'],
+					],
 					[
 						'label' => 'Контакты',
 						'url' => ['/admin/contacts'],
