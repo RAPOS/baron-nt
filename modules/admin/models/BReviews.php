@@ -37,7 +37,9 @@ class BReviews extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['moderate'], 'integer'],
             [['date'], 'safe'],
-            [['email', 'name', 'verifyCode', 'section', 'ip'], 'string', 'max' => 64]
+            [['email', 'name', 'verifyCode', 'section', 'ip'], 'string', 'max' => 64],
+			// verifyCode needs to be entered correctly
+			['verifyCode', 'captcha','captchaAction'=>'site/captcha'],
         ];
     }
 

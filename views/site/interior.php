@@ -27,6 +27,9 @@ $this->title = 'Мужской спа-салон «Барон»';
 		<h3>Отзывы</h3>
 		<div id="reviews">
 			<p class="add_reviews">Оставить отзыв</p>
+			<?=$this->render('_reviews_form', [
+				'section' => 'interior'
+			]);?>
 			<p class="reviews_name">Андрей</p>
 			<div class="review_background">
 				<p class="review_text">Отличный салон!</p>

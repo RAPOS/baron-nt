@@ -1,6 +1,5 @@
 <?php
 use dosamigos\tinymce\TinyMce;
-use kartik\widgets\DatePicker;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
