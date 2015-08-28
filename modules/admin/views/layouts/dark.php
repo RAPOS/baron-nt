@@ -75,6 +75,10 @@ AppAsset::register($this);
 						'url' => ['/admin/mainpage'],
 					],
 					[
+						'label' => 'Акции',
+						'url' => ['/admin/actions'],
+					],
+					[
 						'label' => 'Мастера',
 						'url' => ['/admin/masters'],
 					],
