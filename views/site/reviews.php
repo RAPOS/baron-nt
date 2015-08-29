@@ -1,12 +1,14 @@
 <?
-$this->title = 'Мужской спа-салон «Барон»';
-?>
-<div id="content" class="clearfix">
+	use yii\helpers\Html;
+	use yii\bootstrap\ActiveForm;
+	use yii\captcha\Captcha;
+	$this->title = 'Мужской спа-салон «Барон»';
+?><div id="content" class="clearfix">
 	<div id="reviews_page">
 		<h1>Отзывы</h1>
-		<p class="add_reviews">Оставить отзыв</p>
+		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
 		<?=$this->render('_reviews_form', [
-			'section' => 'interior'
+			'section' => 'reviews'
 		]);?>
 		<div id="reviews">
 			<div class="review_wrap">

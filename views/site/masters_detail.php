@@ -45,9 +45,9 @@ use app\modules\admin\models\BImages;
 	</div>
 	<h2 class="reviews_title">Отзывы</h2>
 	<div id="reviews">
-		<p class="add_reviews">Оставить отзыв</p>
+		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
 		<?=$this->render('_reviews_form', [
-			'section' => 'interior'
+			'section' => 'master'
 		]);?>
 		<!--<p class="reviews_name">Андрей</p>
 		<div class="review_background">

@@ -758,15 +758,9 @@ aside{
 	margin-bottom:30px;
 }
 .reviews_form_block {
-	display: none;
-    margin-left: -150px;
-    padding: 20px 30px;
-    position: fixed;
-    width: 300px;
-    top: 20%;
-    left: 50%;
-    background: #222;
-    z-index: 1000;
+	display:none;
+    width: 250px;
+
 }
 .reviews_form_block .title{
     font-family: MonAmourTwo;
@@ -776,9 +770,14 @@ aside{
     margin-bottom: 20px;
     font-weight: normal;
 }
+.reviews_form_block #breviews-verifycode-image {
+	border-radius:4px;	
+}
 .reviews_form_block #breviews-verifycode {
     margin-left: 68px;
     height: 50px;
+	width:110px !important;
+	border-radius:4px;
 }
 .reviews_form_block .btn {
     width: 200px;
@@ -790,7 +789,7 @@ aside{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 .reviews_form_block label {
 	display:none;

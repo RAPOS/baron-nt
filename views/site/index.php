@@ -73,7 +73,7 @@
 						<p class="reviews_name">Андрей</p>
 						<div class="review_background">
 							<p class="review_text">Отличный салон!</p>
-							<a>Читать далее</a>
+							<?/*<a>Читать далее</a>*/?>
 						</div>
 					</div>
 				</div>

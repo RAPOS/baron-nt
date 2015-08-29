@@ -5,12 +5,12 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 $reviews = new BReviews;
 ?>
-<div class="reviews_form_block">
+<div id="reviews_box" class="reviews_form_block">
 	<p class="title">Оставить отзыв</p>
-	<?php $form = ActiveForm::begin([
-		'id' => 'contact-form',
-		'action' => '/reviews'
-	]); ?>
+		<?php $form = ActiveForm::begin([
+			'id' => 'contact-form',
+			'action' => '/reviews'
+		]);?>
 		<?= $form->field($reviews, 'name')->textInput(['placeholder' => 'Введите имя']) ?>
 		<?= $form->field($reviews, 'email')->textInput(['placeholder' => 'Введите e-mail']) ?>
 		<div style="padding-left: 15px;padding-bottom: 10px">
