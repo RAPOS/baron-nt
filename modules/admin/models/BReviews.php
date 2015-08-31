@@ -12,13 +12,13 @@ use Yii;
  * @property string $name
  * @property string $text
  * @property string $date
- * @property string $verifyCode
  * @property string $section
  * @property integer $moderate
  * @property string $ip
  */
 class BReviews extends \yii\db\ActiveRecord
 {
+	public $verifyCode;
     /**
      * @inheritdoc
      */
@@ -37,9 +37,7 @@ class BReviews extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['moderate'], 'integer'],
             [['date'], 'safe'],
-            [['email', 'name', 'verifyCode', 'section', 'ip'], 'string', 'max' => 64],
-			// verifyCode needs to be entered correctly
-			['verifyCode', 'captcha','captchaAction'=>'site/captcha'],
+            [['email', 'name', 'section', 'ip'], 'string', 'max' => 64],
         ];
     }
 
@@ -54,9 +52,9 @@ class BReviews extends \yii\db\ActiveRecord
             'name' => 'Имя',
             'text' => 'Текст',
             'date' => 'Дата',
-            'verifyCode' => 'Код подтверждения',
             'section' => 'Раздел сайта',
             'moderate' => 'Публикаця',
+            'verifyCode' => 'Проверочный код',
             'ip' => 'IP',
         ];
     }

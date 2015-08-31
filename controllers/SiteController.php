@@ -63,21 +63,14 @@ class SiteController extends Controller
     public function actionIndex()
     {
 		$mainpage = BMainpage::find()->where(['site' => 1])->one();
-		
 		$title_h1 = $mainpage->title_h1;
-		
 		$title_h2 = $mainpage->title_h2;
-		
 		$text_1 = $mainpage->text_1;
-		
 		$text_2 = $mainpage->text_2;
-		
 		$images = $mainpage->images;
 		
 		$masters = BMasters::find()->all();
-		
 		$actions = BActions::find()->one();	
-		
 		$sertificate = BSertificates::find()->where(['site' => 1])->one();
 	
         return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images, 'actions' => $actions]);
@@ -93,30 +86,59 @@ class SiteController extends Controller
     public function actionReviews()
     {
 		$reviews = new BReviews;
-		if ($reviews->load(Yii::$app->request->post()) && $reviews->validate()){
-			$message = $reviews->text;
-			$message = str_replace(":)", "<img src='/base/img/smiles/ab.gif' alt=''/>", $message);
-			$message = str_replace("8-)", "<img src='/base/img/smiles/24.gif' alt=''/>", $message);
-			$message = str_replace(";)", "<img src='/base/img/smiles/105.gif' alt=''/>", $message);
-			$message = str_replace(":yahoo:", "<img src='/base/img/smiles/bp.gif' alt=''/>", $message);
-			$message = str_replace(":think:", "<img src='/base/img/smiles/73.gif' alt=''/>", $message);
-			$message = str_replace(":cool:", "<img src='/base/img/smiles/33.gif' alt=''/>", $message);
-			$message = str_replace(":yes:", "<img src='/base/img/smiles/109.gif' alt=''/>", $message);
-			$message = str_replace(":ok:", "<img src='/base/img/smiles/56.gif' alt=''/>", $message);
-			$message = str_replace(":dance:", "<img src='/base/img/smiles/21.gif' alt=''/>", $message);
-			$message = str_replace(":drug:", "<img src='/base/img/smiles/31.gif' alt=''/>", $message);
-			$message = str_replace(":read:", "<img src='/base/img/smiles/65.gif' alt=''/>", $message);
-			$message = str_replace(":aplo:", "<img src='/base/img/smiles/15.gif' alt=''/>", $message);
-			$reviews->text = $message;
-			$reviews->ip = $_SERVER['REMOTE_ADDR'];		
-			$reviews->date = time();
-			$reviews->save();
+		if(Yii::$app->request->post()){
+			if($_SESSION['__captcha/site/captcha'] != $_POST['verifyCode']){
+				Yii::$app->getSession()->setFlash('captcha', 'false');
+
+				if($_POST['BReviews']['section'] == 'masters' || $_POST['BReviews']['section'] == 'programs'){
+					return $this->redirect('/'.$_POST['BReviews']['section'].'/'.$_POST['BReviews']['name']);
+				} else {
+					return $this->redirect([$_POST['BReviews']['section']]);
+				}
+			}
+			if($reviews->load(Yii::$app->request->post()) && $reviews->validate()){
+				$message = $reviews->text;
+				$message = str_replace(":)", "<img src='/base/img/smiles/ab.gif' alt=''/>", $message);
+				$message = str_replace("8-)", "<img src='/base/img/smiles/24.gif' alt=''/>", $message);
+				$message = str_replace(";)", "<img src='/base/img/smiles/105.gif' alt=''/>", $message);
+				$message = str_replace(":yahoo:", "<img src='/base/img/smiles/bp.gif' alt=''/>", $message);
+				$message = str_replace(":think:", "<img src='/base/img/smiles/73.gif' alt=''/>", $message);
+				$message = str_replace(":cool:", "<img src='/base/img/smiles/33.gif' alt=''/>", $message);
+				$message = str_replace(":yes:", "<img src='/base/img/smiles/109.gif' alt=''/>", $message);
+				$message = str_replace(":ok:", "<img src='/base/img/smiles/56.gif' alt=''/>", $message);
+				$message = str_replace(":dance:", "<img src='/base/img/smiles/21.gif' alt=''/>", $message);
+				$message = str_replace(":drug:", "<img src='/base/img/smiles/31.gif' alt=''/>", $message);
+				$message = str_replace(":read:", "<img src='/base/img/smiles/65.gif' alt=''/>", $message);
+				$message = str_replace(":aplo:", "<img src='/base/img/smiles/15.gif' alt=''/>", $message);
+				$reviews->text = $message;
+				$reviews->ip = $_SERVER['REMOTE_ADDR'];		
+				$reviews->date = time();
+				if($reviews->save()){
+					Yii::$app->getSession()->setFlash('save', 'true');
+					if($reviews->section == 'masters' || $reviews->section == 'programs'){
+						return $this->redirect('/'.$reviews->section.'/'.$_POST['BReviews']['name']);
+					} else {
+						return $this->redirect([$reviews->section]);
+					}
+				} else {
+					$errors = $reviews->errors;
+					Yii::$app->general->print_r($errors);die();
+				}
+			} else {
+				$errors = $reviews->errors;
+				Yii::$app->general->print_r($errors);die();
+			}
+		}
+		if(Yii::$app->getSession()->getFlash('captcha')){
+			$captcha = false;
 		} else {
-			$errors = $model->errors;
-			//Yii::$app->general->print_r(Yii::$app->request->post($errors));die();
+			$captcha = true;
 		}
 		
-        return $this->render('reviews', ['reviews' => $reviews]);
+        return $this->render('reviews', [
+			'reviews' => $reviews,
+			'captcha' => $captcha,
+		]);
     }
 	
     public function actionContacts()
@@ -145,11 +167,6 @@ class SiteController extends Controller
         return $this->render('interior', ['model' => $model]);
     }
 	
-    public function actionPrograms_detail()
-    {
-        return $this->render('programs_detail');
-    }
-		
     public function actionPrograms($page = 0)
     {
 		$getName = $_GET['name'];
@@ -180,7 +197,16 @@ class SiteController extends Controller
 				return $this->render('error', ['name' => 'Not Found (#404)', 'message' => 'Страница не найдена']);
 			}
 			
-			return $this->render('programs_detail', ['model' => $model]);
+			if(Yii::$app->getSession()->getFlash('captcha')){
+				$captcha = false;
+			} else {
+				$captcha = true;
+			}
+			
+			return $this->render('programs_detail', [
+				'model' => $model,
+				'captcha' => $captcha,
+			]);
 		}	
 	}
 
@@ -214,7 +240,16 @@ class SiteController extends Controller
 				return $this->render('error', ['name' => 'Not Found (#404)', 'message' => 'Страница не найдена']);
 			}
 			
-			return $this->render('masters_detail', ['model' => $model]);
+			if(Yii::$app->getSession()->getFlash('captcha')){
+				$captcha = false;
+			} else {
+				$captcha = true;
+			}
+			
+			return $this->render('masters_detail', [
+				'model' => $model,
+				'captcha' => $captcha,
+			]);
 		}	
     }	
 	

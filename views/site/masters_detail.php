@@ -1,5 +1,20 @@
 <?
+use kartik\widgets\Alert;
 use app\modules\admin\models\BImages;
+if(!$captcha){
+	echo Alert::widget([
+		'type' => Alert::TYPE_DANGER,
+		'title' => 'Ошибка! Отзыв не отправлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Вы не верно ввели проверочный код!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
+print Yii::$app->getSession()->getFlash('captcha');
 ?>
 <div id="content" class="clearfix">
 	<div id="onemaster_page" class="clearfix">
@@ -47,7 +62,8 @@ use app\modules\admin\models\BImages;
 	<div id="reviews">
 		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
 		<?=$this->render('_reviews_form', [
-			'section' => 'master'
+			'section' => 'masters',
+			'name' => $model->translate,
 		]);?>
 		<!--<p class="reviews_name">Андрей</p>
 		<div class="review_background">
