@@ -1,12 +1,36 @@
 <?php
-
-	$this->title = 'Мужской спа-салон «Барон»';	
-	use app\modules\admin\models\BImages;
+use kartik\widgets\Alert;
+use app\modules\admin\models\BImages;
+$this->title = 'Мужской спа-салон «Барон»';
+if(!$captcha){
+	echo Alert::widget([
+		'type' => Alert::TYPE_DANGER,
+		'title' => 'Ошибка! Отзыв не отправлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Вы не верно ввели проверочный код!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
+if($save){
+	echo Alert::widget([
+		'type' => Alert::TYPE_SUCCESS,
+		'title' => 'Отзыв отравлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Отзыв будет опубликован после модерации!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
 ?>
 <div id="content" class="clearfix">
-
 	<div id="oneprogram_page" class="clearfix">
-
 		<h1><?=$model->name?></h1>		
 			<?$model_images = json_decode($model->images);
 				$BImages = BImages::findOne($model_images[0]);
@@ -22,45 +46,26 @@
 						<p><?=$programs->name?></p>						
 					</a>
 				<?}?>
-
 		<div class="info">			
-
 			<p class="time">Продолжительность: <?=$model->duration?> минут</p>
-
 			<p class="description_title">В программу входит:</p>
-
 			<p class="description_text"><?=$model->description?></p>	
-
 			<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
-
 			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>				
-
 		</div>
-
 		<div class="prev-link"><span><</span>Предыдущая программа</div>	
-
 		<div class="next-link">Следующая программа<span>></span></div>
-
 	</div>
-
 	<h2 class="reviews_title">Отзывы</h2>
-
 	<div id="reviews">
 		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
 		<?=$this->render('_reviews_form', [
-			'section' => 'program'
+			'section' => 'program',
+			'name' => $model->translate,
 		]);?>
-		
 		<p class="reviews_name">Андрей</p>
-
 		<div class="review_background">
-
 			<p class="review_text">Отличный салон!</p>
-
-			<a>Читать далее</a>
-
 		</div>
-
 	</div>	
-
 </div>

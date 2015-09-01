@@ -17,6 +17,19 @@ if(!$captcha){
 		],
 	]);
 }
+if($save){
+	echo Alert::widget([
+		'type' => Alert::TYPE_SUCCESS,
+		'title' => 'Отзыв отравлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Отзыв будет опубликован после модерации!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
 ?>
 <div id="content" class="clearfix">
 	<div id="reviews_page">

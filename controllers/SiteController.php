@@ -87,7 +87,7 @@ class SiteController extends Controller
     {
 		$reviews = new BReviews;
 		if(Yii::$app->request->post()){
-			if($_SESSION['__captcha/site/captcha'] != $_POST['verifyCode']){
+			if($_SESSION['__captcha/site/captcha'] != $_POST['BReviews']['verifyCode']){
 				Yii::$app->getSession()->setFlash('captcha', 'false');
 
 				if($_POST['BReviews']['section'] == 'masters' || $_POST['BReviews']['section'] == 'programs'){
@@ -134,10 +134,16 @@ class SiteController extends Controller
 		} else {
 			$captcha = true;
 		}
+		if(Yii::$app->getSession()->getFlash('save')){
+			$save = true;
+		} else {
+			$save = false;
+		}
 		
         return $this->render('reviews', [
 			'reviews' => $reviews,
 			'captcha' => $captcha,
+			'save' => $save,
 		]);
     }
 	
@@ -163,7 +169,18 @@ class SiteController extends Controller
     public function actionInterior()
     {
 		$model = BInterior::find()->where(['site' => 1])->one();
-
+		
+		if(Yii::$app->getSession()->getFlash('captcha')){
+			$captcha = false;
+		} else {
+			$captcha = true;
+		}
+		if(Yii::$app->getSession()->getFlash('save')){
+			$save = true;
+		} else {
+			$save = false;
+		}
+		
         return $this->render('interior', ['model' => $model]);
     }
 	
@@ -201,6 +218,11 @@ class SiteController extends Controller
 				$captcha = false;
 			} else {
 				$captcha = true;
+			}
+			if(Yii::$app->getSession()->getFlash('save')){
+				$save = true;
+			} else {
+				$save = false;
 			}
 			
 			return $this->render('programs_detail', [
@@ -244,6 +266,11 @@ class SiteController extends Controller
 				$captcha = false;
 			} else {
 				$captcha = true;
+			}
+			if(Yii::$app->getSession()->getFlash('save')){
+				$save = true;
+			} else {
+				$save = false;
 			}
 			
 			return $this->render('masters_detail', [

@@ -1,6 +1,33 @@
 <?php
+use kartik\widgets\Alert;
 use app\modules\admin\models\BImages;
 $this->title = 'Мужской спа-салон «Барон»';
+if(!$captcha){
+	echo Alert::widget([
+		'type' => Alert::TYPE_DANGER,
+		'title' => 'Ошибка! Отзыв не отправлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Вы не верно ввели проверочный код!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
+if($save){
+	echo Alert::widget([
+		'type' => Alert::TYPE_SUCCESS,
+		'title' => 'Отзыв отравлен!',
+		'icon' => 'glyphicon glyphicon-remove-sign',
+		'body' => 'Отзыв будет опубликован после модерации!',
+		'showSeparator' => true,
+		'delay' => 5000,
+		'options' => [
+			'style' => 'position: absolute;top: 0;right: 0;width: 400px;',
+		],
+	]);
+}
 ?>
 <div id="content" class="clearfix">
 	<div id="interior_page">
@@ -33,7 +60,6 @@ $this->title = 'Мужской спа-салон «Барон»';
 			<p class="reviews_name">Андрей</p>
 			<div class="review_background">
 				<p class="review_text">Отличный салон!</p>
-				<a>Читать далее</a>
 			</div>
 		</div>				
 	</div>
