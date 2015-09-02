@@ -60,7 +60,7 @@ if($save){
 	<div id="reviews">
 		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
 		<?=$this->render('_reviews_form', [
-			'section' => 'program',
+			'section' => 'programs',
 			'translate' => $model->translate,
 		]);?>
 		<?foreach($reviews as $key => $value){?>
