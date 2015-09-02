@@ -13,6 +13,7 @@ use Yii;
  * @property string $text
  * @property string $date
  * @property string $section
+ * @property string $translate
  * @property integer $moderate
  * @property string $ip
  */
@@ -37,7 +38,7 @@ class BReviews extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['moderate'], 'integer'],
             [['date'], 'safe'],
-            [['email', 'name', 'section', 'ip'], 'string', 'max' => 64],
+            [['email', 'name', 'section', 'translate', 'ip'], 'string', 'max' => 64],
         ];
     }
 
@@ -53,6 +54,7 @@ class BReviews extends \yii\db\ActiveRecord
             'text' => 'Текст',
             'date' => 'Дата',
             'section' => 'Раздел сайта',
+            'translate' => 'Транслит названия страницы',
             'moderate' => 'Публикаця',
             'verifyCode' => 'Проверочный код',
             'ip' => 'IP',

@@ -36,7 +36,7 @@ $reviews = new BReviews;
 		])?>
 		<?= $form->field($reviews, 'section')->textInput(['value' => $section, 'style' => 'display: none;'])->label(false)?>
 		<?if($section == 'masters' || $section == 'programs'){?>
-			<?= $form->field($reviews, 'name')->textInput(['value' => $name, 'style' => 'display: none;'])->label(false)?>
+			<?= $form->field($reviews, 'translate')->textInput(['value' => $name, 'style' => 'display: none;'])->label(false)?>
 		<?}?>
 		<div class="form-group">
 			<?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>

@@ -39,20 +39,14 @@ if($save){
 			'section' => 'reviews'
 		]);?>
 		<div id="reviews">
+		<?foreach($reviews as $key => $value){?>
 			<div class="review_wrap">
-				<p class="reviews_name">Андрей</p>
+				<p class="reviews_name"><?=$value->name?></p>
 				<div class="review_background">
-					<p class="review_text">Отличный салон!</p>
-					<a>Читать далее</a>
+					<p class="review_text"><?=$value->text?></p>
 				</div>
 			</div>
-			<div class="review_wrap">
-				<p class="reviews_name">Леха</p>
-				<div class="review_background">
-					<p class="review_text">Отличный салон!</p>
-					<a>Читать далее</a>
-				</div>
-			</div>
+		<?}?>
 		</div>	
 	</div>
 </div>

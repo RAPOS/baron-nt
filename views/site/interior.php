@@ -54,13 +54,17 @@ if($save){
 		<h3>Отзывы</h3>
 		<div id="reviews">
 		<a href="#reviews_box" class="add_reviews zoomimage">Оставить отзыв</a>
-			<?=$this->render('_reviews_form', [
-				'section' => 'interior'
-			]);?>
-			<p class="reviews_name">Андрей</p>
-			<div class="review_background">
-				<p class="review_text">Отличный салон!</p>
+		<?=$this->render('_reviews_form', [
+			'section' => 'interior'
+		]);?>
+		<?foreach($reviews as $key => $value){?>
+			<div class="review_wrap">
+				<p class="reviews_name"><?=$value->name?></p>
+				<div class="review_background">
+					<p class="review_text"><?=$value->text?></p>
+				</div>
 			</div>
+		<?}?>
 		</div>				
 	</div>
 </div>
