@@ -2,8 +2,6 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-/* @var $this yii\web\View */
-/* @var $dataProvider yii\data\ActiveDataProvider */
 $this->title = 'Мастера';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -14,13 +12,42 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+		'tBodyAttr' => 'id="sortable"',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id_master',
-            'name',
-            'new',
-            'tour',
-            ['class' => 'yii\grid\ActionColumn'],
+			[
+				'attribute' => 'name',
+				'contentOptions' => ['style' => 'width: 380px;'],
+			],
+			[
+				'attribute' => 'new',
+				'format' => 'html',
+				'contentOptions' => ['style' => 'text-align: center;'],
+				'value' => function ($model, $key, $index, $column){
+					if($model['new']){
+						return '<img src="/images/panel/checkmark.png" width="32"/>';
+					} else {
+						return '<img src="/images/panel/cancel.png" width="32"/>';
+					}
+				},
+			],
+			[
+				'attribute' => 'tour',
+				'format' => 'html',
+				'contentOptions' => ['style' => 'text-align: center;'],
+				'value' => function ($model, $key, $index, $column){
+					if($model['tour']){
+						return '<img src="/images/panel/checkmark.png" width="32"/>';
+					} else {
+						return '<img src="/images/panel/cancel.png" width="32"/>';
+					}
+				},
+			],
+            [
+				'class' => 'yii\grid\ActionColumn',
+				'buttons' => ['view' => function ($url, $model, $key) {return false;}]
+			],
         ],
     ]); ?>
 </div>

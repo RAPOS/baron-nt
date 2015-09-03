@@ -37,6 +37,9 @@ class FeedbackController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => BFeedback::find(),
+			'sort' => [
+				'defaultOrder' => ['id' => SORT_DESC],
+			],
         ]);
 
         return $this->render('index', [

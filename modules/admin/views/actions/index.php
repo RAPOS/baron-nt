@@ -14,12 +14,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id',
-            'text',
 			[
 				'attribute' => 'date',
 				'format' => ['date', 'php:d.m.Y']
 			],
-            'status',
+			[
+				'attribute' => 'text',
+				'format' => 'html',
+				'contentOptions' => ['style' => 'width: 410px;'],
+			],
+			[
+				'attribute' => 'status',
+				'format' => 'html',
+				'value' => function ($model, $key, $index, $column){
+					if($model['status']){
+						return '<img src="/images/panel/checkmark.png" width="32"/>';
+					} else {
+						return '<img src="/images/panel/cancel.png" width="32"/>';
+					}
+				},
+			],
             [
 				'class' => 'yii\grid\ActionColumn',
 				'buttons' => ['view' => function ($url, $model, $key) {return false;}]

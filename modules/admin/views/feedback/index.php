@@ -16,12 +16,22 @@ $this->params['breadcrumbs'][] = $this->title;
 				'class' => 'yii\grid\SerialColumn'
 			],
             'id',
-            'email:email',
-            'name',
-            'subject',
 			[
 				'attribute' => 'date',
 				'format' => ['date', 'php:d.m.Y']
+			],
+			[
+				'attribute' => 'email',
+				'format' => 'email',
+				'contentOptions' => ['style' => 'width: 155px;'],
+			],
+			[
+				'attribute' => 'name',
+				'contentOptions' => ['style' => 'width: 155px;'],
+			],
+			[
+				'attribute' => 'subject',
+				'contentOptions' => ['style' => 'width: 155px;'],
 			],
             [
 				'class' => 'yii\grid\ActionColumn',

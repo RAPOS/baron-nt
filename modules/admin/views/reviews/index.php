@@ -1,8 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\grid\GridView;
-/* @var $this yii\web\View */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+
 $this->title = 'Breviews';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -12,11 +11,35 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id',
-            'date',
-            'email:email',
-            'name',
-            'moderate',
-            ['class' => 'yii\grid\ActionColumn'],
+			[
+				'attribute' => 'date',
+				'format' => ['date', 'php:d.m.Y']
+			],
+			[
+				'attribute' => 'email',
+				'format' => 'email',
+				'contentOptions' => ['style' => 'width: 190px;'],
+			],
+			[
+				'attribute' => 'name',
+				'contentOptions' => ['style' => 'width: 190px;'],
+			],
+			[
+				'attribute' => 'moderate',
+				'format' => 'html',
+				'contentOptions' => ['style' => 'text-align: center;'],
+				'value' => function ($model, $key, $index, $column){
+					if($model['moderate']){
+						return '<img src="/images/panel/checkmark.png" width="32"/>';
+					} else {
+						return '<img src="/images/panel/cancel.png" width="32"/>';
+					}
+				}
+			],
+            [
+				'class' => 'yii\grid\ActionColumn',
+				'buttons' => ['update' => function ($url, $model, $key) {return false;}]
+			],
         ],
     ]); ?>
 </div>

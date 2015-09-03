@@ -40,6 +40,9 @@ class ReviewsController extends Controller
 		
         $dataProvider = new ActiveDataProvider([
             'query' => BReviews::find(),
+			'sort' => [
+				'defaultOrder' => ['id' => SORT_DESC],
+			],
         ]);
 
         return $this->render('index', [

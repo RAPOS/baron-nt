@@ -2,8 +2,6 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-/* @var $this yii\web\View */
-/* @var $dataProvider yii\data\ActiveDataProvider */
 $this->title = 'Программы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -18,9 +16,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id_massage',
-            'name',
-            'exclusive',
-            ['class' => 'yii\grid\ActionColumn'],
+			[
+				'attribute' => 'name',
+				'contentOptions' => ['style' => 'width: 440px;'],
+			],
+			[
+				'attribute' => 'exclusive',
+				'format' => 'html',
+				'contentOptions' => ['style' => 'text-align: center;'],
+				'value' => function ($model, $key, $index, $column){
+					if($model['exclusive']){
+						return '<img src="/images/panel/checkmark.png" width="32"/>';
+					} else {
+						return '<img src="/images/panel/cancel.png" width="32"/>';
+					}
+				},
+			],
+            [
+				'class' => 'yii\grid\ActionColumn',
+				'buttons' => ['view' => function ($url, $model, $key) {return false;}]
+			],
         ],
     ]); ?>
 </div>

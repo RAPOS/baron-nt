@@ -39,6 +39,9 @@ class ActionsController extends Controller
 		
         $dataProvider = new ActiveDataProvider([
             'query' => BActions::find(),
+			'sort' => [
+				'defaultOrder' => ['id' => SORT_DESC],
+			],
         ]);
 
         return $this->render('index', [
