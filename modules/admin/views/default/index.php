@@ -41,7 +41,7 @@ $this->title = 'Панель управления';
 		<img src="/images/panel/speech_bubble.png" width="100"/>
 		Отзывы
 	</a>
-	<a class="icon_panel" href="/admin/feadback">
+	<a class="icon_panel" href="/admin/feedback">
 		<img src="/images/panel/antenna2.png" width="100"/>
 		Обратная связь
 	</a>
