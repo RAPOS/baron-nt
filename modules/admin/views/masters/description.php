@@ -1,11 +1,9 @@
 <?php
-use yii\helpers\Html;
-use yii\bootstrap\Alert;
-use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
-/* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BHello */
-/* @var $form ActiveForm */
+use kartik\widgets\Alert;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 $this->title = 'Описание страницы';
 $this->params['breadcrumbs'][] = ['label' => 'Мастера', 'url' => ['/admin/masters']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -13,10 +11,15 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="bmainpage-massage" style="width: 700px;">
 	<?if($success){
 		echo Alert::widget([
+			'type' => Alert::TYPE_SUCCESS,
+			//'title' => 'Отзыв отравлен!',
+			'icon' => 'glyphicon glyphicon-remove-sign',
+			'body' => 'Изменения успешно сохранены!',
+			'showSeparator' => true,
+			'delay' => 5000,
 			'options' => [
-				'class' => 'alert-success'
+				'style' => 'position: fixed;top: 50px;right: 0;width: 400px;',
 			],
-			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>

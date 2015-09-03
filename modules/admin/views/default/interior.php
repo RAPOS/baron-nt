@@ -1,13 +1,11 @@
 <?php
 use app\modules\admin\models\BImages;
 use dosamigos\tinymce\TinyMce;
+use kartik\widgets\Alert;
 use kartik\widgets\FileInput;
-use yii\bootstrap\Alert;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-/* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BInterior */
-/* @var $form ActiveForm */
+
 $this->title = 'Интерьер';
 $this->params['breadcrumbs'][] = $this->title;
 $array_image = array();
@@ -33,10 +31,15 @@ if(!$array_image && !$array_image_cfg){
 <div class="interior" style="width: 700px;">
 	<?if($success){
 		echo Alert::widget([
+			'type' => Alert::TYPE_SUCCESS,
+			//'title' => 'Отзыв отравлен!',
+			'icon' => 'glyphicon glyphicon-remove-sign',
+			'body' => 'Изменения успешно сохранены!',
+			'showSeparator' => true,
+			'delay' => 5000,
 			'options' => [
-				'class' => 'alert-success'
+				'style' => 'position: fixed;top: 50px;right: 0;width: 400px;',
 			],
-			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>
