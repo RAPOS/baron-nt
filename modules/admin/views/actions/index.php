@@ -24,7 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
 				'format' => ['date', 'php:d.m.Y']
 			],
             'status',
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+				'class' => 'yii\grid\ActionColumn',
+				'buttons' => ['view' => function ($url, $model, $key) {return false;}]
+			],
         ],
     ]); ?>
 </div>
