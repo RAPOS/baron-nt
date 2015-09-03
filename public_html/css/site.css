@@ -1446,7 +1446,8 @@ a.desc:after {
 /*ПУ*/
 .admin_panel {margin-right: 50px;}
 .admin_panel, .admin_content {float: left;}
-.admin_panel a {display: block;border: 1px solid #000;padding: 10px;width: 220px;}
+.admin_panel a {display: block;border: 1px solid #DEDCD9;padding: 10px;width: 220px;}
+.admin_panel a:hover{background: #f5f5f5!important;}
 /* .admin_panel a:last-child {border-bottom: 1px solid #000;} */
 .paginate .pagination{
 	margin-left:15px;
@@ -1477,7 +1478,24 @@ a.desc:after {
 	font-weight:bold;
 	background: rgba(173, 144, 64, 0.7);	
 }
-
+.icon_panel{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	border: 1px solid #DEDCD9;
+	border-radius: 3px;
+	text-decoration: none;
+	float: left;
+}
+.icon_panel:hover{
+	-webkit-box-shadow: 0 0 10px #6C6968;
+	-moz-box-shadow: 0 0 10px #6C6968;
+	box-shadow: 0 0 10px #6C6968;
+	text-decoration: none;
+}
 @media (max-width: 1000px) {
 	.review_background:after {
 		top:57px;

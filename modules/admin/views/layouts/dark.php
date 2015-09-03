@@ -107,10 +107,6 @@ AppAsset::register($this);
 						'url' => ['/admin/reviews'],
 					],
 					[
-						'label' => 'Контакты',
-						'url' => ['/admin/contacts'],
-					],
-					[
 						'label' => 'Обратная связь',
 						'url' => ['/admin/feedback'],
 					],

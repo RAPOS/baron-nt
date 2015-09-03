@@ -6,7 +6,9 @@ use dosamigos\tinymce\TinyMce;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BHello */
 /* @var $form ActiveForm */
-$this->params['breadcrumbs'][] = 'Контакты';
+$this->title = 'Описание страницы';
+$this->params['breadcrumbs'][] = ['label' => 'Обратная связь', 'url' => ['/admin/feedback']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bhello" style="width: 700px;">
 	<?if($success){
@@ -33,7 +35,7 @@ $this->params['breadcrumbs'][] = 'Контакты';
 		]);?>
         <div class="form-group">
 			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
-			<?= Html::a('Отменить', ['/admin'], ['class'=>'btn btn-primary']) ?>
+			<?= Html::a('Отменить', ['/admin/feedback'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 </div>

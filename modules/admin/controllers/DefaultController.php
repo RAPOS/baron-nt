@@ -12,7 +12,6 @@ use app\modules\admin\models\BRules;
 use app\modules\admin\models\BSettings;
 use app\modules\admin\models\BTypesOfMassage;
 use app\modules\admin\models\BVacancy;
-use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BSertificates;
 
 class DefaultController extends Controller
@@ -106,30 +105,6 @@ class DefaultController extends Controller
 		
 		return $this->render('sertificate', ['model' => $model]);
     }	
-	
-	public function actionContacts(){
-		
-		if(Yii::$app->user->isGuest){
-			$this->redirect(Yii::$app->user->loginUrl);
-		}
-
-		$model = BContacts::find()->where(['site' => 1])->one();
-		
-		if(!$model){
-			$model = new BContacts;
-			$model->site = 1;
-		}
-
-		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
-			return $this->render('contacts', ['model' => $model, 'success' => true]);
-		}
-
-		return $this->render('contacts', [
-			'model' => $model,
-		]);
-		
-	}
 	
 	public function actionLogin()
 	{

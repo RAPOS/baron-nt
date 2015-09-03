@@ -7,6 +7,9 @@ $this->title = 'Обратная связь';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bfeedback-index" style="width: 700px;">
+	<p>
+		<?= Html::a('Описание страницы', ['description'], ['class' => 'btn btn-primary']) ?>
+	</p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [

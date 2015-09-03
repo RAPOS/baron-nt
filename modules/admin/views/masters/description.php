@@ -6,7 +6,7 @@ use dosamigos\tinymce\TinyMce;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\BHello */
 /* @var $form ActiveForm */
-$this->title = 'Описание';
+$this->title = 'Описание страницы';
 $this->params['breadcrumbs'][] = ['label' => 'Мастера', 'url' => ['/admin/masters']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'options' => [
 				'class' => 'alert-success'
 			],
-			'body' => '<b>Описание успешно изменено!</b>'
+			'body' => '<b>Изменения сохранены!</b>'
 		]);
 	}?>
     <?php $form = ActiveForm::begin(); ?>

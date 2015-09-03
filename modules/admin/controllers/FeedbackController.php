@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\BFeedback;
+use app\modules\admin\models\BContacts;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -102,4 +103,27 @@ class FeedbackController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+	
+	
+	public function actionDescription(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+
+		$model = BContacts::find()->where(['site' => 1])->one();
+		
+		if(!$model){
+			$model = new BContacts;
+			$model->site = 1;
+		}
+
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+			return $this->render('description', ['model' => $model, 'success' => true]);
+		}
+
+		return $this->render('description', [
+			'model' => $model,
+		]);
+	}
 }

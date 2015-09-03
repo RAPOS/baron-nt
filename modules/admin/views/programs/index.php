@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="btypes-of-massage-index" style="width: 700px;">
     <p>
         <?= Html::a('Добавить программу', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Описание', ['description'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Описание страницы', ['description'], ['class' => 'btn btn-primary']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
