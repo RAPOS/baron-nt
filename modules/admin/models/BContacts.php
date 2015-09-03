@@ -40,8 +40,8 @@ class BContacts extends \yii\db\ActiveRecord
     {
         return [
             'site' => 'Site',
-            'title' => 'Title',
-            'text' => 'Text',
+            'title' => 'Заголовок',
+            'text' => 'Описание',
         ];
     }
 }
