@@ -2,11 +2,10 @@
 use app\modules\admin\models\BImages;
 use dosamigos\tinymce\TinyMce;
 use kartik\widgets\FileInput;
+use kartik\widgets\SwitchInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-/* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BTypesOfMassage */
-/* @var $form yii\widgets\ActiveForm */
+
 $array_image = array();
 $array_image_cfg = array();
 if(!$model->isNewRecord){
@@ -35,7 +34,7 @@ if(!$array_image && !$array_image_cfg){
 			<?= $form->field($model, 'name')->textInput(
 				[
 					'maxlength' => true,
-					'style' => 'width: 400px;',
+					'style' => 'width: 330px;',
 				]
 			) ?>
 		</div>
@@ -58,8 +57,17 @@ if(!$array_image && !$array_image_cfg){
 				]
 			)?>
 		</div>
-		<div style="float: left; margin-left: 15px; margin-top:20px;">
-			<?= $form->field($model, 'exclusive')->checkbox() ?>
+		<div style="float: left; margin-left: 15px;">
+			<?= $form->field($model, 'exclusive')->widget(SwitchInput::classname(), [
+				'pluginOptions' => [
+					'size' => 'normal',
+					'onColor' => 'success',
+					'offColor' => 'danger',
+					'onText' => 'Включить',
+					'offText' => 'Выключить',
+					
+				],
+			])?>
 		</div>
 	</div>
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>

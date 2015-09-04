@@ -2,6 +2,7 @@
 use app\modules\admin\models\BImages;
 use dosamigos\tinymce\TinyMce;
 use kartik\widgets\FileInput;
+use kartik\widgets\SwitchInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -37,9 +38,29 @@ if(!$array_image && !$array_image_cfg){
 				]
 			) ?>
 		</div>
-		<div style="float: left;margin-left: 150px;">
-			<?= $form->field($model, 'new')->checkbox() ?>
-			<?= $form->field($model, 'tour')->checkbox() ?>
+		<div style="float: left;margin-left: 39px;">
+			<?= $form->field($model, 'new')->widget(SwitchInput::classname(), [
+				'pluginOptions' => [
+					'size' => 'normal',
+					'onColor' => 'success',
+					'offColor' => 'danger',
+					'onText' => 'Включить',
+					'offText' => 'Выключить',
+					
+				],
+			])?>
+		</div>
+		<div style="float: left;margin-left: 39px;">
+			<?= $form->field($model, 'tour')->widget(SwitchInput::classname(), [
+				'pluginOptions' => [
+					'size' => 'normal',
+					'onColor' => 'success',
+					'offColor' => 'danger',
+					'onText' => 'Включить',
+					'offText' => 'Выключить',
+					
+				],
+			])?>
 		</div>
 	</div>
 	<div class="clearfix">

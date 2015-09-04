@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				]
 			])->widget(SwitchInput::classname(), [
 				'pluginOptions' => [
-					'size' => 'large',
+					'size' => 'normal',
 					'onColor' => 'success',
 					'offColor' => 'danger',
 					'onText' => 'Включить',
