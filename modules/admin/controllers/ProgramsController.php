@@ -53,22 +53,6 @@ class ProgramsController extends Controller
     }
 
     /**
-     * Displays a single BTypesOfMassage model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-		if(Yii::$app->user->isGuest){
-			$this->redirect(Yii::$app->user->loginUrl);
-		}
-		
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
      * Creates a new BTypesOfMassage model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -84,7 +68,7 @@ class ProgramsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			$model->images = json_encode($_POST[id_img]);
 			$model->save();
-            return $this->redirect(['view', 'id' => $model->id_massage]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -117,7 +101,7 @@ class ProgramsController extends Controller
 					$model->save();
 				}
 			}
-            return $this->redirect(['view', 'id' => $model->id_massage]);
+             return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

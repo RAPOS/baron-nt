@@ -4,9 +4,7 @@ use dosamigos\tinymce\TinyMce;
 use kartik\widgets\FileInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-/* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BMasters */
-/* @var $form yii\widgets\ActiveForm */
+
 $array_image = array();
 $array_image_cfg = array();
 if(!$model->isNewRecord){

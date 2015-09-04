@@ -9,3 +9,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
+Redirect 301 /masters.php http://baron-nt.dev/masters
+Redirect 301 /rules.php http://baron-nt.dev/rules
+Redirect 301 /reviews.php http://baron-nt.dev/reviews

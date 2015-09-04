@@ -8,6 +8,7 @@ $config = [
 	'language' => 'ru-RU',
 	'sourceLanguage' => 'ru-RU',
     'bootstrap' => ['log'],
+	'timeZone' => 'Asia/Yekaterinburg',
     'components' => [
 		'image' => [
 			'class' => 'yii\image\ImageDriver',

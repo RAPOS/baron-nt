@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-$this->title = 'Breviews';
+$this->title = 'Отзывы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="breviews-index" style="width: 700px;">

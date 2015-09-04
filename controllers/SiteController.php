@@ -181,6 +181,8 @@ class SiteController extends Controller
         return $this->render('interior', [
 			'model' => $model,
 			'reviews' => $reviews,
+			'captcha' => $captcha,
+			'save' => $save,
 		]);
     }
 	
@@ -227,8 +229,9 @@ class SiteController extends Controller
 			
 			return $this->render('programs_detail', [
 				'model' => $model,
-				'captcha' => $captcha,
 				'reviews' => $reviews,
+				'captcha' => $captcha,
+				'save' => $save,
 			]);
 		}	
 	}
@@ -276,8 +279,9 @@ class SiteController extends Controller
 			
 			return $this->render('masters_detail', [
 				'model' => $model,
-				'captcha' => $captcha,
 				'reviews' => $reviews,
+				'captcha' => $captcha,
+				'save' => $save,
 			]);
 		}	
     }	
