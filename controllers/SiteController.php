@@ -99,18 +99,18 @@ class SiteController extends Controller
 			}
 			if($model->load(Yii::$app->request->post()) && $model->validate()){
 				$message = $model->text;
-				$message = str_replace(":)", "<img src='".Yii::getAlias('@webroot/images/smiles/ab.gif')."' alt=''/>", $message);
-				$message = str_replace("8-)", "<img src='".Yii::getAlias('@webroot/images/smiles/24.gif')."' alt=''/>", $message);
-				$message = str_replace(";)", "<img src='".Yii::getAlias('@webroot/images/smiles/105.gif')."' alt=''/>", $message);
-				$message = str_replace(":yahoo:", "<img src='".Yii::getAlias('@webroot/images/smiles/bp.gif')."' alt=''/>", $message);
-				$message = str_replace(":think:", "<img src='".Yii::getAlias('@webroot/images/smiles/73.gif')."' alt=''/>", $message);
-				$message = str_replace(":cool:", "<img src='".Yii::getAlias('@webroot/images/smiles/33.gif')."' alt=''/>", $message);
-				$message = str_replace(":yes:", "<img src='".Yii::getAlias('@webroot/images/smiles/109.gif')."' alt=''/>", $message);
-				$message = str_replace(":ok:", "<img src='".Yii::getAlias('@webroot/images/smiles/56.gif')."' alt=''/>", $message);
-				$message = str_replace(":dance:", "<img src='".Yii::getAlias('@webroot/images/smiles/21.gif')."' alt=''/>", $message);
-				$message = str_replace(":drug:", "<img src='".Yii::getAlias('@webroot/images/smiles/31.gif')."' alt=''/>", $message);
-				$message = str_replace(":read:", "<img src='".Yii::getAlias('@webroot/images/smiles/65.gif')."' alt=''/>", $message);
-				$message = str_replace(":aplo:", "<img src='".Yii::getAlias('@webroot/images/smiles/15.gif')."' alt=''/>", $message);
+				$message = str_replace(":)", "<img src='/images/smiles/ab.gif' alt=''/>", $message);
+				$message = str_replace("8-)", "<img src='/images/smiles/24.gif' alt=''/>", $message);
+				$message = str_replace(";)", "<img src='/images/smiles/105.gif' alt=''/>", $message);
+				$message = str_replace(":yahoo:", "<img src='/images/smiles/bp.gif' alt=''/>", $message);
+				$message = str_replace(":think:", "<img src='/images/smiles/73.gif' alt=''/>", $message);
+				$message = str_replace(":cool:", "<img src='/images/smiles/33.gif' alt=''/>", $message);
+				$message = str_replace(":yes:", "<img src='/images/smiles/109.gif' alt=''/>", $message);
+				$message = str_replace(":ok:", "<img src='/images/smiles/56.gif' alt=''/>", $message);
+				$message = str_replace(":dance:", "<img src='/images/smiles/21.gif' alt=''/>", $message);
+				$message = str_replace(":drug:", "<img src='/images/smiles/31.gif' alt=''/>", $message);
+				$message = str_replace(":read:", "<img src='/images/smiles/65.gif' alt=''/>", $message);
+				$message = str_replace(":aplo:", "<img src='/images/smiles/15.gif' alt=''/>", $message);
 				$model->text = $message;
 				$model->translate = $_POST['BReviews']['translate'];
 				$model->ip = $_SERVER['REMOTE_ADDR'];		
