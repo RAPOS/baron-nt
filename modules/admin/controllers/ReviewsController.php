@@ -61,29 +61,15 @@ class ReviewsController extends Controller
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Updates an existing BReviews model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionUpdate($id)
-    {
-		if(Yii::$app->user->isGuest){
-			$this->redirect(Yii::$app->user->loginUrl);
-		}
-		
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+		$model = $this->findModel($id);
+		if(Yii::$app->request->post()){
+			$model->verifyCode = rand(1, 100);
+			$model->moderate = $_POST['BReviews']['moderate'];		
+			if ($model->save()) {
+				return $this->redirect(['index']);
+			}
         } else {
-            return $this->render('update', [
+            return $this->render('view', [
                 'model' => $model,
             ]);
         }

@@ -13,10 +13,10 @@ use Yii;
  * @property string $subject
  * @property string $text
  * @property string $date
- * @property string $verifyCode
  */
 class BFeedback extends \yii\db\ActiveRecord
 {
+	public $verifyCode;
     /**
      * @inheritdoc
      */
@@ -34,7 +34,7 @@ class BFeedback extends \yii\db\ActiveRecord
             [['email', 'name', 'subject', 'text', 'date', 'verifyCode'], 'required'],
             [['text'], 'string'],
             [['date'], 'safe'],
-            [['email', 'name', 'subject', 'verifyCode'], 'string', 'max' => 64]
+            [['email', 'name', 'subject'], 'string', 'max' => 64]
         ];
     }
 
