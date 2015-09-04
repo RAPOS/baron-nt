@@ -7,7 +7,7 @@
 ?>
 	<div id="content" class="clearfix">
 		<h1 class="contacts_title">Контакты</h1>
-		<p class="contacts_text"><?=$text?></p>
+		<p class="contacts_text"><?=strip_tags($text)?></p>
 		<section id="contacts_page">
 				<div id="map">
 				

@@ -34,7 +34,7 @@ $this->title = 'Мужской спа-салон «Барон»';
 		</div>	
 		<h2>Описание</h2>
 		<div id="programs_text">
-			<p><?=$description?></p>
+			<p><?=strip_tags($description)?></p>
 		</div>
 	</div>
 </div>

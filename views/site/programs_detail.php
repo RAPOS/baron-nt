@@ -49,7 +49,7 @@ if($save){
 		<div class="info">			
 			<p class="time">Продолжительность: <?=$model->duration?> минут</p>
 			<p class="description_title">В программу входит:</p>
-			<p class="description_text"><?=$model->description?></p>	
+			<p class="description_text"><?=strip_tags($model->description)?></p>	
 			<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
 			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>				
 		</div>
@@ -63,13 +63,18 @@ if($save){
 			'section' => 'programs',
 			'translate' => $model->translate,
 		]);?>
-		<?foreach($reviews as $key => $value){?>
-			<div class="review_wrap">
-				<p class="reviews_name"><?=$value->name?></p>
-				<div class="review_background">
-					<p class="review_text"><?=$value->text?></p>
+		<?
+		if($reviews){
+			foreach($reviews as $key => $value){?>
+				<div class="review_wrap">
+					<p class="reviews_name"><?=$value->name?></p>
+					<div class="review_background">
+						<p class="review_text"><?=$value->text?></p>
+					</div>
 				</div>
-			</div>
-		<?}?>
+			<?}
+		}else{?>
+			<p class="empty_reviews">Пока что не оставлено ни одного отзыва.</p>
+		<?}?>	
 	</div>	
 </div>

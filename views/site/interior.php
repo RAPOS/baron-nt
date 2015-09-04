@@ -49,7 +49,7 @@ if($save){
 		</div>	
 		<h2>Описание</h2>
 		<div id="interior_text">
-			<p><?=$model->text?></p>
+			<p><?=strip_tags($model->text)?></p>
 		</div>
 		<h3>Отзывы</h3>
 		<div id="reviews">
@@ -57,14 +57,19 @@ if($save){
 		<?=$this->render('_reviews_form', [
 			'section' => 'interior'
 		]);?>
-		<?foreach($reviews as $key => $value){?>
-			<div class="review_wrap">
-				<p class="reviews_name"><?=$value->name?></p>
-				<div class="review_background">
-					<p class="review_text"><?=$value->text?></p>
+		<?
+		if($reviews){
+			foreach($reviews as $key => $value){?>
+				<div class="review_wrap">
+					<p class="reviews_name"><?=$value->name?></p>
+					<div class="review_background">
+						<p class="review_text"><?=$value->text?></p>
+					</div>
 				</div>
-			</div>
-		<?}?>
+			<?}
+		}else{?>
+			<p class="empty_reviews">Пока что не оставлено ни одного отзыва.</p>
+		<?}?>			
 		</div>				
 	</div>
 </div>

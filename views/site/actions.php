@@ -26,7 +26,7 @@
 					}?>
 					<div class="status <?=$active?>"><?=$status?></div>
 
-					<div class="description"><?=$actions[$i]->text?></div>
+					<div class="description"><?=strip_tags($actions[$i]->text)?></div>
 
 				</div>	
 			<?}?>

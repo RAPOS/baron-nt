@@ -64,7 +64,7 @@ if($save){
 			<p>Рост: <span><?=$model->growth?></span></p>	
 			<p>Вес: <span><?=$model->weight?></span></p>	
 			<p>Описание:</p>	
-			<p><span><?=$model->description?></span></p>	
+			<p><span><?=strip_tags($model->description)?></span></p>	
 			<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
 			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>				
 		</div>
@@ -78,14 +78,18 @@ if($save){
 			'section' => 'masters',
 			'translate' => $model->translate,
 		]);?>
-		<?foreach($reviews as $key => $value){?>
-			<div class="review_wrap">
-				<p class="reviews_name"><?=$value->name?></p>
-				<div class="review_background">
-					<p class="review_text"><?=$value->text?></p>
+		<?
+		if($reviews){
+			foreach($reviews as $key => $value){?>
+				<div class="review_wrap">
+					<p class="reviews_name"><?=$value->name?></p>
+					<div class="review_background">
+						<p class="review_text"><?=$value->text?></p>
+					</div>
 				</div>
-			</div>
-		<?}?>
-		<p class="empty_reviews">Пока что не оставлено ни одного отзыва.</p>
+			<?}
+		}else{?>
+			<p class="empty_reviews">Пока что не оставлено ни одного отзыва.</p>
+		<?}?>	
 	</div>	
 </div>

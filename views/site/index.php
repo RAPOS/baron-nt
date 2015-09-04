@@ -28,8 +28,9 @@
 					<div class="owl-next"></div>
 				</div>
 				<h2><?=$title_h2?></h2>
-				<p><?=$text_1?></p>
-				<p style="color:#c2c2c2 !important;"><?=$text_2?></p>
+				<p><?=strip_tags($text_1)?></p>
+				<p style="color:#c2c2c2 !important; font-size:14px; line-height:14px; font-style:italic; margin-bottom:30px;"><?=$text_2?></p>
+				<p style="color:#c2c2c2 !important; font-size:14px; line-height:14px; font-style:italic; margin-bottom:30px; margin-top:-15px;">Все указанные услуги предоставляются в рамках шоу программ, салон Барон услуг медицинского массажа не оказывает. При употреблении слова "массаж" следует руководствоваться исключительно художественным описанием шоу программ.</p>
 			</section>
 			<aside>
 				<div id="main_our_masters">

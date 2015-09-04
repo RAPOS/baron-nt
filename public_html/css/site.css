@@ -937,14 +937,14 @@ aside{
 	padding-left:15px;	
 }
 #onemaster_page .main_image img {
-	width:275px;
+	width:274px;
 	border:1px solid #c2c2c2;
 }
 #onemaster_page .preview_image {
 	padding-left:15px;	
 }
 #onemaster_page .preview_image img {
-	width:87px;
+	width:88px;
 	height:67px;
 	border:1px solid #c2c2c2;
 	float:left;
@@ -954,7 +954,7 @@ aside{
 #onemaster_page .info {
 	float:left;
 	width:600px;
-	margin-left:20px;
+	margin-left:50px;
 }
 #onemaster_page .info p{
     text-align: justify;
@@ -1324,7 +1324,7 @@ aside{
     width: 37px;
     height: 51px;
     position: absolute;
-    top: 120px;
+    top: 145px;
     left: -13px;
     cursor: pointer;
     z-index: 999;
@@ -1336,7 +1336,7 @@ aside{
     height: 51px;
     position: absolute;
     width: 37px;
-    top: 120px;
+    top: 145px;
     left: 284px;
     cursor: pointer;
     z-index: 999;
