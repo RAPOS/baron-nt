@@ -1509,6 +1509,69 @@ a.desc:after {
 .breviews-view .breviews-view-right{
 	width: 250px;
 }
+.breviews-view .breviews-view-left .breviews-view-border{
+	border-bottom: 1px dashed #777;
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #777;
+}
+.breviews-view .breviews-view-left .breviews-view-border a{
+	font-weight: 400;
+	font-size: 18px;
+	float: right;
+}
+.breviews-view-name{
+	margin-top: 10px;
+}
+.breviews-view-name img{
+	float: left;
+}
+.breviews-view-name span{
+	color: #777;
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.breviews-view-baloon{
+	background: #E2E2E2;
+	color: #777;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	width: 100%;
+}
+.breviews-view-baloon:after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 15px 21px;
+	border-color: #E2E2E2 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -21px;
+	left: 22px;
+}
+.field-breviews-moderate{
+	border-top: 1px dashed #777;
+	padding-top: 10px;
+}
+.breviews-label-switch{
+	font-size: 28px;
+	float: left;
+	margin-top: 2px;
+	color: #777;
+}
+.field-breviews-moderate .bootstrap-switch{
+	float: right!important;
+}
 .breviews-view .breviews-view-right p{
 	border-bottom: 1px dashed #777;
 	padding-top: 5px;
