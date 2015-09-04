@@ -1,6 +1,7 @@
 <?php
 use kartik\widgets\Alert;
 use app\modules\admin\models\BImages;
+
 $this->title = 'Мужской спа-салон «Барон»';
 if(!$captcha){
 	echo Alert::widget([

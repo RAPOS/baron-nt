@@ -151,15 +151,39 @@ class SiteController extends Controller
 		$text = $model->text;
 		
 		$feedback = new BFeedback;
-		if ($feedback->load(Yii::$app->request->post()) && $feedback->save()){
-			$feedback->date = time();
-			$feedback->save();
+		if(Yii::$app->request->post()){
+			if($_SESSION['__captcha/site/captcha'] != $_POST['BFeedback']['verifyCode']){
+				Yii::$app->getSession()->setFlash('captcha', 'false');
+
+				return $this->redirect(['contacts']);
+			}
+			if ($feedback->load(Yii::$app->request->post()) && $model->validate()){
+				$feedback->date = time();
+				if($feedback->save()){
+					Yii::$app->getSession()->setFlash('save', 'true');
+					
+					return $this->redirect(['contacts']);
+				}
+			}
+		}
+		
+		if(Yii::$app->getSession()->getFlash('captcha')){
+			$captcha = false;
+		} else {
+			$captcha = true;
+		}
+		if(Yii::$app->getSession()->getFlash('save')){
+			$save = true;
+		} else {
+			$save = false;
 		}
 		
         return $this->render('contacts', [
 			'title' => $title, 
 			'text' => $text,
 			'feedback' => $feedback,
+			'captcha' => $captcha,
+			'save' => $save,
         ]);
     }
 	
