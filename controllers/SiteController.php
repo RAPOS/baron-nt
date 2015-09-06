@@ -20,12 +20,12 @@ use app\modules\admin\models\BMasters;
 use app\modules\admin\models\BFeedback;
 use app\modules\admin\models\BReviews;
 use app\modules\admin\models\BSertificates;
+use app\modules\admin\models\BSettings;
 use app\modules\admin\models\BActions;
 
 class SiteController extends Controller
 {
-    public function behaviors()
-    {
+    public function behaviors(){
         return [
             'access' => [
                 'class' => AccessControl::className(),
@@ -47,8 +47,7 @@ class SiteController extends Controller
         ];
     }
 
-    public function actions()
-    {
+    public function actions(){
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -60,8 +59,7 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex()
-    {
+    public function actionIndex(){
 		$mainpage = BMainpage::find()->where(['site' => 1])->one();
 		$title_h1 = $mainpage->title_h1;
 		$title_h2 = $mainpage->title_h2;
@@ -76,15 +74,13 @@ class SiteController extends Controller
         return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images, 'actions' => $actions]);
     }
 	
-    public function actionActions()
-    {
+    public function actionActions(){
 		$actions = BActions::find()->all();	
 		
         return $this->render('actions',['actions' => $actions]);
     }	
 
-    public function actionReviews()
-    {
+    public function actionReviews(){
 		$model = new BReviews;
 		$reviews = BReviews::find()->where('moderate = 1')->orderBy('id DESC')->all();
 		if(Yii::$app->request->post()){
@@ -144,8 +140,7 @@ class SiteController extends Controller
 		]);
     }
 	
-    public function actionContacts()
-    {
+    public function actionContacts(){
 		$model = BContacts::find()->where(['site' => 1])->one();
 		$title = $model->title;
 		$text = $model->text;
@@ -160,6 +155,15 @@ class SiteController extends Controller
 			if ($feedback->load(Yii::$app->request->post()) && $model->validate()){
 				$feedback->date = time();
 				if($feedback->save()){
+					
+					$BSettings = BSettings::find()->where(['site' => 1])->one();
+					Yii::$app->mail->compose()
+						//->setTo($BSettings->email)
+						->setFrom([$feedback->email => $feedback->name])
+						->setSubject($feedback->subject)
+						->setTextBody($feedback->text)
+						->send();
+					
 					Yii::$app->getSession()->setFlash('save', 'true');
 					
 					return $this->redirect(['contacts']);
@@ -187,8 +191,7 @@ class SiteController extends Controller
         ]);
     }
 	
-    public function actionInterior()
-    {
+    public function actionInterior(){
 		$model = BInterior::find()->where(['site' => 1])->one();
 		$reviews = BReviews::find()->where('section = "interior" AND moderate = 1')->orderBy('id DESC')->all();
 		if(Yii::$app->getSession()->getFlash('captcha')){
@@ -210,8 +213,7 @@ class SiteController extends Controller
 		]);
     }
 	
-    public function actionPrograms($page = 0)
-    {
+    public function actionPrograms($page = 0){
 		$getName = $_GET['name'];
 		if(!$getName){
 			$query = BTypesOfMassage::find();
@@ -260,8 +262,7 @@ class SiteController extends Controller
 		}	
 	}
 
-    public function actionMasters($page = 0)
-    {
+    public function actionMasters($page = 0){
 		$getName = $_GET['name'];
 		if(!$getName){
 			$query = BMasters::find();
@@ -310,30 +311,25 @@ class SiteController extends Controller
 		}	
     }	
 	
-    public function actionVacancy()
-    {
+    public function actionVacancy(){
 		$model = BVacancy::find()->where(['site' => 1])->one();
 		
 		$title = $model->title;
-		
 		$text = $model->text;
 
         return $this->render('vacancy', ['title' => $title, 'text' => $text]);
     }	
 
-    public function actionRules()
-    {
+    public function actionRules(){
 		$model = BRules::find()->where(['site' => 1])->one();
 	
 		$title = $model->title;
-		
 		$text = $model->text;
 		
 	    return $this->render('rules', ['title' => $title, 'text' => $text]);
     }
 
-    public function actionLogout()
-    {
+    public function actionLogout(){
         Yii::$app->user->logout();
 
         return $this->goHome();
