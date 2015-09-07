@@ -158,10 +158,11 @@ class SiteController extends Controller
 					
 					$BSettings = BSettings::find()->where(['site' => 1])->one();
 					Yii::$app->mail->compose()
-						//->setTo($BSettings->email)
+						->setTo($BSettings->email)
 						->setFrom([$feedback->email => $feedback->name])
 						->setSubject($feedback->subject)
-						->setTextBody($feedback->text)
+						->setTextBody('Письмо отправлено с сайта \n
+							http://'.$_SERVER['SERVER_NAME'].'\n'.$feedback->text)
 						->send();
 					
 					Yii::$app->getSession()->setFlash('save', 'true');
