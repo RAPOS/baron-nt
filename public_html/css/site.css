@@ -181,7 +181,8 @@ header .lenta {
 }
 footer {
 	background: url(/images/line.png) no-repeat;
-	background-size: 100% 7%;
+    background-size: 100% 5%;
+    height: 90px;
 }
 aside #main_actions .title{
 	font-family: MonAmourTwo; 
@@ -1535,7 +1536,7 @@ a.desc:after {
     text-decoration: underline;
 }
 .breviews-view-baloon{
-	background: #DCDADA;
+	background: #E8E8E8;
 	color: #777;
 	font-size: 18px;
 	margin-top: 20px;
@@ -1552,7 +1553,7 @@ a.desc:after {
 	position: absolute;
 	border-style: solid;
 	border-width: 0 15px 21px;
-	border-color: #DCDADA transparent;
+	border-color: #E8E8E8 transparent;
 	display: block;
 	width: 0;
 	z-index: 1;
@@ -1585,6 +1586,16 @@ a.desc:after {
 .breviews-view .breviews-view-right p span:nth-child(2){
 	font-size: 18px;
 	float: right;
+}
+.counter {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 55px;
+}
+.relaxlink {
+    margin-left: 160px;
+    margin-top: -60px;
+    position: absolute;
 }
 
 @media (max-width: 1000px) {

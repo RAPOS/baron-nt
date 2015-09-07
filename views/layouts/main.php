@@ -98,6 +98,20 @@ AppAsset::register($this);
 		<!--Footer-->
 		
 <?php $this->endBody() ?>
+<!--Кнопка 1relax.ru-->
+<a class="relaxlink" href="http://www.1relax.ru" title="Все салоны эротического массажа" target="_blank"><img src="http://www.1relax.ru/buttons/130x31.png" border="0" width="130" height="31" alt="Все салоны эротического массажа" /></a>
+<!--/ Кнопка 1relax.ru-->
+<!-- begin of Top100 code -->
+<div class="counter">
+	<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?3130409"></script>
+	<noscript>
+		<a href="http://top100.rambler.ru/navi/3130409/">
+			<img src="http://counter.rambler.ru/top100.cnt?3130409" alt="Rambler's Top100" border="0" />
+		</a>
+	</noscript>
+</div>
+<!-- end of Top100 code -->
+
 </body>
 </html>
 <?php $this->endPage() ?>
