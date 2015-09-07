@@ -1535,7 +1535,7 @@ a.desc:after {
     text-decoration: underline;
 }
 .breviews-view-baloon{
-	background: #E8E8E8;
+	background: #DCDADA;
 	color: #777;
 	font-size: 18px;
 	margin-top: 20px;
@@ -1552,7 +1552,7 @@ a.desc:after {
 	position: absolute;
 	border-style: solid;
 	border-width: 0 15px 21px;
-	border-color: #E8E8E8 transparent;
+	border-color: #DCDADA transparent;
 	display: block;
 	width: 0;
 	z-index: 1;
