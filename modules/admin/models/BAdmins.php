@@ -44,6 +44,7 @@ class BAdmins extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'id' => 'ID',
             'name' => 'Логин',
             'password' => 'Пароль',
+            'rememberMe' => 'Запомнить меня',
         ];
     }
 	

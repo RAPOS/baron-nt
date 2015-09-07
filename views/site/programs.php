@@ -22,7 +22,10 @@ $this->title = 'Мужской спа-салон «Барон»';
 				<?} else {?>
 					<a href="/programs/<?=$programs->translate?>">
 						<img src="/images/default_massage.png" width="280" height="200" alt="">
-						<p><?=$programs->name?></p>						
+						<p><?=$programs->name?></p>		
+						<?if($programs->exclusive){?>
+							<div class="exclusive"></div>						
+						<?}?>						
 					</a>
 				<?}
 			}?>

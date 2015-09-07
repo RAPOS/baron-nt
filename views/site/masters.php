@@ -22,7 +22,12 @@ $this->title = 'Мужской спа-салон «Барон»';
 				<?} else {?>
 					<a href="/masters/<?=$masters->translate?>">
 						<img src="/images/default_master.png" width="280" height="200" alt="">
-						<p><?=$masters->name?></p>						
+						<p><?=$masters->name?></p>
+						<?if($masters->new){?>
+							<div class="new_master"></div>						
+						<?}else if($masters->tour){?>
+							<div class="master_in_tour"></div>	
+						<?}?>
 					</a>
 				<?}
 			}?>

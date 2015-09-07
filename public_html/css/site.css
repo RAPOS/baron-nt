@@ -1597,7 +1597,40 @@ a.desc:after {
     margin-top: -60px;
     position: absolute;
 }
-
+.control-label {
+	margin-bottom:10px;
+}
+.summary{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.new_master {
+    background: url(/images/new.png) no-repeat;
+    background-size: 50% 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    right: -100px;
+}
+.exclusive {
+    background: url(/images/exclusive.png) no-repeat;
+    background-size: 50% 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    right: -100px;
+}
+.master_in_tour {
+    background: url(/images/tour.png) no-repeat;
+    background-size: 50% 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    right: -100px;
+}
 @media (max-width: 1000px) {
 	.review_background:after {
 		top:57px;
