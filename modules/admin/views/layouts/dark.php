@@ -45,11 +45,11 @@ AppAsset::register($this);
 				'class' => 'btn-link',
 				'style' => 'margin: 8px'
 			],
-			'dropdown' => [
+			/* 'dropdown' => [
 				'items' => [
 					['label' => 'Изменить данные', 'url' => '/admin/userchange'],
 				],
-			],
+			], */
 		]);
 		echo Nav::widget([
 			'options' => ['class' => 'navbar-nav navbar-right'],

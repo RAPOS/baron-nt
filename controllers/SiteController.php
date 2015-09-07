@@ -155,16 +155,6 @@ class SiteController extends Controller
 			if ($feedback->load(Yii::$app->request->post()) && $model->validate()){
 				$feedback->date = time();
 				if($feedback->save()){
-					
-					$BSettings = BSettings::find()->where(['site' => 1])->one();
-					Yii::$app->mail->compose()
-						->setTo($BSettings->email)
-						->setFrom([$feedback->email => $feedback->name])
-						->setSubject($feedback->subject)
-						->setTextBody('Письмо отправлено с сайта \n
-							http://'.$_SERVER['SERVER_NAME'].'\n'.$feedback->text)
-						->send();
-					
 					Yii::$app->getSession()->setFlash('save', 'true');
 					
 					return $this->redirect(['contacts']);

@@ -3,8 +3,9 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\modules\admin\models\BFeedback;
 use app\modules\admin\models\BContacts;
+use app\modules\admin\models\BFeedback;
+use app\modules\admin\models\BSettings;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -54,6 +55,17 @@ class FeedbackController extends Controller
      */
     public function actionView($id)
     {
+		if(Yii::$app->request->post()){
+			$BSettings = BSettings::find()->where(['site' => 1])->one();
+			Yii::$app->mail->compose()
+				->setTo($BSettings->email)
+				->setFrom([$feedback->email => $feedback->name])
+				->setSubject($feedback->subject)
+				->setTextBody('Письмо отправлено с сайта \n
+					http://'.$_SERVER['SERVER_NAME'].'\n'.$feedback->text)
+				->send();
+		}
+		
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

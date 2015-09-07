@@ -1,14 +1,14 @@
 <?php
 use yii\helpers\Html;
-use yii\widgets\DetailView;
-/* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BFeedback */
+use yii\widgets\ActiveForm;
+
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Обратная связь', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bfeedback-view">
-    <?= DetailView::widget([
+	<?php $form = ActiveForm::begin(); ?>
+    <?/* = DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
 				'format' => ['date', 'php:d.m.Y']
 			],
         ],
-    ]) ?>
+    ])  */?>
     <p>
-        <?= Html::a('Ответить', ['update', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+        <?=Html::submitButton('Ответить', ['class' => 'btn btn-success'])?>
         <?= Html::a('Отмена', ['/admin/feedback'], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить запись', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -33,4 +33,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+	<?php ActiveForm::end(); ?>
 </div>

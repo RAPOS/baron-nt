@@ -13,6 +13,7 @@ use Yii;
  * @property string $subject
  * @property string $text
  * @property string $date
+ * @property string $response
  */
 class BFeedback extends \yii\db\ActiveRecord
 {
@@ -32,7 +33,7 @@ class BFeedback extends \yii\db\ActiveRecord
     {
         return [
             [['email', 'name', 'subject', 'text', 'date', 'verifyCode'], 'required'],
-            [['text'], 'string'],
+            [['text', 'response'], 'string'],
             [['date'], 'safe'],
             [['email', 'name', 'subject'], 'string', 'max' => 64]
         ];
@@ -50,6 +51,7 @@ class BFeedback extends \yii\db\ActiveRecord
             'subject' => 'Тема',
             'text' => 'Текст',
             'date' => 'Дата',
+            'response' => 'Ответ',
             'verifyCode' => 'Проверочный код',
         ];
     }

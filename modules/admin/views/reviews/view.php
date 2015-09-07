@@ -4,7 +4,6 @@ use app\modules\admin\models\BTypesOfMassage;
 use kartik\widgets\SwitchInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\widgets\DetailView;
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Отзывы', 'url' => ['index']];
