@@ -11,7 +11,6 @@ use Yii;
  * @property string $title
  * @property string $keywords
  * @property string $description
- * @property string $email
  */
 class BSettings extends \yii\db\ActiveRecord
 {
@@ -32,7 +31,6 @@ class BSettings extends \yii\db\ActiveRecord
             [['title', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
             [['title'], 'string', 'max' => 64],
-            [['email'], 'string', 'max' => 50],
             [['keywords', 'description'], 'string', 'max' => 256],
             [['site'], 'unique']
         ];
@@ -48,7 +46,6 @@ class BSettings extends \yii\db\ActiveRecord
             'title' => 'Заголовок',
             'keywords' => 'Ключевые слова',
             'description' => 'Описание',
-            'email' => 'Email для уведомления',
         ];
     }
 }

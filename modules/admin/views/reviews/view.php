@@ -28,12 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
 				$page = 'Программы / '.$BTypesOfMassage->name;
 				$url = '/programs/'.$model->translate;
 			}?>
-			<p class="breviews-view-border">Отзыв к странице: <a href="<?=$url?>" target="_blank"><?=$page?></a></p>
-			<p class="breviews-view-name clearfix"> 
+			<div class="breviews-view-border">Отзыв к странице: <a href="<?=$url?>" target="_blank"><?=$page?></a></div>
+			<div class="breviews-view-name clearfix"> 
 				<img src="/images/panel/user.png" width="48"/>
 				<span><?=$model->name?></span>
-			</p>
-			<p class="breviews-view-baloon"><?=$model->text?></p>
+			</div>
+			<div class="breviews-view-baloon"><?=$model->text?></div>
 			<?= $form->field($model, 'moderate', [
 				'labelOptions' => [
 					'class' => 'breviews-label-switch'
@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<br>
     <div class="form-group">
         <?=Html::submitButton('Сохранить', ['class' => 'btn btn-success'])?>
-        <?= Html::a('Отмена', ['/admin/feedback'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Назад', ['/admin/feedback'], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить запись', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [

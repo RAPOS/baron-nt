@@ -133,7 +133,7 @@ if(!$array_image && !$array_image_cfg){
 	<br>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Сохранить' : 'Обновить', ['class' => 'btn btn-success']) ?>
-		<?= Html::a('Отменить', ['/admin/programs'], ['class'=>'btn btn-primary']) ?>
+		<?= Html::a('Назад', ['/admin/programs'], ['class'=>'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

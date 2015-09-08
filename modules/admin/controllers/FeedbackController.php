@@ -5,7 +5,6 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\modules\admin\models\BContacts;
 use app\modules\admin\models\BFeedback;
-use app\modules\admin\models\BSettings;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -36,6 +35,10 @@ class FeedbackController extends Controller
      */
     public function actionIndex()
     {
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
         $dataProvider = new ActiveDataProvider([
             'query' => BFeedback::find(),
 			'sort' => [
@@ -55,20 +58,29 @@ class FeedbackController extends Controller
      */
     public function actionView($id)
     {
-		if(Yii::$app->request->post()){
-			$BSettings = BSettings::find()->where(['site' => 1])->one();
-			Yii::$app->mail->compose()
-				->setTo($BSettings->email)
-				->setFrom([$feedback->email => $feedback->name])
-				->setSubject($feedback->subject)
-				->setTextBody('Письмо отправлено с сайта \n
-					http://'.$_SERVER['SERVER_NAME'].'\n'.$feedback->text)
-				->send();
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+		$model = $this->findModel($id);
+		if(Yii::$app->request->post()){
+			$model->verifyCode = rand(1, 100);
+			$model->response = $_POST['BFeedback']['response'];	
+			if ($model->save()) {
+			Yii::$app->mail->compose()
+				->setTo($model->email)
+				->setFrom(['raposbest@yandex.ru' => "Мужской спа-салон «Барон»"])
+				->setSubject($model->subject)
+				->setHtmlBody('Вам отправлен ответ с сайта:	http://'.$_SERVER['SERVER_NAME'].' <br>'.$model->response)
+				->send();
+				
+				return $this->redirect(['index']);
+			}
+        } else {
+            return $this->render('view', [
+                'model' => $model,
+            ]);
+        }
     }
 	
     /**
@@ -79,6 +91,10 @@ class FeedbackController extends Controller
      */
     public function actionDelete($id)
     {
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

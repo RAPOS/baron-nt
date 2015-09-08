@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		]);?>
         <div class="form-group">
 			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
-			<?= Html::a('Отменить', ['/admin/masters'], ['class'=>'btn btn-primary']) ?>
+			<?= Html::a('Назад', ['/admin/masters'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 </div>

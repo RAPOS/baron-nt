@@ -12,7 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?if($success){
 		echo Alert::widget([
 			'type' => Alert::TYPE_SUCCESS,
-			//'title' => 'Отзыв отравлен!',
 			'icon' => 'glyphicon glyphicon-remove-sign',
 			'body' => 'Изменения успешно сохранены!',
 			'showSeparator' => true,
@@ -38,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		]);?>
         <div class="form-group">
 			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
-			<?= Html::a('Отменить', ['/admin/feedback'], ['class'=>'btn btn-primary']) ?>
+			<?= Html::a('Назад', ['/admin/feedback'], ['class'=>'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 </div>

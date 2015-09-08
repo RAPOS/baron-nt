@@ -141,20 +141,21 @@ class SiteController extends Controller
     }
 	
     public function actionContacts(){
-		$model = BContacts::find()->where(['site' => 1])->one();
-		$title = $model->title;
-		$text = $model->text;
+		$BContacts = BContacts::find()->where(['site' => 1])->one();
+		$title = $BContacts->title;
+		$text = $BContacts->text;
 		
-		$feedback = new BFeedback;
+		$model = new BFeedback;
 		if(Yii::$app->request->post()){
 			if($_SESSION['__captcha/site/captcha'] != $_POST['BFeedback']['verifyCode']){
 				Yii::$app->getSession()->setFlash('captcha', 'false');
 
 				return $this->redirect(['contacts']);
 			}
-			if ($feedback->load(Yii::$app->request->post()) && $model->validate()){
-				$feedback->date = time();
-				if($feedback->save()){
+			if ($model->load(Yii::$app->request->post()) && $model->validate()){
+				$model->date = time();
+				$model->ip = $_SERVER['REMOTE_ADDR'];
+				if($model->save()){
 					Yii::$app->getSession()->setFlash('save', 'true');
 					
 					return $this->redirect(['contacts']);
@@ -176,7 +177,7 @@ class SiteController extends Controller
         return $this->render('contacts', [
 			'title' => $title, 
 			'text' => $text,
-			'feedback' => $feedback,
+			'feedback' => $model,
 			'captcha' => $captcha,
 			'save' => $save,
         ]);

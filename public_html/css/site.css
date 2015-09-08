@@ -1498,44 +1498,64 @@ a.desc:after {
 	text-decoration: none;
 }
 
-.breviews-view .breviews-view-left, .breviews-view .breviews-view-right{
+.breviews-view-left, .breviews-view-right,
+.bfeedback-view-left, .bfeedback-view-right{
 	float: left;
 	width: 440px;
 	background: #f5f5f5;
 	padding: 10px;
 }
-.breviews-view .breviews-view-left{
+.breviews-view-left, .bfeedback-view-left{
 	margin-right: 10px;
 }
-.breviews-view .breviews-view-right{
+.breviews-view-right, .bfeedback-view-right{
 	width: 250px;
 }
-.breviews-view .breviews-view-left .breviews-view-border{
+.breviews-view-border,
+.bfeedback-view-border{
 	border-bottom: 1px dashed #777;
 	padding-bottom: 10px;
 	font-weight: bold;
 	font-size: 18px;
 	color: #777;
 }
-.breviews-view .breviews-view-left .breviews-view-border a{
+.breviews-view-border a{
 	font-weight: 400;
 	font-size: 18px;
 	float: right;
 }
-.breviews-view-name{
+.bfeedback-view-border span{
+	font-weight: 400;
+	font-size: 18px;
+	color: #4cae4c;
+}
+.breviews-view-name, .bfeedback-view-name{
 	margin-top: 10px;
 }
-.breviews-view-name img{
+.breviews-view-name img, .bfeedback-view-name img{
 	float: left;
 }
-.breviews-view-name span{
+.breviews-view-name span, .bfeedback-view-name span{
 	color: #777;
     display: block;
     font-size: 24px;
     margin-top: 20px;
     text-decoration: underline;
 }
-.breviews-view-baloon{
+.bfeedback-view-admin{
+	text-align: right;
+}
+.bfeedback-view-admin img{
+	float: right;
+}
+.bfeedback-view-admin span{
+	color: #777;
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.breviews-view-baloon, .bfeedback-view-baloon{
 	background: #E8E8E8;
 	color: #777;
 	font-size: 18px;
@@ -1548,7 +1568,7 @@ a.desc:after {
 	position: relative;
 	width: 100%;
 }
-.breviews-view-baloon:after{
+.breviews-view-baloon:after, .bfeedback-view-baloon:after{
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -1559,6 +1579,31 @@ a.desc:after {
 	z-index: 1;
 	top: -21px;
 	left: 22px;
+}
+.bfeedback-view-baloon-admin{
+	background: #E8E8E8;
+	color: #777;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	width: 100%;
+}
+.bfeedback-view-baloon-admin:after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 15px 21px;
+	border-color: #E8E8E8 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -21px;
+	right: 22px;
 }
 .field-breviews-moderate{
 	border-top: 1px dashed #777;
@@ -1573,17 +1618,19 @@ a.desc:after {
 .field-breviews-moderate .bootstrap-switch{
 	float: right!important;
 }
-.breviews-view .breviews-view-right p{
+.breviews-view-right p, .bfeedback-view-right p{
 	border-bottom: 1px dashed #777;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-.breviews-view .breviews-view-right p span:nth-child(1){
+.breviews-view-right p span:nth-child(1),
+.bfeedback-view-right p span:nth-child(1){
 	font-weight: bold;
 	font-size: 18px;
 	color: #777;
 }
-.breviews-view .breviews-view-right p span:nth-child(2){
+.breviews-view-right p span:nth-child(2),
+.bfeedback-view-right p span:nth-child(2){
 	font-size: 18px;
 	float: right;
 }
