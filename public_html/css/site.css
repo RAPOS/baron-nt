@@ -584,6 +584,10 @@ aside{
     color: white;
     border: none;
     cursor: pointer;
+	text-decoration:none;
+}
+#reviews .add_reviews:hover {
+	background: rgba(191, 164, 90, 0.9);
 }
 #reviews_page .add_reviews {
 	position: absolute;
@@ -701,6 +705,9 @@ aside{
 	border:none;
 	border-radius:4px;
 	cursor:pointer;
+}
+#feedback .btn:hover {
+    background: rgba(191, 164, 90, 0.9);
 }
 #feedback .form-group:last-child {
 	text-align:center;

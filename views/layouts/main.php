@@ -19,7 +19,7 @@ AppAsset::register($this);
 		 <title><?= Html::encode($this->title) ?></title>
 		
 		<meta charset="<?= Yii::$app->charset ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=1024">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		

@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
 			[
 				'attribute' => 'email',
-				'format' => 'email',
+				'format' => 'text',
 				'contentOptions' => ['style' => 'width: 155px;'],
 			],
 			[

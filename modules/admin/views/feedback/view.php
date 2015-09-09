@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			</p>
 			<p>
 				<span>E-mail:</span> 
-				<span><a href="mailto:<?=$model->email?>"><?=$model->email?></a></span>
+				<span><?=$model->email?></span>
 			</p>
 			<p>
 				<span>IP:</span> 
