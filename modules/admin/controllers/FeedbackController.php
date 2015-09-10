@@ -69,7 +69,7 @@ class FeedbackController extends Controller
 			if ($model->save()) {
 			Yii::$app->mail->compose()
 				->setTo($model->email)
-				->setFrom(['raposbest@yandex.ru' => "Мужской спа-салон «Барон»"])
+				->setFrom(['baron-nt@yandex.ru' => "Мужской спа-салон «Барон»"])
 				->setSubject($model->subject)
 				->setHtmlBody('Вам отправлен ответ с сайта:	http://'.$_SERVER['SERVER_NAME'].' <br>'.$model->response)
 				->send();
