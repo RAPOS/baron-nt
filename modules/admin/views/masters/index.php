@@ -1,4 +1,5 @@
 <?php
+use kartik\widgets\Alert;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -6,6 +7,42 @@ $this->title = 'Мастера';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bmasters-index" style="width: 700px;">
+	<?if($create){
+		echo Alert::widget([
+			'type' => Alert::TYPE_SUCCESS,
+			'icon' => 'glyphicon glyphicon-remove-sign',
+			'body' => 'Запись успешно создана!',
+			'showSeparator' => true,
+			'delay' => 5000,
+			'options' => [
+				'style' => 'position: fixed;top: 50px;right: 0;width: 400px;',
+			],
+		]);
+	}?>
+	<?if($save){
+		echo Alert::widget([
+			'type' => Alert::TYPE_SUCCESS,
+			'icon' => 'glyphicon glyphicon-remove-sign',
+			'body' => 'Изменения успешно сохранены!',
+			'showSeparator' => true,
+			'delay' => 5000,
+			'options' => [
+				'style' => 'position: fixed;top: 50px;right: 0;width: 400px;',
+			],
+		]);
+	}?>
+	<?if($delete){
+		echo Alert::widget([
+			'type' => Alert::TYPE_SUCCESS,
+			'icon' => 'glyphicon glyphicon-remove-sign',
+			'body' => 'Запись успешно удалена!',
+			'showSeparator' => true,
+			'delay' => 5000,
+			'options' => [
+				'style' => 'position: fixed;top: 50px;right: 0;width: 400px;',
+			],
+		]);
+	}?>
     <p>
         <?= Html::a('Добавить мастера', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Описание страницы', ['description'], ['class' => 'btn btn-primary']) ?>

@@ -47,8 +47,27 @@ class MastersController extends Controller
 			],
         ]);
 
+		if(Yii::$app->getSession()->getFlash('create')){
+			$create = true;
+		} else {
+			$create = false;
+		}
+		if(Yii::$app->getSession()->getFlash('save')){
+			$save = true;
+		} else {
+			$save = false;
+		}
+		if(Yii::$app->getSession()->getFlash('delete')){
+			$delete = true;
+		} else {
+			$delete = false;
+		}
+		
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+			'create' => $create,
+			'save' => $save,
+			'delete' => $delete,
         ]);
     }
 
@@ -67,8 +86,10 @@ class MastersController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			$model->images = json_encode($_POST[id_img]);
-			$model->save();
-            return $this->redirect(['index']);
+			if($model->save()){
+				Yii::$app->getSession()->setFlash('create', 'true');
+				return $this->redirect(['index']);
+			}
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -95,13 +116,21 @@ class MastersController extends Controller
 				if(is_array($array_id_img)){
 					$new_pre_images = array_merge($array_id_img, $_POST[id_img]);
 					$model->images = json_encode(array_unique($new_pre_images));
-					$model->save();
+					if($model->save()){
+						Yii::$app->getSession()->setFlash('save', 'true');
+						return $this->redirect(['index']);
+					}
 				} else {
 					$model->images = json_encode($_POST[id_img]);
-					$model->save();
+					if($model->save()){
+						Yii::$app->getSession()->setFlash('save', 'true');
+						return $this->redirect(['index']);
+					}
 				}
+			} else {
+				Yii::$app->getSession()->setFlash('save', 'true');
+				return $this->redirect(['index']);
 			}
-            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -121,8 +150,10 @@ class MastersController extends Controller
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-        $this->findModel($id)->delete();
-
+		if( $this->findModel($id)->delete()){
+			Yii::$app->getSession()->setFlash('delete', 'true');
+		}
+		
         return $this->redirect(['index']);
     }
 

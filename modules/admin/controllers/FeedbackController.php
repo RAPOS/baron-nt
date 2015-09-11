@@ -45,9 +45,22 @@ class FeedbackController extends Controller
 				'defaultOrder' => ['id' => SORT_DESC],
 			],
         ]);
-
+		
+		if(Yii::$app->getSession()->getFlash('save')){
+			$save = true;
+		} else {
+			$save = false;
+		}
+		if(Yii::$app->getSession()->getFlash('delete')){
+			$delete = true;
+		} else {
+			$delete = false;
+		}
+		
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+			'save' => $save,
+			'delete' => $delete,
         ]);
     }
 
@@ -67,12 +80,13 @@ class FeedbackController extends Controller
 			$model->verifyCode = rand(1, 100);
 			$model->response = $_POST['BFeedback']['response'];	
 			if ($model->save()) {
-			Yii::$app->mail->compose()
-				->setTo($model->email)
-				->setFrom(['baron-nt@yandex.ru' => "Мужской спа-салон «Барон»"])
-				->setSubject($model->subject)
-				->setHtmlBody('Вам отправлен ответ с сайта:	http://'.$_SERVER['SERVER_NAME'].' <br>'.$model->response)
-				->send();
+				Yii::$app->mail->compose()
+					->setTo($model->email)
+					->setFrom(['baron-nt@yandex.ru' => "Мужской спа-салон «Барон»"])
+					->setSubject($model->subject)
+					->setHtmlBody('Вам отправлен ответ с сайта:	http://'.$_SERVER['SERVER_NAME'].' <br>'.$model->response)
+					->send();
+				Yii::$app->getSession()->setFlash('save', 'true');
 				
 				return $this->redirect(['index']);
 			}
@@ -95,7 +109,9 @@ class FeedbackController extends Controller
 			$this->redirect(Yii::$app->user->loginUrl);
 		}
 		
-        $this->findModel($id)->delete();
+		if( $this->findModel($id)->delete()){
+			Yii::$app->getSession()->setFlash('delete', 'true');
+		}
 
         return $this->redirect(['index']);
     }
