@@ -243,7 +243,7 @@ class ProgramsController extends Controller
 				$model->site = 1;
 				$model->save();
 				
-				return $this->render('vacancy', ['model' => $model, 'success' => true]);
+				return $this->render('description', ['model' => $model, 'success' => true]);
 			}
 		}
 
