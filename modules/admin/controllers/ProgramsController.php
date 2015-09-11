@@ -127,7 +127,6 @@ class ProgramsController extends Controller
 						return $this->redirect(['index']);
 					}
 				}
-			}
 			} else {
 				Yii::$app->getSession()->setFlash('save', 'true');
 				return $this->redirect(['index']);
