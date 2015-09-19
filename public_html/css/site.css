@@ -247,6 +247,12 @@ aside #main_responses .all_list{
 	font-size: 16px;
 	font-family: Trebuchet-MS;
 }
+aside #main_responses .some_reviews{
+	display: none;
+}
+aside #main_responses .some_reviews.active{
+	display: block;
+}
 aside #main_responses .some_reviews .reviews_name{
 	color:white; 
 	font-weight:200; 

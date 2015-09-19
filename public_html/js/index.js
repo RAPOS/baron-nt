@@ -38,33 +38,31 @@ $(document).ready(function(){
 		owl.next();
 	});
 	
-	i = 0;
 	
+	m = 0;
 	setInterval(function() {
-		count = $('.master_link').length;
-		$('.master_link').eq(i).fadeOut('slow');	
+		mcount = $('.master_link').length;
+		$('.master_link').eq(m).fadeOut('slow');	
 		setTimeout(function(){	
-			i++;		
-			if(i == count){
-				i = 0;
+			m++;		
+			if(m == mcount){
+				m = 0;
 			}
-			$('.master_link').eq(i).fadeIn('slow');
+			$('.master_link').eq(m).fadeIn('slow');
 		}, 700);		
 	}, 6000);	
 
+	r = 0;
 	setInterval(function() {
-		$('.some_reviews').fadeOut('slow');
-		name = $('.some_reviews .reviews_name').text();
+		rcount = $('.some_reviews').length;
+		$('.some_reviews').eq(r).fadeOut('slow');	
 		setTimeout(function(){	
-			if(name == 'Андрей'){
-				$('.some_reviews .reviews_name').text('Лёха');
-				$('.reviews_text').text('Часто здесь бываю, всем рекомендую.');
-			}else{
-				$('.some_reviews .reviews_name').text('Андрей');
-				$('.reviews_text').text('Отличный салон!');
+			r++;		
+			if(r == rcount){
+				r = 0;
 			}
+			$('.some_reviews').eq(r).fadeIn('slow');
 		}, 600);
-		$('.some_reviews').fadeIn('slow');
 	}, 7000);	
 	
 	$('#sortable').sortable({

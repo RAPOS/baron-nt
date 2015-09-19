@@ -69,9 +69,10 @@ class SiteController extends Controller
 		
 		$masters = BMasters::find()->all();
 		$actions = BActions::find()->one();	
+		$BReviews = BReviews::find()->where('moderate = 1')->all();	
 		$sertificate = BSertificates::find()->where(['site' => 1])->one();
 	
-        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images, 'actions' => $actions]);
+        return $this->render('index', ['title_h1' => $title_h1, 'text_1' => $text_1, 'title_h2' => $title_h2, 'text_2' => $text_2, 'masters' => $masters, 'sertificate' => $sertificate, 'images' => $images, 'actions' => $actions, 'reviews' => $BReviews]);
     }
 	
     public function actionActions(){
