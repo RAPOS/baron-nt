@@ -13,7 +13,6 @@ use Yii;
  * @property string $text
  * @property string $date
  * @property string $section
- * @property string $translate
  * @property integer $moderate
  * @property string $ip
  */
