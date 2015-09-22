@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 use app\modules\admin\models\BImages;
-$this->title = 'Мужской спа-салон «Барон»';
+$this->title = 'Спа - салон для мужчин «Барон»';
 ?>
 <!--Content-->
 <div id="content" class="clearfix">

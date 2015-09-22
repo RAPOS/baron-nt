@@ -8,9 +8,11 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\modules\admin\models\BSettings;
 
 AppAsset::register($this);
 
+$settings = BSettings::find()->where(['site' => 1])->one();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -20,8 +22,8 @@ AppAsset::register($this);
 		
 		<meta charset="<?= Yii::$app->charset ?>">
 		<meta name="viewport" content="width=1024">
-		<meta name="keywords" content="">
-		<meta name="description" content="">
+		<meta name="keywords" content="<?=$settings->keywords?>">
+		<meta name="description" content="<?=$settings->description?>">
 		
 		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
 		<link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
