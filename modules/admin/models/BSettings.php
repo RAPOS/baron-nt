@@ -31,7 +31,7 @@ class BSettings extends \yii\db\ActiveRecord
             [['title', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
             [['title'], 'string', 'max' => 64],
-            [['keywords', 'description'], 'string', 'max' => 256],
+            [['keywords', 'description'], 'string'],
             [['site'], 'unique']
         ];
     }
