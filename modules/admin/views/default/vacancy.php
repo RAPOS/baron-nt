@@ -34,6 +34,11 @@ $this->params['breadcrumbs'][] = $this->title;
 				'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 			]
 		]);?>
+		<div class="breadcrumb">
+			<p class="active">Для поисковых систем</p>
+		</div>
+		<?= $form->field($model, 'keywords')->textInput() ?>
+		<?= $form->field($model, 'description')->textarea(['rows' => 6])?>
         <div class="form-group">
 			<?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 			<?= Html::a('Назад', ['/admin'], ['class'=>'btn btn-primary']) ?>

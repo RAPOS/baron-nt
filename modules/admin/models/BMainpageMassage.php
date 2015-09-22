@@ -9,6 +9,8 @@ use Yii;
  *
  * @property integer $site
  * @property string $text
+ * @property string $keywords
+ * @property string $description
  */
 class BMainpageMassage extends \yii\db\ActiveRecord
 {
@@ -26,9 +28,9 @@ class BMainpageMassage extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'text'], 'required'],
+            [['site', 'text', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
-            [['text'], 'string'],
+            [['text', 'keywords', 'description'], 'string'],
             [['site'], 'unique']
         ];
     }
@@ -41,6 +43,8 @@ class BMainpageMassage extends \yii\db\ActiveRecord
         return [
             'site' => 'Site',
             'text' => 'Описание',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Описание для поиска',
         ];
     }
 }

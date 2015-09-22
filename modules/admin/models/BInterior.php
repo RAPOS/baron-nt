@@ -11,6 +11,8 @@ use Yii;
  * @property string $title
  * @property string $text
  * @property string $images
+ * @property string $keywords
+ * @property string $description
  */
 class BInterior extends \yii\db\ActiveRecord
 {
@@ -28,10 +30,11 @@ class BInterior extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'title', 'text'], 'required'],
+            [['site', 'title', 'text', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
             [['text', 'images'], 'string'],
             [['title'], 'string', 'max' => 64],
+			[['keywords', 'description'], 'string'],
             [['site'], 'unique']
         ];
     }
@@ -46,6 +49,8 @@ class BInterior extends \yii\db\ActiveRecord
             'title' => 'Заголовок',
             'text' => 'Описание',
             'images' => 'Images',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Описание для поиска',
         ];
     }
 }

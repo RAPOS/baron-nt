@@ -10,6 +10,8 @@ use Yii;
  * @property integer $site
  * @property string $title
  * @property string $text
+ * @property string $keywords
+ * @property string $description
  */
 class BRules extends \yii\db\ActiveRecord
 {
@@ -27,9 +29,9 @@ class BRules extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'title', 'text'], 'required'],
+            [['site', 'title', 'text', 'keywords', 'description'], 'required'],
             [['site'], 'integer'],
-            [['text'], 'string'],
+            [['text', 'keywords', 'description'], 'string'],
             [['title'], 'string', 'max' => 64]
         ];
     }
@@ -43,6 +45,8 @@ class BRules extends \yii\db\ActiveRecord
             'site' => 'Site',
             'title' => 'Заголовок',
             'text' => 'Описание',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Описание для поиска',
         ];
     }
 }

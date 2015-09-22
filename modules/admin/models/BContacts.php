@@ -10,6 +10,8 @@ use Yii;
  * @property integer $site
  * @property string $title
  * @property string $text
+ * @property string $keywords
+ * @property string $description
  */
 class BContacts extends \yii\db\ActiveRecord
 {
@@ -27,9 +29,10 @@ class BContacts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'text'], 'required'],
+            [['title', 'text', 'keywords', 'description'], 'required'],
             [['text'], 'string'],
-            [['title'], 'string', 'max' => 64]
+            [['title'], 'string', 'max' => 64],
+			[['keywords', 'description'], 'string'],
         ];
     }
 
@@ -42,6 +45,8 @@ class BContacts extends \yii\db\ActiveRecord
             'site' => 'Site',
             'title' => 'Заголовок',
             'text' => 'Описание',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Описание для поиска',
         ];
     }
 }
