@@ -15,7 +15,7 @@ if(!$model->isNewRecord){
 		$array_image[] = Html::img('/'.$BImages->path, ['class'=>'file-preview-image', 'alt'=>$BImages->name, 'title'=>$BImages->name, 'style'=>'width:auto;height:210px;']);
 		$array_image_cfg[] = [
 			'caption' => $BImages->name,
-			'url' => '/admin/programs/deleteimages',
+			'url' => '/admin/masters/deleteimages',
 			'key' =>  $BImages->id_img,
 			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_master' => $model->id_master, 'id_images' => $array_id_images],
 		];

@@ -174,6 +174,10 @@ class MastersController extends Controller
     }
 	
 	public function actionDeleteimages(){
+		if(Yii::$app->user->isGuest){
+			$this->redirect(Yii::$app->user->loginUrl);
+		}
+		
 		if($_POST){
 			$new_array_images = array();
 			for($i=0;$i<count($_POST['id_images']);$i++){
