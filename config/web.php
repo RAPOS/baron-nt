@@ -54,6 +54,7 @@ $config = [
 		'urlManager' => [
 			'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'suffix' => '/',
 			'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
