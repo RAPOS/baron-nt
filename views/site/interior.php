@@ -43,7 +43,7 @@ if($save){
 					$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
 					?>			
 					<a class="zoomimage" rel="interior-group" href="<?=$BImages->path?>">
-						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
+						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt=""/>
 					</a>
 				<?}
 			}?>
