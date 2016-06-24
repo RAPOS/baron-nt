@@ -30,7 +30,7 @@ class BActions extends \yii\db\ActiveRecord
         return [
             [['text','status'], 'required'],
             [['status'], 'integer'],
-            [['text'], 'string', 'max' => 255],
+            [['text'], 'string'],
             [['date'], 'safe'],
         ];
     }

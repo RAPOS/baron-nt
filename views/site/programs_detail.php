@@ -1,7 +1,8 @@
 <?php
 use kartik\widgets\Alert;
 use app\modules\admin\models\BImages;
-$this->title = 'Мужской спа-салон «Барон»';
+$this->title = 'Программа эротического массажа - '.$model->name;
+
 if(!$captcha){
 	echo Alert::widget([
 		'type' => Alert::TYPE_DANGER,
@@ -15,6 +16,7 @@ if(!$captcha){
 		],
 	]);
 }
+
 if($save){
 	echo Alert::widget([
 		'type' => Alert::TYPE_SUCCESS,
@@ -49,12 +51,15 @@ if($save){
 		<div class="info">			
 			<p class="time">Продолжительность: <?=$model->duration?> минут</p>
 			<p class="description_title">В программу входит:</p>
-			<p class="description_text"><?=strip_tags($model->description)?></p>	
+			<p class="description_text"><?=$model->description?></p>	
 			<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
-			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>				
+			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="big" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>				
+			<div class="appeal">
+				<p>Хочешь ощутить незабываемое удовольствие? Запишись на программу <a href='tel: +7 (3435) 42-06-06'>(3435) 42-06-06</a></p>
+			</div>
 		</div>
-		<div class="prev-link"><span><</span>Предыдущая программа</div>	
-		<div class="next-link">Следующая программа<span>></span></div>
+		<a href="/programs/<?=$prevprogramtranslate->translate?>" class="prev-link"><span></span>Предыдущая программа</a>	
+		<a href="/programs/<?=$nextprogramtranslate->translate?>" class="next-link">Следующая программа<span></span></a>
 	</div>
 	<h2 class="reviews_title">Отзывы</h2>
 	<div id="reviews">

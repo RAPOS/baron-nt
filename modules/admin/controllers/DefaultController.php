@@ -17,8 +17,8 @@ use app\modules\admin\models\BSertificates;
 class DefaultController extends Controller
 {
 	public $layout = 'dark';
-	
-    public function actionIndex()
+
+	public function actionIndex()
     {
 		if(Yii::$app->user->isGuest){
 			$this->redirect(Yii::$app->user->loginUrl);

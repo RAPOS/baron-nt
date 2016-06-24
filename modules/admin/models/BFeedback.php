@@ -33,7 +33,7 @@ class BFeedback extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email', 'name', 'subject', 'text', 'date', 'verifyCode'], 'required'],
+            [['email', 'name', 'subject', 'text', 'verifyCode'], 'required'],
             [['text', 'response'], 'string'],
             [['date'], 'safe'],
             [['email', 'name', 'subject', 'ip'], 'string', 'max' => 64]

@@ -16,8 +16,8 @@ use yii\filters\VerbFilter;
 class FeedbackController extends Controller
 {
 	public $layout = 'dark';
-	
-    public function behaviors()
+
+	public function behaviors()
     {
         return [
             'verbs' => [

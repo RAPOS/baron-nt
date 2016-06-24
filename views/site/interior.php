@@ -2,7 +2,8 @@
 use kartik\widgets\Alert;
 use app\modules\admin\models\BImages;
 
-$this->title = 'Мужской спа-салон «Барон»';
+$this->title = 'Интерьер - Мужской спа-салон «Барон»';
+
 if(!$captcha){
 	echo Alert::widget([
 		'type' => Alert::TYPE_DANGER,
@@ -42,8 +43,8 @@ if($save){
 					$image->resize(280, 200);
 					$image->save(Yii::getAlias('@webroot/assets/'.$BImages->name.'.'.$BImages->extension));
 					?>			
-					<a class="zoomimage" rel="interior-group" href="<?=$BImages->path?>">
-						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt=""/>
+					<a class="zoomimage" rel="interior-group" href="/<?=$BImages->path?>">
+						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
 					</a>
 				<?}
 			}?>

@@ -15,7 +15,7 @@ if(!$model->isNewRecord){
 		$array_image[] = Html::img('/'.$BImages->path, ['class'=>'file-preview-image', 'alt'=>$BImages->name, 'title'=>$BImages->name, 'style'=>'width:auto;height:210px;']);
 		$array_image_cfg[] = [
 			'caption' => $BImages->name,
-			'url' => '/admin/programs/deleteimages',
+			'url' => '/admin/programs/deleteimages/',
 			'key' =>  $BImages->id_img,
 			'extra' => ['delete_id_img' => $BImages->id_img, 'delete_path' => $BImages->path, 'id_massage' => $model->id_massage, 'id_images' => $array_id_images],
 		];
@@ -100,7 +100,7 @@ if(!$array_image && !$array_image_cfg){
 			'overwriteInitial' => false,
 			'initialPreview' => $array_image,
 			'initialPreviewConfig' => $array_image_cfg,
-			'uploadUrl' => '/admin/upload',
+			'uploadUrl' => '/admin/upload/',
 			'browseClass' => 'btn btn-success',
 			'uploadClass' => 'btn btn-info',
 			'removeClass' => 'btn btn-danger',

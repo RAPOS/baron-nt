@@ -83,6 +83,10 @@ AppAsset::register($this);
 						'url' => ['/admin/masters'],
 					],
 					[
+						'label' => 'Для милых дам',
+						'url' => ['/admin/mastersforwomen'],
+					],
+					[
 						'label' => 'Программы',
 						'url' => ['/admin/programs'],
 					],

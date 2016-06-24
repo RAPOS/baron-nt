@@ -14,10 +14,21 @@ $(document).ready(function(){
 		});
 	}
 	
-
 	$(".zoomimage").fancybox();
 	
-	$(".slideimage").owlCarousel({
+	$("#main_page .slideimage").owlCarousel({
+		navigation : true,
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		items : 1, 
+		itemsDesktop : false,
+		itemsDesktopSmall : false,
+		itemsTablet: false,
+		itemsMobile : false
+	});
+
+	
+	$("aside .slideimage").owlCarousel({
 		navigation : true,
 		slideSpeed : 300,
 		paginationSpeed : 400,
@@ -28,29 +39,44 @@ $(document).ready(function(){
 		itemsMobile : false
 	});
 	
-	var owl = $(".slideimage").data('owlCarousel');
+	var owl = $("#main_page .slideimage").data('owlCarousel');
 	
-	$(".owl-prev").click(function(){
+	var owl1 = $("aside .slideimage").data('owlCarousel');
+	
+	$("#main_page .owl-prev").click(function(){
 		owl.prev();
 	});
 	
-	$(".owl-next").click(function(){
+	$("#main_page .owl-next").click(function(){
 		owl.next();
 	});
+
+	$("aside .owl-prev").click(function(){
+		owl1.prev();
+	});
 	
+	$("aside .owl-next").click(function(){
+		owl1.next();
+	});	
 	
 	m = 0;
-	setInterval(function() {
+	
+	$('#ca-container').contentcarousel();
+	$('#ca-container2').contentcarousel();
+	
+/* 	setInterval(function() {
 		mcount = $('.master_link').length;
 		$('.master_link').eq(m).fadeOut('slow');	
 		setTimeout(function(){	
+			$('.master_link').eq(m).removeClass('active');
 			m++;		
 			if(m == mcount){
 				m = 0;
 			}
 			$('.master_link').eq(m).fadeIn('slow');
+			$('.master_link').eq(m).addClass('active');
 		}, 700);		
-	}, 6000);	
+	}, 6000);	 */
 
 	r = 0;
 	setInterval(function() {
@@ -75,9 +101,9 @@ $(document).ready(function(){
 			});
 			s = $('#sortable').sortable('toArray', {attribute: 'data-key'});
 			if(page.name == 'masters'){
-				$.post('/admin/masters/sort', {'id_master[]':s});
+				$.post('/admin/masters/sort/', {'id_master[]':s});
 			} else if(page.name == 'programs'){
-				$.post('/admin/programs/sort', {'id_massage[]':s});
+				$.post('/admin/programs/sort/', {'id_massage[]':s});
 			}
 		},
 		out: function (event, ui){
@@ -87,7 +113,7 @@ $(document).ready(function(){
     $('#sortable').disableSelection();
 });
 
-function change_image(thisis){	
+function change_image(thisis){
 	choose_element_link = thisis.attr('src');
 	active_element_link =  thisis.parents('.master_images').find('.main_image img').attr('src');
 	thisis.parents('.master_images').find('.main_image a').attr('href', choose_element_link);

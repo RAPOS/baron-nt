@@ -3,7 +3,7 @@ use kartik\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
-$this->title = 'Мужской спа-салон «Барон»';
+$this->title = 'Отзывы - Мужской спа-салон «Барон»';
 if(!$captcha){
 	echo Alert::widget([
 		'type' => Alert::TYPE_DANGER,

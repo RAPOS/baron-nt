@@ -9,7 +9,7 @@ $reviews = new BReviews;
 	<p class="title">Оставить отзыв</p>
 		<?php $form = ActiveForm::begin([
 			'id' => 'contact-form',
-			'action' => '/reviews',
+			'action' => '/reviews/',
 		]);?>
 		<?= $form->field($reviews, 'name')->textInput(['placeholder' => 'Введите имя']) ?>
 		<?= $form->field($reviews, 'email')->textInput(['placeholder' => 'Введите e-mail']) ?>

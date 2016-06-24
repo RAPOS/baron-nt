@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /admin
+Disallow: /assets
+Disallow: /captcha
+Host: baron-nt.ru

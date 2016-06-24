@@ -58,7 +58,7 @@
 
 .owl-pagination {
 	position: absolute;
-	top: 265px;
+	top: 305px;
 	left: 20px;			
 }
 .owl-buttons {
@@ -106,9 +106,81 @@
 	width: 37px; 
 	height: 51px; 		
 }
-
 .owl-container {
 	margin-top:20px;
 	margin-left:5px;
 	width:540px;
+}
+
+#mainpage .owl-container {
+	margin-top:20px;
+	margin-left:5px;
+	width:540px;
+}
+
+aside .owl-container {
+	margin-top:20px;
+	margin-left:5px;
+	width:330px;
+}
+
+#mainpage .owl-prev {
+	transition: opacity 0.5s;
+	opacity:0;
+	background: url('/images/left-arrow.png') no-repeat;  
+	background-position: -0px -0px;				
+	width: 37px;
+	height: 51px; 
+	position: absolute;
+	top: 215px;
+	left: 25px;
+	cursor:pointer;
+	z-index:999;
+}
+#mainpage .owl-next {
+	transition: opacity 0.5s;
+	opacity:0;
+	background: url('/images/right-arrow.png') no-repeat; 
+	background-position: -0px -0px;				
+	height: 51px;
+	position: absolute;
+	width: 37px;
+	top: 215px;
+	left: 585px;
+	cursor:pointer;
+	z-index:999;
+}
+
+
+aside .owl-prev {
+	transition: opacity 0.5s;
+	opacity:0;
+	background: url('/images/left-arrow.png') no-repeat;  
+	background-position: -0px -0px;				
+	width: 37px;
+	height: 51px; 
+	position: absolute;
+	top: 50%;
+	left: -23px;
+	cursor:pointer;
+	z-index:999;
+}
+aside .owl-next {
+	transition: opacity 0.5s;
+	opacity:0;
+	background: url('/images/right-arrow.png') no-repeat; 
+	background-position: -0px -0px;				
+	height: 51px;
+	position: absolute;
+	width: 37px;
+	top: 50%;
+	left: 326px;
+	cursor:pointer;
+	z-index:999;
+}
+
+aside .owl-pagination {
+	position: absolute;
+	top: 190px;
+	left: 20px;			
 }

@@ -184,6 +184,9 @@ footer {
     background-size: 100% 5%;
     height: 90px;
 }
+aside a {
+	color: #bfa45a !important; 
+}
 aside #main_actions .title{
 	font-family: MonAmourTwo; 
 	color: #bfa45a; 
@@ -230,9 +233,12 @@ aside #main_actions .all_list .link{
 }
 aside #main_actions{
 	position:relative;
+	margin-top:80px;
 }
 aside #main_responses{
 	position:relative;
+	margin-bottom:30px;
+	margin-top:-20px;
 }
 aside #main_responses .title{
 	font-family: MonAmourTwo; 
@@ -261,12 +267,13 @@ aside #main_responses .some_reviews .reviews_name{
 	font-family: Trebuchet-MS;
 }
 aside #main_responses .some_reviews .review_background{
-	background: #bfa45a; 
-	width:330px;
-	height:100px; 
-	border-radius:15px; 
-	margin-top:20px;
-	opacity:0.7;
+    background: #bfa45a;
+    width: 330px;
+    min-height: 100px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    opacity: 0.7;
 }
 aside #main_responses .some_reviews .review_background a{
     color: white;
@@ -303,8 +310,10 @@ aside #main_sertificates a img{
  margin-top:20px;
 }
 aside{
-	float:right;
+    display: inline-block;
+    vertical-align: top;
 	margin-right:20px;
+	    margin-left: 15px;
 }
 /***tegs**/
 /* #w0.navbar-inverse {display:none !important;} */
@@ -312,14 +321,17 @@ aside{
 #main_our_masters .master_link {
 	position:relative;
 	display:none;
+	height:240px;
+	width: 330px;
+	overflow:hidden;
 }
 #main_our_masters .master_link.active {
-	display:block;
+	display:block !important;
 }
 #main_our_masters .master_link img{
 	width:330px;
-	height:220px;
 	margin-top:20px;
+	min-height:220px;
 }
 #main_our_masters .link {
 	position: absolute; 
@@ -345,6 +357,17 @@ aside{
 	color: #bfa45a;
 	font-size: 25px; 
 	margin-top: 20px;
+	display:block;
+	cursor:pointer;
+}
+#main_our_masters p{
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+    width: 330px;
+    margin-left: 7px;
+    font-family: Trebuchet-MS;
+    word-wrap: break-word;
 }
 #main_our_masters {
 	position:relative;
@@ -529,6 +552,7 @@ aside{
 	font-family: MonAmourTwo;
 	color: #bfa45a;
 	font-size: 48px;
+	margin-left:10px;
 }
 #contactinfo .phone {
 	font-family: MonAmourTwo;
@@ -538,6 +562,7 @@ aside{
 	top: 20px;
 	left: -25px;
 	width: 310px;
+	text-decoration:none;
 }
 #contactinfo .roundclock {
     top: 70px;
@@ -622,6 +647,9 @@ aside{
 /***reviews***/
 
 /***main_page***/
+#main_page a {
+	color: #bfa45a; 
+}
 #main_page h1 {
 	font-family: MonAmourTwo; 
 	color: #bfa45a; 
@@ -642,6 +670,10 @@ aside{
 	width:540px;
 	height:300px;
 }
+#main_page .slideimage .item img {
+	width:540px;
+	height:300px;
+}
 #main_page > p {
 	width: 540px; 
 	font-family: Trebuchet-MS; 
@@ -656,6 +688,7 @@ aside{
 #main_page {
 	float:left;
 	margin-left:45px;
+	margin-right:10px;
 }
 /***main_page***/
 
@@ -853,13 +886,15 @@ aside{
 	width:950px;
 	margin: 0 auto;
 }
-#masters_image a {
+#masters_image > a {
 	text-decoration:none;
 	display:inline-block;
 	margin-right:10px;
 	margin-left:10px;
 	margin-bottom:20px;
 	position:relative;
+	overflow:hidden;
+	height:200px;
 }
 #masters_image a p {
     background: rgba(0, 0, 0, 0.7);
@@ -875,7 +910,7 @@ aside{
 }
 #masters_image img {
 	width:280px; 
-	height:200px; 
+	min-height:200px; 
 }
 /***masters_page***/
 
@@ -927,12 +962,12 @@ aside{
 #onemaster_page {
 	width:950px;
 	margin: 0 auto;
-	padding-bottom:70px;
+	padding-bottom:100px;
 	position:relative;
 }
 #onemaster_page .yashare-auto-init{
 	margin-left:-5px; 
-	margin-top:10px;
+	margin-top:15px;
 }
 #onemaster_page h1 {
     padding-left: 15px;
@@ -949,17 +984,18 @@ aside{
 }
 #onemaster_page .main_image {
 	padding-left:15px;	
+	position:relative;
 }
 #onemaster_page .main_image img {
-	width:274px;
+	width:320px;
 	border:1px solid #c2c2c2;
 }
 #onemaster_page .preview_image {
 	padding-left:15px;	
 }
 #onemaster_page .preview_image img {
-	width:88px;
-	height:67px;
+	width:100px;
+	/* height:67px; */
 	border:1px solid #c2c2c2;
 	float:left;
 	margin-right:5px;
@@ -967,7 +1003,7 @@ aside{
 }
 #onemaster_page .info {
 	float:left;
-	width:600px;
+	width:500px;
 	margin-left:50px;
 }
 #onemaster_page .info p{
@@ -983,22 +1019,52 @@ aside{
 	color:white;
 }
 #onemaster_page .prev-link {
-	font-family: Trebuchet-MS;	
-	color:white;
-	position:absolute;
-	bottom:0;
-	left:20px;
-	margin-bottom:30px;	
-	cursor:pointer;
+	font-family: Trebuchet-MS;
+    color: white;
+    position: absolute;
+    left: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    bottom: 0px;
+    cursor: pointer;
+}
+#onemaster_page .prev-link span {
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(/images/prev-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	opacity:0.6;
 }
 #onemaster_page  .next-link{
 	font-family: Trebuchet-MS;
-	color:white;
-	position:absolute;	
-	bottom:0;
-	right:50px;	
-	margin-bottom:30px;
-	cursor:pointer;
+    color: white;
+    position: absolute;
+    right: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    bottom: 0px;
+    cursor: pointer;
+}
+#onemaster_page .next-link span {
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    background: url(/images/next-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	opacity:0.6;
+}
+.prev-link:hover span, .next-link:hover span{
+	opacity:1 !important;
+}
+.prev-link:hover, .next-link:hover{
+	text-decoration:none;
 }
 /***onemaster_page***/
 .empty_reviews {
@@ -1024,7 +1090,14 @@ aside{
 }
 #oneprogram_page .yashare-auto-init{
 	margin-left:-5px; 
-	margin-top:10px;
+	margin-top:15px;
+}
+#oneprogram_page p {
+	margin-top:5px;
+}
+#oneprogram_page a {
+	color:#bfa45a;
+	text-decoration:underline;
 }
 #oneprogram_page h1 {
     padding-left: 15px;
@@ -1040,7 +1113,7 @@ aside{
 	width:950px;
 	margin: 0 auto;
 	position:relative;
-	padding-bottom:70px;
+	padding-bottom:100px;
 }
 #oneprogram_page .info {
 	float:left;
@@ -1056,22 +1129,46 @@ aside{
 	font-family: Trebuchet-MS;
 }
 #oneprogram_page .prev-link {
-	font-family: Trebuchet-MS;	
-	color:white;
-	position:absolute;
-	bottom:0;
-	left:15px;
-	margin-bottom:30px;	
-	cursor:pointer;
+	font-family: Trebuchet-MS;
+    color: white;
+    position: absolute;
+    left: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    bottom: 0px;
+    cursor: pointer;
+}
+#oneprogram_page .prev-link span {
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(/images/prev-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	opacity:0.6;
 }
 #oneprogram_page  .next-link{
 	font-family: Trebuchet-MS;
-	color:white;
-	position:absolute;	
-	bottom:0;
-	right:50px;	
-	margin-bottom:30px;
-	cursor:pointer;
+    color: white;
+    position: absolute;
+    right: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    bottom: 0px;
+    cursor: pointer;
+}
+#oneprogram_page .next-link span {
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    background: url(/images/next-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	opacity:0.6;
 }
 /***oneprogram_page***/
 
@@ -1224,7 +1321,6 @@ aside{
 	background: #bfa45a; 
 	position:relative;
 	width:880px;
-	height:100px; 
 	border-radius:15px; 
 	margin-top:20px;
 	margin-left:10px;
@@ -1256,7 +1352,9 @@ aside{
 	font-size:21px; 
 	font-style:italic; 
 	padding-top: 20px; 
+	padding-bottom: 20px; 
 	padding-left: 25px;
+	padding-right:15px;
 	font-family: Trebuchet-MS;
 }
 /***reviews***/
@@ -1300,7 +1398,7 @@ aside{
 	margin-bottom:20px;
     white-space: nowrap;
 }
-#vacancy_page p{
+#vacancy_page > p{
     text-align: justify;
     color: white;
     font-size: 21px;
@@ -1327,18 +1425,13 @@ aside{
 	color:white;
 }
 
-.slideimage {
-	width:540px;
-	height:300px;
-}
-
 .image-prev {
     background: url('/images/left-arrow.png') no-repeat;
     background-position: -0px -0px;
     width: 37px;
     height: 51px;
     position: absolute;
-    top: 145px;
+    top: 50%;
     left: -13px;
     cursor: pointer;
     z-index: 999;
@@ -1350,8 +1443,8 @@ aside{
     height: 51px;
     position: absolute;
     width: 37px;
-    top: 145px;
-    left: 284px;
+    top: 50%;
+    right: -28px;
     cursor: pointer;
     z-index: 999;
 }
@@ -1690,6 +1783,180 @@ a.desc:after {
     height: 200px;
     top: 0px;
     right: -100px;
+}
+.appeal a {
+	color:white !important;
+	text-decoration:underline
+}
+.appeal p {
+	text-align:center !important;
+	width:auto !important;
+    color: #c2c2c2;
+	font-family: Trebuchet-MS;	
+    font-size: 21px;	
+}
+.appeal {
+	background: rgba(210,24,3,0.7);
+	padding: 5px 10px;
+	margin-top: 15px;
+}
+.sertificate {
+	width:1000px;
+	padding-bottom:20px;
+}
+.sertificate .appeal {
+	padding-top:5px;
+	padding-bottom:10px;
+	margin-top:40px;
+	margin-bottom:10px;
+}
+.sertificate .appeal p {
+	padding-right:15px;
+	margin-top:0;
+}
+.sertificate h1 {
+    width: 950px;
+    padding-left: 15px;
+    margin: 0 auto;
+	font-family: MonAmourTwo;
+    color: #bfa45a;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 20px;
+	margin-bottom:20px;
+    white-space: nowrap;
+}
+.sertificate  > div > p {
+	width: 930px;
+    text-align: justify;
+    color: white;
+    font-size: 21px;
+    margin-top: 20px;
+    word-wrap: break-word;
+	padding-left:40px; 
+	padding-right:0px;
+	font-family: Trebuchet-MS;
+}
+.sertificate_icons {
+    margin: 0 auto;
+    width: 850px;
+    text-align: center;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.sertificate_icons > div{
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+.sertificate_icons  img{
+	display:block;
+}
+.sertificate_icons > div > p{
+	display:block;
+	font-family: Trebuchet-MS;
+}
+.gift p{
+	margin-left:-50px;
+	font-size:20px;
+	margin-top:10px;
+}
+.dollar p{
+	margin-left:-55px;
+	font-size:20px;
+	margin-top:10px;
+}
+.heart p{
+	margin-left:-50px;
+	font-size:20px;
+	margin-top:10px;
+}
+.sertificate .title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -75px;
+    font-family: Trebuchet-MS;
+}
+.advantages {
+	position:relative;
+	width: 930px;
+    text-align: justify;
+    color: white;
+    font-size: 21px;
+    margin-top: 20px;
+    word-wrap: break-word;
+	padding-left:40px; 
+	padding-right:0px;
+	font-family: Trebuchet-MS;
+	margin-left:200px;
+}
+.advantages span{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+}
+.advantages p{
+    left: 120px;
+    top: 15px;
+    position: absolute;
+}
+.main_interior_block {
+	margin-left:5px; 
+	margin-top:15px; 
+	height:110px;
+}
+.main_interior_block a{
+	float:left;
+	margin-right:20px;
+}
+.main_interior_block a:last-child{
+	margin-right:0px;
+}
+#main_our_masters .owl-carousel{
+	min-height:230px;
+	max-height:230px;
+}
+#masters_page .attention {
+    color: white;
+    font-family: Trebuchet-MS;
+    font-size: 18px;
+    margin-left: 375px;
+    position: absolute;
+    margin-top: -37px;
+}
+#special_page {
+	width:950px;
+	margin: 0 auto;
+	position:relative;
+	padding-bottom:100px;
+}
+#special_page h1{
+    padding-left: 15px;
+	font-family: MonAmourTwo;
+    color: #bfa45a;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 20px;
+	margin-bottom:20px;
+    white-space: nowrap;
+}
+#special_page p {
+	color:white;
+    font-family: Trebuchet-MS;
+    font-size: 21px;
+	text-align:justify;
+}
+#special_page .title {
+	color:white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -75px;
+    font-family: Trebuchet-MS;
 }
 @media (max-width: 1000px) {
 	.review_background:after {

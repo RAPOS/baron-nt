@@ -30,7 +30,7 @@ class BInterior extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['site', 'title', 'text', 'keywords', 'description'], 'required'],
+            [['site', 'title', 'text'], 'required'],
             [['site'], 'integer'],
             [['text', 'images'], 'string'],
             [['title'], 'string', 'max' => 64],

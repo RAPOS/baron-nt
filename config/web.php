@@ -15,7 +15,7 @@ $config = [
 			'driver' => 'GD',  //GD or Imagick
 		],
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+
             'cookieValidationKey' => 'ahsd721yuhd7832hdujgh87gf23g8732fghjgf',
         ],
         'cache' => [
@@ -54,7 +54,7 @@ $config = [
 		'urlManager' => [
 			'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'suffix' => '/',
+			'suffix' => '/',
 			'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
@@ -65,12 +65,13 @@ $config = [
 				'admin/actions' => 'admin/actions/index',
 				'admin/feedback' => 'admin/feedback/index',
 				'admin/masters' => 'admin/masters/index',
+				'admin/mastersforwomen' => 'admin/mastersforwomen/index',
 				'admin/programs' => 'admin/programs/index',
 				'admin/reviews' => 'admin/reviews/index',
 				'admin/<action:\w+>' => 'admin/default/<action>',
 				'<action:\w+>'=>'site/<action>',
 				'<action:\w+>/<name:\w+>'=>'site/<action>',
-			],
+			], 
 		],
 		'general' => [
 			'class' => 'app\extensions\general',

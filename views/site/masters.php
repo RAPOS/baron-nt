@@ -1,7 +1,17 @@
 <?php
 use yii\widgets\LinkPager;
 use app\modules\admin\models\BImages;
-$this->title = 'Мужской спа-салон «Барон»';
+use app\modules\admin\models\BMainpageMassage;
+$this->title = 'Мастера эротического массажа - Мужской спа-салон «Барон»';
+$master = BMainpageMassage::find()->one();
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => $master->keywords
+]);
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => $master->description
+]);
 ?>
 <div id="content" class="clearfix">
 	<div id="masters_page">
@@ -17,7 +27,12 @@ $this->title = 'Мужской спа-салон «Барон»';
 					?>			
 					<a href="/masters/<?=$masters->translate?>">
 						<img src="<?='/assets/'.$BImages->name.'.'.$BImages->extension?>" alt="">
-						<p><?=$masters->name?></p>						
+						<p><?=$masters->name?></p>	
+						<?if($masters->new){?>
+							<div class="new_master"></div>						
+						<?}else if($masters->tour){?>
+							<div class="master_in_tour"></div>	
+						<?}?>						
 					</a>
 				<?} else {?>
 					<a href="/masters/<?=$masters->translate?>">
@@ -31,11 +46,6 @@ $this->title = 'Мужской спа-салон «Барон»';
 					</a>
 				<?}
 			}?>
-			<div class="paginate clearfix">
-				<?echo LinkPager::widget([
-					'pagination' => $page,
-				]);?>
-			</div>	
 		</div>	
 		<h2>Описание</h2>
 		<div id="masters_text">

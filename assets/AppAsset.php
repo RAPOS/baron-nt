@@ -24,7 +24,9 @@ class AppAsset extends AssetBundle
 		'js/index.js',
 		'js/owl.carousel.js',
 		'js/jquery-ui.js',
-		'js/jquery.fancybox.js'
+		'js/jquery.fancybox.js',
+		'js/jquery.mousewheel.js',
+		'js/jquery.contentcarousel.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

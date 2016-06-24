@@ -1,3 +1,6 @@
+<?
+$this->title = 'Акции - Мужской спа-салон «Барон»';
+?>
 <div id="content" class="clearfix">
 
 	<div id="actions_page">

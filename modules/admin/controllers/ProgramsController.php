@@ -17,8 +17,8 @@ use yii\filters\VerbFilter;
 class ProgramsController extends Controller
 {
 	public $layout = 'dark';
-	
-    public function behaviors()
+
+	public function behaviors()
     {
         return [
             'verbs' => [
